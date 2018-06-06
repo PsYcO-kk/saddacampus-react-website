@@ -8,6 +8,7 @@ import AboutUsPage from './components/AboutUsPage';
 import PrivacyPolicyPage from './components/PrivacyPolicyPage';
 import NotFoundPage from './components/NotFoundPage';
 
+
 import './styles/bootstrap.min.css';
 import './styles/poppins.css';
 import './styles/main.css';
@@ -24,7 +25,7 @@ const jsx = (
                 <Route path="/privacy-policy" component={PrivacyPolicyPage} />
                 <Route component={NotFoundPage} />
             </Switch>
-		</div>
+        </div>
 	</BrowserRouter>
 );
 
