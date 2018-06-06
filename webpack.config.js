@@ -2,11 +2,10 @@ var path = require('path');
 
 module.exports = {
 
-    entry: path.resolve(__dirname, 'src') + '/app/index.js',
+    entry: path.resolve(__dirname, 'src') + '/app.js',
     output: {
-        path: path.resolve(__dirname, 'dist') + '/app',
+        path: path.resolve(__dirname, 'public'),
         filename: 'bundle.js',
-        publicPath: '/app/'
     },
     module: {
         loaders: [
@@ -15,7 +14,8 @@ module.exports = {
                 include: path.resolve(__dirname, 'src'),
                 loader: 'babel-loader',
                 query: {
-                    presets: ['react', 'env']
+                    presets: ['env', 'react'],
+					plugins: ['transform-class-properties', 'transform-object-rest-spread']
                 }
             },
             {
