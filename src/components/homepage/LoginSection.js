@@ -16,9 +16,9 @@ export default class LoginSection extends React.Component{
 	constructor(props){
 		super(props);
 		this.state = {
-			NumberForm: false,
+			NumberForm: true,
 			OtpForm: false,
-			ProfileSettings: true
+			ProfileSettings: false
 		}
 	}
     render(){
