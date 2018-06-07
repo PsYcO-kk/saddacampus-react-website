@@ -68,13 +68,13 @@ export default class OtpForm extends React.Component {
                   return response.json()
               })
               .then((response)=>{
-                   console.log(response);
                    if(response.success)
                    {
                       sessionStorage.setItem('user_exists', response.user_exists);
                       sessionStorage.setItem('token', response.token);
                         if(response.user_exists)
                        {
+                           console.log("redirect to the main page");
                           // redirect to the main page
                        }
                       else{
