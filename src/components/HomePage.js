@@ -1,20 +1,21 @@
 import React, { Fragment } from 'react';
-import VideoSection from './static_components/VideoSection.js'
-import Services from "./static_components/Services.js";
-import Blog from "./static_components/Blogs.js";
-import UserReview from './static_components/UserReview.js';
-import SaddaImage from './static_components/SadddaImage.js'
-import Form from './forms/Form.js';
+
+import LoginSection from './homepage/LoginSection.js';
+import VideoSection from './homepage/VideoSection.js'
+import ServicesSection from "./homepage/ServicesSection.js";
+import BlogsSection from './homepage/BlogsSection.js';
+import ReviewsSection from './homepage/ReviewsSection.js';
+import GetAppSection from './homepage/GetAppSection.js';
 
 
 const HomePage = () => (
 	<Fragment>
-		<SaddaImage />
-		<Form />
+		<LoginSection />
 		<VideoSection />
-		<Services />
-		<Blog />
-		<UserReview />
+		<ServicesSection />
+		<BlogsSection />
+		<ReviewsSection />
+		<GetAppSection />
 	</Fragment>
 );
 
