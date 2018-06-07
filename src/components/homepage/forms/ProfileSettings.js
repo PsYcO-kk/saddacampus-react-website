@@ -1,20 +1,10 @@
 import React from "react";
 
 export default class ProfileSettings extends React.Component {
-    DisplayReturn = () => {
-        if(this.props.display)
-            return "block";
-        else
-            return "none";
-    }
-
-    checkDisplay = {
-        "display" : this.DisplayReturn()
-    }
-
-    render(){
+  
+  render(){
         return(
-            <form style={this.checkDisplay}>
+            <form>
 				<div id="profileSettings">
 					<div className="form-group">
 						<label htmlFor="avatar">Upload an Avatar:</label>

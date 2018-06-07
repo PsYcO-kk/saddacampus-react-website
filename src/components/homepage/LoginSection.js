@@ -13,13 +13,20 @@ const loaderStyle = {
 };
 
 export default class LoginSection extends React.Component{
-	constructor(props){
-		super(props);
+	constructor(){
+		super();
 		this.state = {
 			NumberForm: true,
 			OtpForm: false,
-			ProfileSettings: false
+			ProfileSettings: false,
+			number: '',
+			country_code: '',
+			otp: '',
+			message: ''
 		}
+	}
+	changeView = (newState) => {
+		this.setState(() => newState);
 	}
     render(){
         return(
@@ -41,9 +48,9 @@ export default class LoginSection extends React.Component{
 									</tbody>
 								</table>
 								<br />
-								<NumberForm display={this.state.NumberForm} />
-								<OtpForm display={this.state.OtpForm} />
-								<ProfileSettings display={this.state.ProfileSettings} />
+								{this.state.NumberForm && <NumberForm changeView={this.changeView} />}
+								{this.state.OtpForm && <OtpForm changeView={this.changeView} message={this.state.message} country_code={this.state.country_code} number={this.state.number}/>}
+								{this.state.ProfileSettings && <ProfileSettings />}
 							</div>
 						</div>
 						<div className="col-lg-6 about-right">
