@@ -3,15 +3,16 @@ import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem } from 'reac
 import { NavLink } from 'react-router-dom';
 
 export default class Header extends React.Component {
-	state = {
-		isOpen: false
-	};
-	toggle = () => {
+	constructor(){
+		super();
+		this.state = false;
+	}
+	toggle(){
 		this.setState({
 			isOpen: !this.state.isOpen
 		});
-	};
-	render = () => {
+	}
+	render(){
 		return (
 			<div>
 				<Navbar color="light" light expand="lg" className="bg-white border-bottom">
@@ -35,5 +36,5 @@ export default class Header extends React.Component {
 				</Navbar>
 			</div>
 		);
-	};
+	}
 }
