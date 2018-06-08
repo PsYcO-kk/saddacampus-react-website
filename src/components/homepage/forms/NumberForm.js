@@ -4,70 +4,77 @@ export default class NumberForm extends React.Component {
 	constructor(props){
 		super(props);
 		this.state = {
+			country_code: '',
 			number: '',
-			error: ''
+			error: '',
+			disableClick: false
 		};
 	}
+
 	validateInput = () => {
 		return this.state.number.match(/^\d{10}$/);
 	}
+
 	handleNumberInput = (e) => {
 		const number = e.target.value;
 		if(!number || number.match(/^\d{1,10}$/)){
 			this.setState(() => ({ error: '', number: number }));
 		}
 	}
-	changeView = (message , country_code) => {
+
+	changeParentState = (message = '', loading, view) => {
 		const newState = {
-			NumberForm: false,
-			OtpForm: true,
-			ProfileSettings: false,
-      number: this.state.number,
-      country_code : country_code,
+			loading: loading,
+			NumberForm: view,
+			OtpForm: !view,
+			country_code : this.state.country_code,
+			number: this.state.number,
 			otp: '',
 			message: message
 		}
-		this.props.changeView(newState);
+		this.props.changeState(newState);
 	}
+
 	handleSubmit = (e) => {
 		e.preventDefault();
 		const country_code = e.target.country_code.value;
+		this.setState(() => ({ disableClick: true, country_code }));
 		const number = this.state.number;
 		if(this.validateInput()){
+			this.changeParentState('', true, true);
 			fetch('http://127.0.0.1:3000/v1/membership/otp/'+country_code+'/'+number)
 			.then((response) => response.json())
 			.then((data) => {
+				this.changeParentState('', false, true);
 				if(data.success){
 					this.setState(() => ({ error: '' }));
-					this.changeView(data.message,country_code);
+					this.changeParentState(data.message, false, false);
 				}
 				else{
-					this.setState(() => ({ error: data.message }));
+					this.setState(() => ({ disableClick: false, error: data.message }));
 				}
 			})
 			.catch((error) => {
-				this.setState(() => ({ error }));
+				this.setState(() => ({ disableClick: false, error }));
 			});
 		}
 		else{
-			document.getElementsByClassName('alert').className += ' alert-danger';
-			this.setState(() => ({
-				error: 'Please enter a valid mobile number.'
-			}));
+			this.setState(() => ({ disableClick: false, error: 'Please enter a valid mobile number.' }));
 		}
 	}
-    render(){
+
+	render(){
         return(
             <form onSubmit={this.handleSubmit}>
 				{this.state.error && <div className="alert alert-danger">{this.state.error}</div>}
 				<label htmlFor="numberInput">Enter your mobile number to continue:</label>
 				<div className="input-group mb-3">
-					<select className="custom-select form-control" defaultValue="+91" name="country_code">
+					<select className="custom-select form-control" defaultValue="+91" id="country_code" name="country_code" required>
 						<option value="+91">+91</option>
 					</select>
-					<input type="tel" className="form-control" name="numberInput" value={this.state.number} onChange={this.handleNumberInput} placeholder="# 7777-777777" />
+					<input type="tel" className="form-control" id="numberInput" name="numberInput" value={this.state.number} onChange={this.handleNumberInput} placeholder="# 7777-777777" required />
 					<div className="input-group-append">
-						<button className="btn btn-outline-secondary" type="submit">Go</button>
+						<button className="btn btn-outline-secondary" type="submit" disabled={this.state.disableClick}>Go</button>
 					</div>
 				</div>
 				<small className="form-text text-muted">Don't worry. We won't stalk you.</small>

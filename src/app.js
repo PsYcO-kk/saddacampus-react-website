@@ -15,25 +15,6 @@ import './styles/poppins.css';
 import './styles/index.css';
 import './styles/main.css';
 
-// postData('http://127.0.0.1:3000/v1/membership/auth', { country_code: '+91', number: '7909024332', otp: '187209' })
-//   .then((data) => {
-// 	  console.log(data);
-// 	})
-//   .catch((error) => {
-// 	  console.log(error);
-// 	})
-
-// function postData(url, data) {
-//   return fetch(url, {
-//     body: JSON.stringify(data),
-// 	method: 'POST',
-// 	headers: {
-// 		'content-type': 'application/json'
-// 	}
-// 	})
-//   .then((response) => response.json())
-// }
-
 const jsx = (
 	<BrowserRouter>
 		<div>
