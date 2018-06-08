@@ -20,6 +20,7 @@ export default class LoginSection extends React.Component{
 			OtpForm: false,
 			ProfileSettings: false,
 			number: '',
+			country_code: '',
 			otp: '',
 			message: ''
 		}
@@ -48,8 +49,8 @@ export default class LoginSection extends React.Component{
 								</table>
 								<br />
 								{this.state.NumberForm && <NumberForm changeView={this.changeView} />}
-								{this.state.OtpForm && <OtpForm message={this.state.message} />}
-								{this.state.ProfileSettings && <ProfileSettings />}
+								{this.state.OtpForm && <OtpForm changeView={this.changeView} message={this.state.message} country_code={this.state.country_code} number={this.state.number}/>}
+								{this.state.ProfileSettings && <ProfileSettings country_code={this.state.country_code} number={this.state.number} />}
 							</div>
 						</div>
 						<div className="col-lg-6 about-right">

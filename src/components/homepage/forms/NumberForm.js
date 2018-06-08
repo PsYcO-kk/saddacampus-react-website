@@ -17,12 +17,13 @@ export default class NumberForm extends React.Component {
 			this.setState(() => ({ error: '', number: number }));
 		}
 	}
-	changeView = (message) => {
+	changeView = (message , country_code) => {
 		const newState = {
 			NumberForm: false,
 			OtpForm: true,
 			ProfileSettings: false,
-			number: this.state.number,
+      number: this.state.number,
+      country_code : country_code,
 			otp: '',
 			message: message
 		}
@@ -38,7 +39,7 @@ export default class NumberForm extends React.Component {
 			.then((data) => {
 				if(data.success){
 					this.setState(() => ({ error: '' }));
-					this.changeView(data.message);
+					this.changeView(data.message,country_code);
 				}
 				else{
 					this.setState(() => ({ error: data.message }));
