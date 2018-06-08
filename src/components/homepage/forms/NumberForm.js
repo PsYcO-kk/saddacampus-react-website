@@ -5,8 +5,7 @@ export default class NumberForm extends React.Component {
 		super(props);
 		this.state = {
 			number: '',
-            error: '',
-          
+			error: ''
 		};
 	}
 	validateInput = () => {
@@ -23,8 +22,8 @@ export default class NumberForm extends React.Component {
 			NumberForm: false,
 			OtpForm: true,
 			ProfileSettings: false,
-            number: this.state.number,
-            country_code : country_code,
+      number: this.state.number,
+      country_code : country_code,
 			otp: '',
 			message: message
 		}
