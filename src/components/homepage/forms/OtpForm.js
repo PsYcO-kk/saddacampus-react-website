@@ -38,7 +38,7 @@ export default class OtpForm extends React.Component {
         const data = {
             country_code : this.props.country_code,
             number : this.props.number,
-            otp : this.state.otp
+            otp : e.target.otpInput.value
         };
 		if(this.validateInput()){
 			this.changeParentState(true, true);

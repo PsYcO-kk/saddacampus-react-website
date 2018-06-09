@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render NumberForm correctly 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <label
+    htmlFor="numberInput"
+  >
+    Enter your mobile number to continue:
+  </label>
+  <div
+    className="input-group mb-3"
+  >
+    <select
+      className="custom-select form-control"
+      defaultValue="+91"
+      id="country_code"
+      name="country_code"
+      required={true}
+    >
+      <option
+        value="+91"
+      >
+        +91
+      </option>
+    </select>
+    <input
+      className="form-control"
+      id="numberInput"
+      name="numberInput"
+      onChange={[Function]}
+      placeholder="# 7777-777777"
+      required={true}
+      type="tel"
+      value=""
+    />
+    <div
+      className="input-group-append"
+    >
+      <button
+        className="btn btn-outline-secondary"
+        disabled={false}
+        type="submit"
+      >
+        Go
+      </button>
+    </div>
+  </div>
+  <small
+    className="form-text text-muted"
+  >
+    Don't worry. We won't stalk you.
+  </small>
+</form>
+`;
+
+exports[`should set and render error on invalid number submit 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <div
+    className="alert alert-danger"
+  >
+    Please enter a valid mobile number.
+  </div>
+  <label
+    htmlFor="numberInput"
+  >
+    Enter your mobile number to continue:
+  </label>
+  <div
+    className="input-group mb-3"
+  >
+    <select
+      className="custom-select form-control"
+      defaultValue="+91"
+      id="country_code"
+      name="country_code"
+      required={true}
+    >
+      <option
+        value="+91"
+      >
+        +91
+      </option>
+    </select>
+    <input
+      className="form-control"
+      id="numberInput"
+      name="numberInput"
+      onChange={[Function]}
+      placeholder="# 7777-777777"
+      required={true}
+      type="tel"
+      value=""
+    />
+    <div
+      className="input-group-append"
+    >
+      <button
+        className="btn btn-outline-secondary"
+        disabled={false}
+        type="submit"
+      >
+        Go
+      </button>
+    </div>
+  </div>
+  <small
+    className="form-text text-muted"
+  >
+    Don't worry. We won't stalk you.
+  </small>
+</form>
+`;

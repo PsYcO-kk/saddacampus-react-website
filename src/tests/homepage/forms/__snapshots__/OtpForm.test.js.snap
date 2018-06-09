@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render OtpForm correctly 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <div>
+     Not your number? 
+    <a
+      href=""
+    >
+      Change it!
+    </a>
+  </div>
+  <br />
+  <div
+    className="input-group mb-3"
+  >
+    <input
+      className="form-control"
+      id="otpInput"
+      onChange={[Function]}
+      placeholder="Enter OTP"
+      required={true}
+      type="tel"
+      value=""
+    />
+    <div
+      className="input-group-append"
+    >
+      <button
+        className="btn btn-outline-secondary"
+        type="submit"
+      >
+        Go
+      </button>
+    </div>
+  </div>
+  <div>
+    Did not receive OTP? 
+    <button
+      className="btn btn-default"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      Resend
+    </button>
+  </div>
+  <br />
+  <small
+    className="form-text text-muted"
+  >
+    Don't worry. We won't stalk you.
+  </small>
+</form>
+`;
+
+exports[`should set and render error on invalid otp submit 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <div>
+     Not your number? 
+    <a
+      href=""
+    >
+      Change it!
+    </a>
+  </div>
+  <br />
+  <div
+    className="alert alert-danger"
+  >
+    Please enter a valid OTP.
+  </div>
+  <div
+    className="input-group mb-3"
+  >
+    <input
+      className="form-control"
+      id="otpInput"
+      onChange={[Function]}
+      placeholder="Enter OTP"
+      required={true}
+      type="tel"
+      value=""
+    />
+    <div
+      className="input-group-append"
+    >
+      <button
+        className="btn btn-outline-secondary"
+        type="submit"
+      >
+        Go
+      </button>
+    </div>
+  </div>
+  <div>
+    Did not receive OTP? 
+    <button
+      className="btn btn-default"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      Resend
+    </button>
+  </div>
+  <br />
+  <small
+    className="form-text text-muted"
+  >
+    Don't worry. We won't stalk you.
+  </small>
+</form>
+`;

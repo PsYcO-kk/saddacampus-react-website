@@ -39,7 +39,7 @@ export default class NumberForm extends React.Component {
 		e.preventDefault();
 		const country_code = e.target.country_code.value;
 		this.setState(() => ({ disableClick: true, country_code }));
-		const number = this.state.number;
+		const number = e.target.numberInput.value;
 		if(this.validateInput()){
 			this.changeParentState('', true, true);
 			fetch('http://127.0.0.1:3000/v1/membership/otp/'+country_code+'/'+number)
