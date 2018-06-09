@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing for Header page component 1`] = `
+<div>
+  <Navbar
+    className="bg-white border-bottom"
+    color="light"
+    expand="lg"
+    light={true}
+    tag="nav"
+  >
+    <div
+      className="container"
+    >
+      <NavbarBrand
+        href="/"
+        tag="a"
+      >
+        <img
+          alt=""
+          className="d-inline-block align-top"
+          src="/assets/images/brand/16-9.png"
+          width="50"
+        />
+          Saddacampus
+      </NavbarBrand>
+      <NavbarToggler
+        onClick={[Function]}
+        tag="button"
+        type="button"
+      />
+      <Collapse
+        appear={false}
+        enter={true}
+        exit={true}
+        in={false}
+        isOpen={false}
+        mountOnEnter={false}
+        navbar={true}
+        onEnter={[Function]}
+        onEntered={[Function]}
+        onEntering={[Function]}
+        onExit={[Function]}
+        onExited={[Function]}
+        onExiting={[Function]}
+        tag="div"
+        timeout={350}
+        unmountOnExit={false}
+      >
+        <Nav
+          className="ml-auto"
+          navbar={true}
+          tag="ul"
+          vertical={false}
+        >
+          <NavItem
+            tag="li"
+          >
+            <NavLink
+              activeClassName="active"
+              aria-current="page"
+              className="nav-link"
+              to="/about-us"
+            >
+              About Us
+            </NavLink>
+          </NavItem>
+          <NavItem
+            tag="li"
+          >
+            <NavLink
+              activeClassName="active"
+              aria-current="page"
+              className="nav-link"
+              to="/privacy-policy"
+            >
+              Privacy Policy
+            </NavLink>
+          </NavItem>
+        </Nav>
+      </Collapse>
+    </div>
+  </Navbar>
+</div>
+`;
