@@ -1,4 +1,5 @@
 import React from "react";
+import getOTP from '../../APIcalls/getOTP';
 
 export default class NumberForm extends React.Component {
 	constructor(props){
@@ -42,8 +43,7 @@ export default class NumberForm extends React.Component {
 		const number = e.target.numberInput.value;
 		if(this.validateInput()){
 			this.changeParentState('', true, true);
-			fetch('http://127.0.0.1:3000/v1/membership/otp/'+country_code+'/'+number)
-			.then((response) => response.json())
+			getOTP({ country_code, number })
 			.then((data) => {
 				this.changeParentState('', false, true);
 				if(data.success){
