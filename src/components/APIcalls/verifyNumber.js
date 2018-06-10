@@ -10,7 +10,14 @@ const verifyNumber = (data) => {
 		},
 		method: 'POST',
 	})
-	.then(response => response.json());
+	.then(response => {
+		if (response.ok) {
+			return response.json();
+		}
+		else {
+			throw new Error(response.statusText);
+		}
+	});
 };
 
 export default verifyNumber;

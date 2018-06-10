@@ -11,7 +11,14 @@ const createProfile = ({ country_code, number, username, profilepic, token }) =>
 		},
 		method: 'POST',
 	})
-	.then(response => response.json());
+	.then(response => {
+		if (response.ok) {
+			return response.json();
+		}
+		else {
+			throw new Error(response.statusText);
+		}
+	});
 };
 
 export default createProfile;
