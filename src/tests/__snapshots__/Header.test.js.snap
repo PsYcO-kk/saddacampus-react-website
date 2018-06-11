@@ -58,7 +58,7 @@ exports[`testing for Header page component 1`] = `
           >
             <NavLink
               activeClassName="active"
-              aria-current="page"
+              ariaCurrent="true"
               className="nav-link"
               to="/about-us"
             >
@@ -70,7 +70,7 @@ exports[`testing for Header page component 1`] = `
           >
             <NavLink
               activeClassName="active"
-              aria-current="page"
+              ariaCurrent="true"
               className="nav-link"
               to="/privacy-policy"
             >

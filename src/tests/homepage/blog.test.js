@@ -1,6 +1,6 @@
 import {shallow} from 'enzyme';
 import React from 'react';
-import Blog from './../../../components/homepage/Blog.js';
+import Blog from '../../components/homepage/Blog.js';
 
 test("testing for Blog Section page component without props" , ()=>{
     const wrapper = shallow(<Blog />)

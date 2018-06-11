@@ -23,7 +23,7 @@ exports[`testing for Log in Section page component 1`] = `
             <span
               className="wrap typewrite"
               data-period="2000"
-              data-type="[ \\"easier...\\", \\"smarter...\\", \\"better...\\"]"
+              data-type="[\\"easier...\\", \\"smarter...\\", \\"better...\\"]"
               style={
                 Object {
                   "color": "#e8c900",
@@ -32,39 +32,12 @@ exports[`testing for Log in Section page component 1`] = `
             />
           </h1>
           <br />
-          <table
-            id="loader"
-          >
-            <tbody>
-              <tr>
-                <td>
-                  <div
-                    id="sync"
-                  />
-                </td>
-                <td>
-                  <h5
-                    style={
-                      Object {
-                        "color": "#555",
-                      }
-                    }
-                  >
-                      Loading 
-                    <span
-                      className="wrap typewrite"
-                      data-period="500"
-                      data-type="[ \\"...\\"]"
-                    />
-                  </h5>
-                </td>
-              </tr>
-            </tbody>
-          </table>
           <br />
-          <NumberForm
-            changeView={[Function]}
-          />
+          <ErrorBoundary>
+            <NumberForm
+              changeState={[Function]}
+            />
+          </ErrorBoundary>
         </div>
       </div>
       <div

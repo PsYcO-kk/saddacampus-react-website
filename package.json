@@ -6,8 +6,7 @@
   "scripts": {
     "test": "jest --config=jest.config.json",
     "serve": "webpack-dev-server",
-    "build": "webpack --watch",
-    "test_jest": "jest --config=jest.config.json"
+    "build": "webpack --watch"
   },
   "repository": {
     "type": "git",

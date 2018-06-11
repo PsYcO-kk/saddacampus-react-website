@@ -1,6 +1,6 @@
 import {shallow} from 'enzyme';
 import React from 'react';
-import UserReview from './../../../components/homepage/UserReview.js';
+import UserReview from '../../components/homepage/UserReview.js';
 
 test("testing for User Review page component with the props" , ()=>{
     const wrapper = shallow(<UserReview username="akash"/>)

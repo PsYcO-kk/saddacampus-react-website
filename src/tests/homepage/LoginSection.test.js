@@ -1,6 +1,6 @@
 import {shallow} from 'enzyme';
 import React from 'react';
-import LoginSection from './../../../components/homepage/LoginSection.js';
+import LoginSection from '../../components/homepage/LoginSection.js';
 
 test("testing for Log in Section page component" , ()=>{
     const wrapper = shallow(<LoginSection />)
