@@ -1,4 +1,6 @@
 import React from "react";
+import getOTP from '../../APIcalls/getOTP';
+import verifyNumber from '../../APIcalls/verifyNumber';
 
 export default class OtpForm extends React.Component {
     constructor(props){
@@ -38,20 +40,12 @@ export default class OtpForm extends React.Component {
         const data = {
             country_code : this.props.country_code,
             number : this.props.number,
-            otp : this.state.otp
+            otp : e.target.otpInput.value
         };
 		if(this.validateInput()){
 			this.changeParentState(true, true);
-            fetch("http://127.0.0.1:3000/v1/membership/auth", {
-                method: "POST",
-                body: JSON.stringify(data),
-                headers: {
-                  "Content-Type": "application/json"
-                }
-			})
-			.then((response) => response.json())
+			verifyNumber(data)
 			.then((response) => {
-				this.changeParentState(false, true);
 				if(response.success){
 					// sessionStorage.setItem('user_exists', response.user_exists);
 					sessionStorage.setItem('token', response.token);
@@ -66,11 +60,13 @@ export default class OtpForm extends React.Component {
 				}
 				else{
 					this.setState(() => ({ disableGo: false, error: response.message }));
+					this.changeParentState(false, true);
 				}
 			})
 			.catch((error) => {
-				this.setState(() => ({ disableGo: false, error }));
-			})
+				this.setState(() => ({ disableGo: false, error: error.message }));
+				this.changeParentState(false, true);
+			});
 		}
 		else{
 			this.setState(() => ({ disableGo: false, error: 'Please enter a valid OTP.' }));
@@ -79,9 +75,10 @@ export default class OtpForm extends React.Component {
 
     resend = () => {
 		this.changeParentState(true, true);
-		this.setState(() => ({ disableResend: true }))
-        fetch('http://localhost:3000/v1/membership/otp/'+this.props.country_code+'/'+this.props.number)
-        .then((response) => response.json())
+		this.setState(() => ({ disableResend: true }));
+		const country_code = this.props.country_code;
+		const number = this.props.number;
+		getOTP({ country_code, number })
         .then((data) => {
 			this.changeParentState(false, true);
             if(data.success){
@@ -92,7 +89,8 @@ export default class OtpForm extends React.Component {
             }
         })
         .catch((error) => {
-            this.setState(() => ({ disableResend: false, error }));
+            this.setState(() => ({ disableResend: false, error: error.message }));
+			this.changeParentState(false, true);
         });
     }
 

@@ -2,6 +2,7 @@ import React from 'react';
 import NumberForm from './forms/NumberForm.js';
 import OtpForm from './forms/OtpForm.js';
 import ProfileSettings from './forms/ProfileSettings.js';
+import ErrorBoundary from '../ErrorBoundary';
 import "../../scripts/typewriter.js";
 
 const typewriterStyle = {
@@ -51,9 +52,11 @@ export default class LoginSection extends React.Component{
 									</table>
 								}
 								<br />
-								{this.state.NumberForm && <NumberForm changeState={this.changeState} />}
-								{this.state.OtpForm && <OtpForm changeState={this.changeState} message={this.state.message} country_code={this.state.country_code} number={this.state.number}/>}
-								{this.state.ProfileSettings && <ProfileSettings country_code={this.state.country_code} number={this.state.number} />}
+								<ErrorBoundary>
+									{this.state.NumberForm && <NumberForm changeState={this.changeState} />}
+									{this.state.OtpForm && <OtpForm changeState={this.changeState} message={this.state.message} country_code={this.state.country_code} number={this.state.number}/>}
+									{this.state.ProfileSettings && <ProfileSettings country_code={this.state.country_code} number={this.state.number} />}
+								</ErrorBoundary>
 							</div>
 						</div>
 						<div className="col-lg-6 about-right">

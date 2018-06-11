@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render ProfileSettings correctly 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <div
+    className="form-group"
+  >
+    <label
+      htmlFor="avatar"
+    >
+      Upload an Avatar:
+    </label>
+    <input
+      className="form-control-file"
+      id="avatar"
+      type="file"
+    />
+  </div>
+  <div
+    className="form-group"
+  >
+    <input
+      className="form-control"
+      id="username"
+      onChange={[Function]}
+      placeholder="Enter Username"
+      required={true}
+      type="text"
+      value=""
+    />
+    <div
+      id="feedback"
+    />
+  </div>
+  <button
+    className="btn btn-success"
+    disabled={true}
+    type="submit"
+  >
+    Create Account
+  </button>
+</form>
+`;
