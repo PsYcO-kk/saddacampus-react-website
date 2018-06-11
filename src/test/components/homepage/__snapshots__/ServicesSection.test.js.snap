@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing for Services Section page component 1`] = `
+<section
+  className="services-area pb-120"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="row section-title"
+    >
+      <h1>
+        What Student-friendly services we offer?
+      </h1>
+      <p>
+        BTW, we already apologize we cannot do anything about your sem-backs and low attendance, but - 
+      </p>
+    </div>
+    <div
+      className="row"
+    >
+      <Service
+        serviceDescription="Don't go out in the summer heat pretty. You will tan. Let us deliver right at your hostels or PG."
+        serviceName="Food Delivery"
+      />
+      <Service
+        serviceDescription="There are always some things you need to know and once in college you need all the help available."
+        serviceName="Blogs & Informatics"
+      />
+      <Service
+        serviceDescription="Access a variety of student exclusive coupons and discounts from top online brands as well as their favourite cafes, pubs, entertainment outlets, education, hobbies and more."
+        serviceName="Deals & Offers"
+      />
+    </div>
+  </div>
+</section>
+`;

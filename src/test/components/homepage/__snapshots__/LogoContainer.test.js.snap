@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing for Logo container page component 1`] = `
+<div
+  className="container logo-container"
+>
+  <img
+    className="img-fluid float-left"
+    id="logo"
+    src="./assets/images/brand/16-9.png"
+    style={
+      Object {
+        "width": "15%",
+      }
+    }
+  />
+</div>
+`;

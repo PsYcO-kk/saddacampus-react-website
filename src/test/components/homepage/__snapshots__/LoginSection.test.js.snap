@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing for Log in Section page component 1`] = `
+<section
+  className="section-gap"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="row align-items-center"
+    >
+      <div
+        className="col-lg-6 about-left"
+      >
+        <div
+          className="jumbotron bg-white"
+        >
+          <h1
+            className="display-4"
+          >
+            Making college life 
+            <span
+              className="wrap typewrite"
+              data-period="2000"
+              data-type="[ \\"easier...\\", \\"smarter...\\", \\"better...\\"]"
+              style={
+                Object {
+                  "color": "#e8c900",
+                }
+              }
+            />
+          </h1>
+          <br />
+          <table
+            id="loader"
+          >
+            <tbody>
+              <tr>
+                <td>
+                  <div
+                    id="sync"
+                  />
+                </td>
+                <td>
+                  <h5
+                    style={
+                      Object {
+                        "color": "#555",
+                      }
+                    }
+                  >
+                      Loading 
+                    <span
+                      className="wrap typewrite"
+                      data-period="500"
+                      data-type="[ \\"...\\"]"
+                    />
+                  </h5>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <br />
+          <NumberForm
+            changeView={[Function]}
+          />
+        </div>
+      </div>
+      <div
+        className="col-lg-6 about-right"
+      >
+        <img
+          alt=""
+          className="img-fluid"
+          src="./assets/images/image.jpg"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+`;

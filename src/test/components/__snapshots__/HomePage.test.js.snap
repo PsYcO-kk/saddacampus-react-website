@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing for HomePage component 1`] = `
+<React.Fragment>
+  <LoginSection />
+  <VideoSection />
+  <ServicesSection />
+  <BlogsSection />
+  <ReviewsSection />
+  <GetAppSection />
+</React.Fragment>
+`;

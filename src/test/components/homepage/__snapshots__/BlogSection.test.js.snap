@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing for Blog Section page component 1`] = `
+<section
+  className="latest-blog-area section-gap"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="row section-title"
+    >
+      <h1>
+        Latest News from our Blog
+      </h1>
+      <p>
+        Lorem ipsum dolor sit amet
+      </p>
+    </div>
+    <div
+      className="row"
+    >
+      <Blog
+        imgSrc="coffee.PNG"
+      />
+      <Blog
+        imgSrc="burger.PNG"
+      />
+    </div>
+  </div>
+</section>
+`;

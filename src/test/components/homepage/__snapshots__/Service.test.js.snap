@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing for Service page component with props 1`] = `
+<div
+  className="col-lg-4 single-service"
+>
+  <span
+    className="lnr lnr-car"
+  />
+  <a
+    href="#"
+  >
+    <h4>
+      Food Delivery
+    </h4>
+  </a>
+  <p>
+    Don't go out in the summer heat pretty. You will tan. Let us deliver right at your hostels or PG.
+  </p>
+</div>
+`;
+
+exports[`testing for Service page component without props 1`] = `
+<div
+  className="col-lg-4 single-service"
+>
+  <span
+    className="lnr lnr-car"
+  />
+  <a
+    href="#"
+  >
+    <h4 />
+  </a>
+  <p />
+</div>
+`;
