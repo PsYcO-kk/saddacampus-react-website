@@ -16,7 +16,7 @@ const createProfile = ({ country_code, number, username, profilepic, token }) =>
 			return response.json();
 		}
 		else {
-			throw new Error(response.statusText);
+			throw Error(response.statusText);
 		}
 	});
 };

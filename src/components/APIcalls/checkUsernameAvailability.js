@@ -9,7 +9,7 @@ const checkUsernameAvailability = (username) => {
 					return response.json();
 				}
 				else {
-					throw new Error(response.statusText);
+					throw Error(response.statusText);
 				}
 			});
 };

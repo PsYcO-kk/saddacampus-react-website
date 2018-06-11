@@ -49,8 +49,8 @@ export default class ProfileSettings extends React.Component {
 			}
 		})
 		.catch((error) => {
-			this.setState(() => ({ disableClick: false, error }));
-		})
+			this.setState(() => ({ disableClick: false, error: error.message }));
+		});
     }
 
     handleUsernameInput = (e) => {
@@ -70,7 +70,7 @@ export default class ProfileSettings extends React.Component {
                 }
 			})
 			.catch((error) => {
-				this.setState(() => ({ disableClick: true, error }));
+				this.setState(() => ({ disableClick: true, error: error.message }));
 			})
         }
         else{

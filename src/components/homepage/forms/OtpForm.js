@@ -46,7 +46,6 @@ export default class OtpForm extends React.Component {
 			this.changeParentState(true, true);
 			verifyNumber(data)
 			.then((response) => {
-				this.changeParentState(false, true);
 				if(response.success){
 					// sessionStorage.setItem('user_exists', response.user_exists);
 					sessionStorage.setItem('token', response.token);
@@ -61,11 +60,13 @@ export default class OtpForm extends React.Component {
 				}
 				else{
 					this.setState(() => ({ disableGo: false, error: response.message }));
+					this.changeParentState(false, true);
 				}
 			})
 			.catch((error) => {
-				this.setState(() => ({ disableGo: false, error }));
-			})
+				this.setState(() => ({ disableGo: false, error: error.message }));
+				this.changeParentState(false, true);
+			});
 		}
 		else{
 			this.setState(() => ({ disableGo: false, error: 'Please enter a valid OTP.' }));
@@ -88,7 +89,8 @@ export default class OtpForm extends React.Component {
             }
         })
         .catch((error) => {
-            this.setState(() => ({ disableResend: false, error }));
+            this.setState(() => ({ disableResend: false, error: error.message }));
+			this.changeParentState(false, true);
         });
     }
 

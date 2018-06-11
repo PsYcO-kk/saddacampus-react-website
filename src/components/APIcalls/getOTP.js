@@ -9,7 +9,7 @@ const getOTP = ({ country_code, number }) => {
 					return response.json();
 				}
 				else {
-					throw new Error(response.statusText);
+					throw Error(response.statusText);
 				}
 			});
 };

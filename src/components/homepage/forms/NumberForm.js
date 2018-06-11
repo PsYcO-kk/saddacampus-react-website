@@ -45,17 +45,18 @@ export default class NumberForm extends React.Component {
 			this.changeParentState('', true, true);
 			getOTP({ country_code, number })
 			.then((data) => {
-				this.changeParentState('', false, true);
 				if(data.success){
 					this.setState(() => ({ error: '' }));
 					this.changeParentState(data.message, false, false);
 				}
 				else{
 					this.setState(() => ({ disableClick: false, error: data.message }));
+					this.changeParentState('', false, true);
 				}
 			})
 			.catch((error) => {
-				this.setState(() => ({ disableClick: false, error }));
+				this.setState(() => ({ disableClick: false, error: error.message }));
+				this.changeParentState('', false, true);
 			});
 		}
 		else{
