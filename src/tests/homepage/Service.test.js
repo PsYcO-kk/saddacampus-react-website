@@ -1,14 +1,14 @@
 import {shallow} from 'enzyme';
 import React from 'react';
-import Services from '../../components/homepage/Service.js';
+import Service from '../../components/homepage/Service';
 
-test("testing for Service page component without props" , ()=>{
-    const wrapper = shallow(<Services />)
-    expect(wrapper).toMatchSnapshot();
-})
+// test("should render Service component without props" , ()=>{
+//     const wrapper = shallow(<Service />)
+//     expect(wrapper).toMatchSnapshot();
+// })
 
-test("testing for Service page component with props" , ()=>{
+test("should render Service component with props" , ()=>{
     const deliveryDescription = "Don't go out in the summer heat pretty. You will tan. Let us deliver right at your hostels or PG.";
-    const wrapper = shallow(<Services serviceName="Food Delivery" serviceDescription={deliveryDescription} />);
+    const wrapper = shallow(<Service serviceName="Food Delivery" serviceDescription={deliveryDescription} />);
     expect(wrapper).toMatchSnapshot();
 })

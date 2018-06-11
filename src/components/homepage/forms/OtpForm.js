@@ -8,8 +8,7 @@ export default class OtpForm extends React.Component {
         this.state = {
 			otp: '',
 			error: '',
-			disableGo: false,
-			disableResend: false
+			disableClick: false
 		};
     }
 
@@ -36,7 +35,7 @@ export default class OtpForm extends React.Component {
 
     handleSubmit = (e) => {
 		e.preventDefault();
-		this.setState(() => ({ disableGo: true }));
+		this.setState(() => ({ disableClick: true }));
         const data = {
             country_code : this.props.country_code,
             number : this.props.number,
@@ -59,37 +58,38 @@ export default class OtpForm extends React.Component {
 					}
 				}
 				else{
-					this.setState(() => ({ disableGo: false, error: response.message }));
+					this.setState(() => ({ disableClick: false, error: response.message }));
 					this.changeParentState(false, true);
 				}
 			})
 			.catch((error) => {
-				this.setState(() => ({ disableGo: false, error: error.message }));
+				this.setState(() => ({ disableClick: false, error: error.message }));
 				this.changeParentState(false, true);
 			});
 		}
 		else{
-			this.setState(() => ({ disableGo: false, error: 'Please enter a valid OTP.' }));
+			this.setState(() => ({ disableClick: false, error: 'Please enter a valid OTP.' }));
 		}
 	}
 
     resend = () => {
 		this.changeParentState(true, true);
-		this.setState(() => ({ disableResend: true }));
+		this.setState(() => ({ disableClick: true }));
 		const country_code = this.props.country_code;
 		const number = this.props.number;
 		getOTP({ country_code, number })
         .then((data) => {
 			this.changeParentState(false, true);
+			this.setState(() => ({ disableClick: false }));
             if(data.success){
-				this.setState(() => ({ disableResend: false, otp: '' }));
+				this.setState(() => ({ otp: '' }));
             }
             else{
-                this.setState(() => ({ disableResend: false, error: data.message }));
+                this.setState(() => ({ error: data.message }));
             }
         })
         .catch((error) => {
-            this.setState(() => ({ disableResend: false, error: error.message }));
+            this.setState(() => ({ disableClick: false, error: error.message }));
 			this.changeParentState(false, true);
         });
     }
@@ -104,10 +104,10 @@ export default class OtpForm extends React.Component {
 				<div className="input-group mb-3">
 					<input type="tel" className="form-control" id="otpInput" placeholder="Enter OTP" value={this.state.otp} onChange={this.handleOtpInput} required />
 					<div className="input-group-append">
-						<button className="btn btn-outline-secondary" type="submit">Go</button>
+						<button className="btn btn-outline-secondary" type="submit" disabled={this.state.disableClick}>Go</button>
 					</div>
 				</div>
-				<div>Did not receive OTP? <button type="button" className="btn btn-default" onClick={this.resend} disabled={this.state.disableResend}>Resend</button></div>
+				<div>Did not receive OTP? <button type="button" id="resend" className="btn btn-default" onClick={this.resend} disabled={this.state.disableClick}>Resend</button></div>
 				<br />
 			    <small className="form-text text-muted">Don't worry. We won't stalk you.</small>
 			</form>

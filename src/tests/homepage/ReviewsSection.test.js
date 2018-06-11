@@ -1,8 +1,8 @@
 import {shallow} from 'enzyme';
 import React from 'react';
-import ReviewSection from '../../components/homepage/ReviewsSection.js';
+import ReviewsSection from '../../components/homepage/ReviewsSection';
 
-test("testing for Reviews Section page component" , ()=>{
-    const wrapper = shallow(<ReviewSection />)
+test("should render ReviewsSection correctly" , ()=>{
+    const wrapper = shallow(<ReviewsSection />)
     expect(wrapper).toMatchSnapshot();
 })

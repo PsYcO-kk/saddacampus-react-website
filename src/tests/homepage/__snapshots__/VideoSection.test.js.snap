@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`testing for Video Section page component 1`] = `
+exports[`should render VideoSection correctly 1`] = `
 <section
   className="home-about-area section-gap"
 >

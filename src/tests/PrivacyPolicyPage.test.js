@@ -1,8 +1,8 @@
 import {shallow} from 'enzyme';
 import React from 'react';
-import PrivacyPolicyPage from '../components/PrivacyPolicypage.js'
+import PrivacyPolicyPage from '../components/PrivacyPolicypage'
 
-test("testing for Privacy policy page component" , ()=>{
+test("should render PrivacyPolicyPage correctly" , ()=>{
     const wrapper = shallow(<PrivacyPolicyPage />)
     expect(wrapper).toMatchSnapshot();
 })

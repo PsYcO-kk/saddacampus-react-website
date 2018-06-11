@@ -1,13 +1,13 @@
 import {shallow} from 'enzyme';
 import React from 'react';
-import Header from '../components/Header.js'
+import Header from '../components/Header';
 
-test("testing for Header page component" , ()=>{
+test("should render Header correctly" , ()=>{
     const wrapper = shallow(<Header />)
     expect(wrapper).toMatchSnapshot();
 });
 
-test("testing the click function of Navbar Toggle" , ()=>{
+test("should toggle Navbar on click" , ()=>{
     const wrapper = shallow(<Header />);
     const isOpen = wrapper.state("isOpen");
     wrapper.find('NavbarToggler').simulate('click');

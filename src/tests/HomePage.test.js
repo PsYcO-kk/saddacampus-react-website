@@ -1,8 +1,8 @@
 import {shallow} from 'enzyme';
 import React from 'react';
-import HomePage from '../components/HomePage.js'
+import HomePage from '../components/HomePage'
 
-test("testing for HomePage component" , ()=>{
+test("should render HomePage correctly" , ()=>{
     const wrapper = shallow(<HomePage />)
     expect(wrapper).toMatchSnapshot();
 })

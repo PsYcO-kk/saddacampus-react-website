@@ -1,8 +1,8 @@
 import {shallow} from 'enzyme';
 import React from 'react';
-import ServicesSection from '../../components/homepage/ServicesSection.js';
+import ServicesSection from '../../components/homepage/ServicesSection';
 
-test("testing for Services Section page component" , ()=>{
+test("should render ServicesSection correctly" , ()=>{
     const wrapper = shallow(<ServicesSection />)
     expect(wrapper).toMatchSnapshot();
 })

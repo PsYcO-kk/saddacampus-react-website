@@ -1,15 +1,15 @@
 import {shallow} from 'enzyme';
 import React from 'react';
-import UserReview from '../../components/homepage/UserReview.js';
+import UserReview from '../../components/homepage/UserReview';
 
-test("testing for User Review page component with the props" , ()=>{
+test("should render UserReview component with the props" , ()=>{
     const wrapper = shallow(<UserReview username="akash"/>)
     expect(wrapper).toMatchSnapshot();
-  })
-
-test("testing for User Review page component without the props being passed" , ()=>{
-    const wrapper = shallow(<UserReview />)
-    expect(wrapper).toMatchSnapshot();
 })
+
+// test("should render UserReview component without the props being passed" , ()=>{
+//     const wrapper = shallow(<UserReview />)
+//     expect(wrapper).toMatchSnapshot();
+// })
 
 

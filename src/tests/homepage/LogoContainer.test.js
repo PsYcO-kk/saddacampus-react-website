@@ -1,8 +1,8 @@
 import {shallow} from 'enzyme';
 import React from 'react';
-import LogoContainer from '../../components/homepage/LogoContainer.js';
+import LogoContainer from '../../components/homepage/LogoContainer';
 
-test("testing for Logo container page component" , ()=>{
+test("should render LogoContainer correctly" , ()=>{
     const wrapper = shallow(<LogoContainer />)
     expect(wrapper).toMatchSnapshot();
 })

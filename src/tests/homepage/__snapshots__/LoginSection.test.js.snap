@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`testing for Log in Section page component 1`] = `
+exports[`should render LoginSection correctly 1`] = `
 <section
   className="section-gap"
 >

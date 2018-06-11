@@ -31,11 +31,11 @@ export default class ProfileSettings extends React.Component {
 			token: sessionStorage.getItem('token')
 		}
 		createProfile(data)
-		.then((data) => {
-			if(data.success){
-				if(!(_.isEmpty(data.User))){
+		.then((response) => {
+			if(response.success){
+				if(!(_.isEmpty(response.User))){
 					// sessionStorage.setItem('user_exists', true);
-					sessionStorage.setItem('token', data.token);
+					sessionStorage.setItem('token', response.token);
 					this.setState(() => ({ error: '' }));
 					// redirect to the main page
 					console.log("redirect to the main page");

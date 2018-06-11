@@ -5,7 +5,7 @@ import faStar from '@fortawesome/fontawesome-free-solid/faStar';
 const UserReview = (props) => (
 	<div className="col-lg-4 col-md-6">
 		<div className="single-review">
-			<h4>{props.username}</h4>
+			<h4>{props.username ? props.username : 'Anonymous'}</h4>
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore.
 			</p>

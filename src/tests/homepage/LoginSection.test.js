@@ -1,15 +1,16 @@
 import {shallow} from 'enzyme';
 import React from 'react';
-import LoginSection from '../../components/homepage/LoginSection.js';
+import LoginSection from '../../components/homepage/LoginSection';
 
-test("testing for Log in Section page component" , ()=>{
+test("should render LoginSection correctly" , ()=>{
     const wrapper = shallow(<LoginSection />)
     expect(wrapper).toMatchSnapshot();
 })
 
-test("testing for Log in Section page change View function" , ()=>{
+test("should change state/view of LoginSection with provided values" , ()=>{
     const wrapper = shallow(<LoginSection />);
     const newState = {
+		loading: false,
         NumberForm: false,
         OtpForm: false,
         ProfileSettings: true,
@@ -17,21 +18,11 @@ test("testing for Log in Section page change View function" , ()=>{
         country_code : "",
         otp:"",
         message:""
-    }
-    const NumberFor = wrapper.find('NumberForm').prop('changeView')(newState);
+	}
+	const change = {
+		NumberForm: false,
+		ProfileSettings: true
+	}
+    wrapper.find('NumberForm').prop('changeState')(change);
     expect(wrapper.state()).toEqual(newState);
-   })
-
-   test("testing for Log in Section initial state" , ()=>{
-    const wrapper = shallow(<LoginSection />);
-    const InitialState = {
-        NumberForm: true,
-        OtpForm: false,
-        ProfileSettings: false,
-        number: '',
-        country_code: '',
-        otp: '',
-        message: ''
-    }
-   expect(wrapper.state()).toEqual(InitialState);
-   })
+})
