@@ -3,19 +3,19 @@ import React from 'react';
 const descriptionStyle = {
 	"fontWeight": "normal",
 	"marginTop": "3%"
-}
+};
 
 const linkDivStyle = {
 	"marginTop": "2%"
-}
+};
 
 const linkStyle = {
 	"cursor": "pointer"
-}
+};
 
 const imgStyle = {
 	"maxWidth": "40%"
-}
+};
 
 const GetAppSection = () => (
 	<section className="section-gap-half">

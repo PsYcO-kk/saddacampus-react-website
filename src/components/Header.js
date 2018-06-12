@@ -5,9 +5,9 @@ import { NavLink } from 'react-router-dom';
 export default class Header extends React.Component {
 	constructor(){
 		super();
-		this.state = { isOpen :false};
+		this.state = { isOpen: false };
 	}
-	toggle = ()=>{
+	toggle = () => {
 		this.setState({
 			isOpen: !this.state.isOpen
 		});

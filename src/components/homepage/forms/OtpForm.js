@@ -29,7 +29,7 @@ export default class OtpForm extends React.Component {
 			OtpForm: view,
 			ProfileSettings: !view,
 			otp: this.state.otp
-		}
+		};
 		this.props.changeState(newState);
     }
 

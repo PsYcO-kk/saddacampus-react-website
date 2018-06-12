@@ -12,7 +12,7 @@ export default class ProfileSettings extends React.Component {
             feedback : '',
 			error: '',
 			disableClick: true
-        }
+        };
     }
 
     validateUsername = () => {
@@ -29,7 +29,7 @@ export default class ProfileSettings extends React.Component {
             username : this.state.username,
 			profilepic : this.state.profilepic,
 			token: sessionStorage.getItem('token')
-		}
+		};
 		createProfile(data)
 		.then((response) => {
 			if(response.success){
@@ -41,11 +41,11 @@ export default class ProfileSettings extends React.Component {
 					console.log("redirect to the main page");
 				}
 				else{
-					this.setState(()=>({ disableClick: false, error :"Server error. Please try again..." }));
+					this.setState(()=>({ disableClick: false, error: "Server error. Please try again..." }));
 				}
 			}
 			else{
-			this.setState(()=>({ disableClick: false, error : response.message }));
+			this.setState(()=>({ disableClick: false, error: response.message }));
 			}
 		})
 		.catch((error) => {
@@ -71,7 +71,7 @@ export default class ProfileSettings extends React.Component {
 			})
 			.catch((error) => {
 				this.setState(() => ({ disableClick: true, error: error.message }));
-			})
+			});
         }
         else{
 			this.setState(() => ({ disableClick: true, feedback: 'Username must be within 5-25 characters.' }))

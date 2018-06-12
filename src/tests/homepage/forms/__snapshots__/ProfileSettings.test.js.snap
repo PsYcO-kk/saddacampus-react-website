@@ -31,8 +31,103 @@ exports[`should render ProfileSettings correctly 1`] = `
       value=""
     />
     <div
+      className=""
       id="feedback"
     />
+  </div>
+  <button
+    className="btn btn-success"
+    disabled={true}
+    type="submit"
+  >
+    Create Account
+  </button>
+</form>
+`;
+
+exports[`should set and render invalid-feedback when (username.length < 5) 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <div
+    className="form-group"
+  >
+    <label
+      htmlFor="avatar"
+    >
+      Upload an Avatar:
+    </label>
+    <input
+      className="form-control-file"
+      id="avatar"
+      type="file"
+    />
+  </div>
+  <div
+    className="form-group"
+  >
+    <input
+      className="form-control is-invalid"
+      id="username"
+      onChange={[Function]}
+      placeholder="Enter Username"
+      required={true}
+      type="text"
+      value="@5ec"
+    />
+    <div
+      className="invalid-feedback"
+      id="feedback"
+    >
+      Username must be within 5-25 characters.
+    </div>
+  </div>
+  <button
+    className="btn btn-success"
+    disabled={true}
+    type="submit"
+  >
+    Create Account
+  </button>
+</form>
+`;
+
+exports[`should set and render invalid-feedback when (username.length > 25) 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <div
+    className="form-group"
+  >
+    <label
+      htmlFor="avatar"
+    >
+      Upload an Avatar:
+    </label>
+    <input
+      className="form-control-file"
+      id="avatar"
+      type="file"
+    />
+  </div>
+  <div
+    className="form-group"
+  >
+    <input
+      className="form-control is-invalid"
+      id="username"
+      onChange={[Function]}
+      placeholder="Enter Username"
+      required={true}
+      type="text"
+      value="rjec y4 389ty94h eiuw390$R%$#@gjjg"
+    />
+    <div
+      className="invalid-feedback"
+      id="feedback"
+    >
+      Username must be within 5-25 characters.
+    </div>
   </div>
   <button
     className="btn btn-success"

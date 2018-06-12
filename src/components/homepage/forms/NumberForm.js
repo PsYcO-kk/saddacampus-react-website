@@ -32,7 +32,7 @@ export default class NumberForm extends React.Component {
 			number: this.state.number,
 			otp: '',
 			message: message
-		}
+		};
 		this.props.changeState(newState);
 	}
 
