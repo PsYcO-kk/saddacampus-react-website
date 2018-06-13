@@ -8,8 +8,8 @@ module.exports = {
     },
 	module: {
         rules: [{
-            loader: 'babel-loader',
             test: /\.js$/,
+            loader: 'babel-loader',
             include: path.resolve(__dirname, 'src')
         }, {
             test: /\.css$/,
