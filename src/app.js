@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
@@ -41,5 +41,20 @@ import './scripts/fontawesome-all.js';
 // import 'simple-line-icons/css/simple-line-icons.css';
 
 import LoginPage from './components/admin/LoginPage';
+import Dashboard from './components/admin/a';
 
-ReactDOM.render(<LoginPage />, document.getElementById('app'));
+const jsx = (
+    	<BrowserRouter>
+    		<div>
+    		
+                <Switch>
+                    <Route path="/login" component={LoginPage} exact={true} />
+                    <Route path="/Dashboard" component={Dashboard} />
+                </Switch>
+    			
+            </div>
+    	</BrowserRouter>
+    );
+    
+
+ReactDOM.render(jsx , document.getElementById('app'));
