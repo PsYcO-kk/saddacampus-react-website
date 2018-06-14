@@ -7,7 +7,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 // import HomePage from './components/HomePage';
 // import AboutUsPage from './components/AboutUsPage';
 // import PrivacyPolicyPage from './components/PrivacyPolicyPage';
-// import NotFoundPage from './components/NotFoundPage';
+import NotFoundPage from './components/NotFoundPage';
 
 // import './styles/bootstrap.min.css';
 // import './styles/poppins.css';
@@ -31,30 +31,26 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 // ReactDOM.render(jsx, document.getElementById('app'));
 
-import '@coreui/coreui/dist/js/coreui-utilities.min.js';
-// import '@coreui/coreui/dist/js/coreui.min.js';
-import '@coreui/coreui/dist/css/bootstrap.min.css';
-import '@coreui/coreui/dist/css/coreui-standalone.min.css';
-import '@coreui/coreui/dist/css/coreui.min.css';
-// import 'flag-icon-css/css/flag-icon.min.css';
-import './scripts/fontawesome-all.js';
-// import 'simple-line-icons/css/simple-line-icons.css';
+import '@coreui/icons/css/coreui-icons.min.css';
+import 'flag-icon-css/css/flag-icon.min.css';
+import 'font-awesome/css/font-awesome.min.css';
+import 'simple-line-icons/css/simple-line-icons.css';
+import './styles/admin/style.css';
 
-import LoginPage from './components/admin/LoginPage';
-import Dashboard from './components/admin/a';
+import DefaultLayout from './components/admin/containers/DefaultLayout/DefaultLayout';
+import Login from './components/admin/views/Pages/Login';
+import Register from './components/admin/views/Pages/Register';
+// import Page404 from './components/admin/views/Pages/Page404';
 
 const jsx = (
-    	<BrowserRouter>
-    		<div>
-    		
-                <Switch>
-                    <Route path="/login" component={LoginPage} exact={true} />
-                    <Route path="/Dashboard" component={Dashboard} />
-                </Switch>
-    			
-            </div>
-    	</BrowserRouter>
-    );
-    
+	<BrowserRouter>
+		<Switch>
+			<Route exact path="/login" name="Login Page" component={Login} />
+			<Route exact path="/register" name="Register Page" component={Register} />
+			<Route path="/" name="Home" component={DefaultLayout} />
+			{/*<Route name="Page 404" component={Page404} />*/}
+		</Switch>
+	</BrowserRouter>
+);
 
 ReactDOM.render(jsx , document.getElementById('app'));
