@@ -2,17 +2,17 @@ import React, { Fragment } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-// import Header from './components/Header';
-// import Footer from './components/Footer';
-// import HomePage from './components/HomePage';
-// import AboutUsPage from './components/AboutUsPage';
-// import PrivacyPolicyPage from './components/PrivacyPolicyPage';
-import NotFoundPage from './components/NotFoundPage';
+// import Header from './public/components/Header';
+// import Footer from './public/components/Footer';
+// import HomePage from './public/components/HomePage';
+// import AboutUsPage from './public/components/AboutUsPage';
+// import PrivacyPolicyPage from './public/components/PrivacyPolicyPage';
+// import NotFoundPage from './public/components/NotFoundPage';
 
-// import './styles/bootstrap.min.css';
-// import './styles/poppins.css';
-// import './styles/index.css';
-// import './styles/main.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+// import './public/styles/poppins.css';
+// import './public/styles/index.css';
+// import './public/styles/main.css';
 
 // const jsx = (
 // 	<BrowserRouter>
@@ -35,12 +35,12 @@ import '@coreui/icons/css/coreui-icons.min.css';
 import 'flag-icon-css/css/flag-icon.min.css';
 import 'font-awesome/css/font-awesome.min.css';
 import 'simple-line-icons/css/simple-line-icons.css';
-import './styles/admin/style.css';
+import './admin/styles/style.css';
 
-import DefaultLayout from './components/admin/containers/DefaultLayout/DefaultLayout';
-import Login from './components/admin/views/Pages/Login';
-import Register from './components/admin/views/Pages/Register';
-// import Page404 from './components/admin/views/Pages/Page404';
+import DefaultLayout from './admin/containers/DefaultLayout';
+import Login from './admin/views/Pages/Login';
+import Register from './admin/views/Pages/Register';
+import Page404 from './admin/views/Pages/Page404';
 
 const jsx = (
 	<BrowserRouter>
@@ -48,7 +48,7 @@ const jsx = (
 			<Route exact path="/login" name="Login Page" component={Login} />
 			<Route exact path="/register" name="Register Page" component={Register} />
 			<Route path="/" name="Home" component={DefaultLayout} />
-			{/*<Route name="Page 404" component={Page404} />*/}
+			<Route name="Page 404" component={Page404} />
 		</Switch>
 	</BrowserRouter>
 );

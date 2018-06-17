@@ -51,6 +51,7 @@
     "reactstrap": "^6.1.0",
     "redux": "^4.0.0",
     "simple-line-icons": "^2.4.1",
+    "typed.js": "^2.0.8",
     "underscore": "^1.9.1",
     "webpack": "^3.1.0",
     "webpack-dev-server": "^2.5.1"
