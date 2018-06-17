@@ -1,12 +1,14 @@
 import React from 'react';
-import Loadable from 'react-loadable';
+// import Loadable from 'react-loadable';
 
 import DefaultLayout from './containers/DefaultLayout';
+import Dashboard from './views/Dashboard';
+import Administrators from './views/Pages/Administrators';
 import CreateAdmin from './views/Forms/CreateAdmin';
 
-const Loading = () => (
-	<h5>Loading...</h5>
-);
+// const Loading = () => (
+// 	<h5>Loading...</h5>
+// );
 
 // const Breadcrumbs = Loadable({
 // 	loader: () => import('./views/Base/Breadcrumbs'),
@@ -118,10 +120,10 @@ const Loading = () => (
 // 	loading: Loading,
 // });
 
-const Dashboard = Loadable({
-	loader: () => import('./views/Dashboard'),
-	loading: Loading,
-});
+// const Dashboard = Loadable({
+// 	loader: () => import('./views/Dashboard'),
+// 	loading: Loading,
+// });
 
 // const CoreUIIcons = Loadable({
 // 	loader: () => import('./views/Icons/CoreUIIcons'),
@@ -178,8 +180,8 @@ const Dashboard = Loadable({
 const routes = [
 	{ path: '/', exact: true, name: 'Home', component: DefaultLayout },
 	{ path: '/dashboard', name: 'Dashboard', component: Dashboard },
-	{ path: '/create-admin', name: 'Create Admin', component: CreateAdmin },
-	// { path: '/theme/colors', name: 'Colors', component: Colors },
+	{ path: '/administrators', exact: true, name: 'Administrators', component: Administrators },
+	{ path: '/administrators/create', name: 'Create Admin', component: CreateAdmin },
 	// { path: '/theme/typography', name: 'Typography', component: Typography },
 	// { path: '/base', exact: true, name: 'Base', component: Cards },
 	// { path: '/base/cards', name: 'Cards', component: Cards },

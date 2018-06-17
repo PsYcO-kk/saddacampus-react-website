@@ -32,16 +32,21 @@ export default {
 		// 		attributes: {},
 		// 	},
 		// },
-		// {
-		// 	name: 'Base',
-		// 	url: '/base',
-		// 	icon: 'icon-puzzle',
-		// 	children: [
-		// 		{
-		// 			name: 'Breadcrumbs',
-		// 			url: '/base/breadcrumbs',
-		// 			icon: 'icon-puzzle',
-		// 		},
+		{
+			name: 'Administrators',
+			url: '/administrators',
+			icon: 'icon-people',
+			children: [
+				// {
+				// 	name: 'Show All',
+				// 	url: '/administrators',
+				// 	icon: 'icon-list',
+				// },
+				{
+					name: 'Create Admin',
+					url: '/administrators/create',
+					icon: 'icon-user-follow',
+				},
 		// 		{
 		// 			name: 'Cards',
 		// 			url: '/base/cards',
@@ -117,8 +122,8 @@ export default {
 		// 			url: '/base/tooltips',
 		// 			icon: 'icon-puzzle',
 		// 		},
-		// 	],
-		// },
+			],
+		},
 		// {
 		// 	name: 'Buttons',
 		// 	url: '/buttons',

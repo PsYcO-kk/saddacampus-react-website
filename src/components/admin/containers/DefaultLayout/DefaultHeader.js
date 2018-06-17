@@ -22,8 +22,8 @@ class DefaultHeader extends Component {
 			<React.Fragment>
 				<AppSidebarToggler className="d-lg-none" display="md" mobile />
 				<AppNavbarBrand
-					full={{ src: logo, width: 89, alt: 'Saddacampus Logo' }}
-					minimized={{ src: logo, width: 30, alt: 'Saddacampus Logo' }}
+					full={{ src: logo, width: 89, alt: 'Logo' }}
+					minimized={{ src: logo, width: 30, alt: 'Logo' }}
 				/>
 				<AppSidebarToggler className="d-md-down-none" display="lg" />
 
@@ -38,7 +38,7 @@ class DefaultHeader extends Component {
 						<NavLink to="/admins" activeClassName="active" className="nav-link">Administrators</NavLink>
 					</NavItem>*/}
 					<NavItem className="px-3">
-						<NavLink to="/create-admin" activeClassName="active" className="nav-link">Craete Admin</NavLink>
+						<NavLink to="/administrators" activeClassName="active" className="nav-link">Administrators</NavLink>
 					</NavItem>
 				</Nav>
 				<Nav className="ml-auto" navbar>
