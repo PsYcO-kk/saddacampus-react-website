@@ -1,4 +1,4 @@
-export default {
+export const superNav = {
 	items: [
 		{
 			name: 'Dashboard',
@@ -21,6 +21,16 @@ export default {
 					icon: 'icon-user-follow',
 				},
 			],
+		},
+	],
+};
+
+export const maintainerNav = {
+	items: [
+		{
+			name: 'Dashboard',
+			url: '/dashboard',
+			icon: 'icon-speedometer',
 		},
 	],
 };

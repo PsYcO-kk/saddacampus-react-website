@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Badge, DropdownItem, DropdownMenu, DropdownToggle, Nav, NavItem } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
 import { AppAsideToggler, AppHeaderDropdown, AppNavbarBrand, AppSidebarToggler } from '@coreui/react';
 import logo from '../../assets/img/brand/logo.svg';
@@ -13,6 +14,28 @@ const propTypes = {
 const defaultProps = {};
 
 class DefaultHeader extends Component {
+	controlledNav = () => {
+		if(this.props.role == 'super' || this.props.role == 'core')
+			return (
+				<Nav className="d-md-down-none" navbar>
+					<NavItem className="px-3">
+						<NavLink to="/dashboard" activeClassName="active" className="nav-link">Dashboard</NavLink>
+					</NavItem>
+					<NavItem className="px-3">
+						<NavLink to="/administrators" activeClassName="active" className="nav-link">Administrators</NavLink>
+					</NavItem>
+				</Nav>
+			);
+		else
+			return (
+				<Nav className="d-md-down-none" navbar>
+					<NavItem className="px-3">
+						<NavLink to="/dashboard" activeClassName="active" className="nav-link">Dashboard</NavLink>
+					</NavItem>
+				</Nav>
+			);
+	}
+
 	render() {
 
 		// eslint-disable-next-line
@@ -27,20 +50,7 @@ class DefaultHeader extends Component {
 				/>
 				<AppSidebarToggler className="d-md-down-none" display="lg" />
 
-				<Nav className="d-md-down-none" navbar>
-					<NavItem className="px-3">
-						<NavLink to="/dashboard" activeClassName="active" className="nav-link">Dashboard</NavLink>
-					</NavItem>
-					{/*<NavItem className="px-3">
-						<NavLink to="/users" activeClassName="active" className="nav-link">Users</NavLink>
-					</NavItem>
-					<NavItem className="px-3">
-						<NavLink to="/admins" activeClassName="active" className="nav-link">Administrators</NavLink>
-					</NavItem>*/}
-					<NavItem className="px-3">
-						<NavLink to="/administrators" activeClassName="active" className="nav-link">Administrators</NavLink>
-					</NavItem>
-				</Nav>
+				<this.controlledNav />
 				<Nav className="ml-auto" navbar>
 					{/*<NavItem className="d-md-down-none">
 						<NavLink to="#" activeClassName="active" className="nav-link"><i className="icon-bell"></i><Badge pill color="danger">5</Badge></NavLink>
@@ -76,4 +86,10 @@ class DefaultHeader extends Component {
 DefaultHeader.propTypes = propTypes;
 DefaultHeader.defaultProps = defaultProps;
 
-export default DefaultHeader;
+const mapStateToProps = (state) => {
+	return {
+		role: state.role
+	};
+};
+
+export default connect(mapStateToProps)(DefaultHeader);

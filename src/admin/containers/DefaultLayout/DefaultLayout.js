@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
 import { Container } from 'reactstrap';
+import { connect } from 'react-redux';
 
 import {
   AppAside,
@@ -15,26 +16,28 @@ import {
   AppSidebarNav,
 } from '@coreui/react';
 // sidebar nav config
-import navigation from '../../_nav';
+import { superNav, maintainerNav } from '../../_nav';
 // routes config
-import routes from '../../routes';
+import { superRoutes, maintainerRoutes } from '../../routes';
 // import DefaultAside from './DefaultAside';
 import DefaultFooter from './DefaultFooter';
 import DefaultHeader from './DefaultHeader';
 
 class DefaultLayout extends Component {
-	constructor(props){
-		super(props);
-		this.state = {
-			role: (sessionStorage.getItem('admin-role') ? sessionStorage.getItem('admin-role') : '')
-		}
-	}
-
 	componentDidMount(){
 		if(!sessionStorage.getItem('admin-token')){
 			this.props.history.push("/login");
 		}
 	}
+
+	controlledSidebarNav = () => {
+		if(this.props.role == 'super' || this.props.role == 'core')
+			return <AppSidebarNav navConfig={superNav} {...this.props} />;
+		else
+			return <AppSidebarNav navConfig={maintainerNav} {...this.props} />;
+	}
+
+	controlledRoutes = (this.props.role == 'super' || this.props.role == 'core') ? superRoutes : maintainerRoutes
 
 	render() {
 		return (
@@ -46,15 +49,15 @@ class DefaultLayout extends Component {
 				<AppSidebar fixed display="lg">
 					<AppSidebarHeader />
 					<AppSidebarForm />
-					<AppSidebarNav navConfig={navigation} {...this.props} />
+					<this.controlledSidebarNav />
 					<AppSidebarFooter />
 					<AppSidebarMinimizer />
 				</AppSidebar>
 				<main className="main">
-					<AppBreadcrumb appRoutes={routes}/>
+					<AppBreadcrumb appRoutes={this.controlledRoutes}/>
 					<Container fluid>
 						<Switch>
-							{routes.map((route, idx) => {
+							{this.controlledRoutes.map((route, idx) => {
 								return route.component ? (<Route key={idx} path={route.path} exact={route.exact} name={route.name} render={props => (
 									<route.component {...props} />
 								)} />)
@@ -77,4 +80,10 @@ class DefaultLayout extends Component {
 	}
 }
 
-export default DefaultLayout;
+const mapStateToProps = (state) => {
+	return {
+		role: state.role
+	};
+};
+
+export default connect(mapStateToProps)(DefaultLayout);

@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { Provider } from 'react-redux';
 
 // import Header from './public/components/Header';
 // import Footer from './public/components/Footer';
@@ -42,15 +43,21 @@ import Login from './admin/views/Pages/Login';
 import Register from './admin/views/Pages/Register';
 import Page404 from './admin/views/Pages/Page404';
 
+import configureStore from './admin/store/configureStore';
+
+const store = configureStore();
+
 const jsx = (
-	<BrowserRouter>
-		<Switch>
-			<Route exact path="/login" name="Login Page" component={Login} />
-			<Route exact path="/register" name="Register Page" component={Register} />
-			<Route path="/" name="Home" component={DefaultLayout} />
-			<Route name="Page 404" component={Page404} />
-		</Switch>
-	</BrowserRouter>
+	<Provider store={store}>
+		<BrowserRouter>
+			<Switch>
+				<Route exact path="/login" name="Login Page" component={Login} />
+				<Route exact path="/register" name="Register Page" component={Register} />
+				<Route path="/" name="Home" component={DefaultLayout} />
+				<Route name="Page 404" component={Page404} />
+			</Switch>
+		</BrowserRouter>
+	</Provider>
 );
 
 ReactDOM.render(jsx , document.getElementById('app'));
