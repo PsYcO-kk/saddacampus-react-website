@@ -1,5 +1,5 @@
 import React from "react";
-import getOTP from '../../APIcalls/getOTP';
+import getOTP from '../../../APIcalls/getOTP';
 
 export default class NumberForm extends React.Component {
 	constructor(props){

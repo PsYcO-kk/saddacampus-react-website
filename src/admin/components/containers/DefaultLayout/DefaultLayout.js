@@ -82,7 +82,7 @@ class DefaultLayout extends Component {
 
 const mapStateToProps = (state) => {
 	return {
-		role: state.role
+		role: state.role.type
 	};
 };
 

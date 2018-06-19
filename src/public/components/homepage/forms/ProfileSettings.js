@@ -1,7 +1,7 @@
 import React from "react";
 import _ from 'underscore';
-import createProfile from '../../APIcalls/createProfile';
-import checkUsernameAvailability from '../../APIcalls/checkUsernameAvailability';
+import createProfile from '../../../APIcalls/createProfile';
+import checkUsernameAvailability from '../../../APIcalls/checkUsernameAvailability';
 
 export default class ProfileSettings extends React.Component {
     constructor(props){

@@ -1,15 +1,11 @@
-import { createStore } from 'redux';
-
-const roleReducer = (state = { role: sessionStorage.getItem('admin-role') }, action) => {
-	switch(action.type){
-		default:
-			return state;
-	}
-}
+import { createStore, combineReducers } from 'redux';
+import roleReducer from '../reducers/roleReducer';
 
 export default() => {
 	const store = createStore(
-		roleReducer,
+		combineReducers({
+			role: roleReducer
+		}),
 		window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 	);
 	return store;

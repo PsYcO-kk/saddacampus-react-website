@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { Badge, DropdownItem, DropdownMenu, DropdownToggle, Nav, NavItem } from 'reactstrap';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import { AppAsideToggler, AppHeaderDropdown, AppNavbarBrand, AppSidebarToggler } from '@coreui/react';
-import logo from '../../assets/img/brand/logo.svg';
+import logo from '../../../assets/img/brand/logo.svg';
 
 const propTypes = {
 	children: PropTypes.node,
@@ -72,7 +72,7 @@ class DefaultHeader extends Component {
 							<DropdownItem><i className="fa fa-file"></i> Projects<Badge color="primary">42</Badge></DropdownItem>
 							<DropdownItem divider />
 							<DropdownItem><i className="fa fa-shield"></i> Lock Account</DropdownItem>
-							<DropdownItem><i className="fa fa-lock"></i> Logout</DropdownItem>
+							<Link to="/logout" className="nav-link"><DropdownItem><i className="fa fa-lock"></i> Logout</DropdownItem></Link>
 						</DropdownMenu>
 					</AppHeaderDropdown>
 				</Nav>
@@ -88,7 +88,7 @@ DefaultHeader.defaultProps = defaultProps;
 
 const mapStateToProps = (state) => {
 	return {
-		role: state.role
+		role: state.role.type
 	};
 };
 

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { Button, Card, CardBody, CardGroup, Col, Container, Input, InputGroup, InputGroupAddon, InputGroupText, Row } from 'reactstrap';
 import _ from 'underscore';
 import adminLogin from '../../../APIcalls/adminLogin';
@@ -34,9 +35,7 @@ class Login extends Component {
 					this.setState(()=>({ error: '' }));
 					sessionStorage.setItem('admin-token', response.token);
 					sessionStorage.setItem('admin-role', response.Admin.role);
-					// sessionStorage.setItem('admin-id', response.Admin.admin_id);
-					// sessionStorage.setItem('admin-username', response.Admin.username);
-					// sessionStorage.setItem('admin-email', response.Admin.email);
+					this.props.updateRole();
 					this.props.history.push("/dashboard");
 				}
 				else{
@@ -86,7 +85,7 @@ class Login extends Component {
 									<Button type="submit" color="primary" className="px-4">Login</Button>
 								</Col>
 								<Col xs="6" className="text-right">
-									<Button color="link" className="px-0">Forgot password?</Button>
+									<Button type="button" color="link" className="px-0">Forgot password?</Button>
 								</Col>
 								</Row>
 							</form>
@@ -111,4 +110,8 @@ class Login extends Component {
 	}
 }
 
-export default Login;
+const mapDispatchToProps = (dispatch) => ({
+	updateRole: () => dispatch({ type: 'UPDATE_ROLE' })
+});
+
+export default connect(undefined, mapDispatchToProps)(Login);

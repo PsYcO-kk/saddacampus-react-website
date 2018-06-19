@@ -20,7 +20,7 @@ import {
   Row,
   Table,
 } from 'reactstrap';
-import Widget03 from '../../views/Widgets/Widget03';
+import Widget03 from '../Widgets/Widget03';
 import { CustomTooltips } from '@coreui/coreui-plugin-chartjs-custom-tooltips';
 import { getStyle, hexToRgba } from '@coreui/coreui/dist/js/coreui-utilities';
 import { connect } from 'react-redux';
@@ -1171,7 +1171,7 @@ class Dashboard extends Component {
 
 const mapStateToProps = (state) => {
 	return {
-		role: state.role
+		role: state.role.type
 	};
 };
 
