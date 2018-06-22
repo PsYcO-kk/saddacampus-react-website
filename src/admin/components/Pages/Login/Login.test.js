@@ -1,9 +1,19 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import Login from './Login';
+import {shallow} from 'enzyme';
+import { Login } from './Login';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<Login />, div);
-  ReactDOM.unmountComponentAtNode(div);
+let wrapper;
+
+beforeEach(() => {
+	wrapper = shallow(<Login />);
+})
+
+test('should render Login component without crashing', () => {
+	expect(wrapper).toMatchSnapshot();
+});
+
+test('should disable error when username or password is changed', () => {
+	wrapper.setState({ error: 'xyz' });
+	wrapper.find('Input[type="text"]').simulate('change');
+	expect(wrapper.state('error')).toBe('');
 });

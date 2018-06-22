@@ -1,9 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import DefaultHeader from '../DefaultHeader';
+import { shallow } from 'enzyme';
+import { DefaultHeader } from '../DefaultHeader';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<DefaultHeader />, div);
-  ReactDOM.unmountComponentAtNode(div);
+test('should render DefaultHeader component without crashing', () => {
+	const wrapper = shallow(<DefaultHeader />);
+	expect(wrapper).toMatchSnapshot();
 });

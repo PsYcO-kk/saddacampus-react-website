@@ -1,6 +1,6 @@
 import React from "react";
-import getOTP from '../../../APIcalls/getOTP';
-import verifyNumber from '../../../APIcalls/verifyNumber';
+import getOTP from '../../../requests/getOTP';
+import verifyNumber from '../../../requests/verifyNumber';
 
 export default class OtpForm extends React.Component {
     constructor(props){

@@ -6,6 +6,11 @@ exports[`testing for App Section page component 1`] = `
 >
   <div
     className="container jumbotron"
+    style={
+      Object {
+        "borderRadius": "0",
+      }
+    }
   >
     <div
       className="row align-items-center"

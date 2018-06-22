@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Button, Card, CardBody, CardGroup, Col, Container, Input, InputGroup, InputGroupAddon, InputGroupText, Row } from 'reactstrap';
 import _ from 'underscore';
-import adminLogin from '../../../APIcalls/adminLogin';
+import adminLogin from '../../../requests/adminLogin';
 
-class Login extends Component {
+export class Login extends Component {
 	constructor(){
 		super();
 		this.state = {

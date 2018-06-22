@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Administrators component correctly 1`] = `
+<div>
+  <Link
+    className="nav-link"
+    replace={false}
+    to="/administrators/create"
+  >
+    <Button
+      block={true}
+      color="primary"
+      size="lg"
+      tag="button"
+    >
+      Create New Administrator
+    </Button>
+  </Link>
+  <br />
+  <Table
+    responsiveTag="div"
+    striped={true}
+    tag="table"
+  >
+    <thead>
+      <tr>
+        <th>
+          #
+        </th>
+        <th>
+          Admin ID
+        </th>
+        <th>
+          Username
+        </th>
+        <th>
+          Password
+        </th>
+        <th>
+          Email
+        </th>
+        <th>
+          Role
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th
+          scope="row"
+        >
+          1
+        </th>
+        <td>
+          sadd4kfue954ji4nk014
+        </td>
+        <td>
+          saddacampussuper
+        </td>
+        <td>
+          Campusjoy69
+        </td>
+        <td>
+          saddacampus@gmail.com
+        </td>
+        <td>
+          Super
+        </td>
+      </tr>
+    </tbody>
+  </Table>
+</div>
+`;
