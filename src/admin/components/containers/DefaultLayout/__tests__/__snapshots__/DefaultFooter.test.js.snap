@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render DefaultFooter component without crashing 1`] = `
+<React.Fragment>
+  <span>
+    <a
+      href="#"
+    >
+      Saddacampus
+    </a>
+     ©
+  </span>
+  <span
+    className="ml-auto"
+  >
+    Powered by 
+    <a
+      href="https://coreui.io/react"
+    >
+      CoreUI for React
+    </a>
+  </span>
+</React.Fragment>
+`;
+
+exports[`should render DefaultFooter correctly 1`] = `
+<React.Fragment>
+  <span>
+    <a
+      href="#"
+    >
+      Saddacampus
+    </a>
+     ©
+  </span>
+  <span
+    className="ml-auto"
+  >
+    Powered by 
+    <a
+      href="https://coreui.io/react"
+    >
+      CoreUI for React
+    </a>
+  </span>
+</React.Fragment>
+`;

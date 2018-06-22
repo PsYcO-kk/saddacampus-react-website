@@ -20,15 +20,17 @@ exports[`should render LoginSection correctly 1`] = `
             className="display-4"
           >
             Making college life 
-            <span
-              className="wrap typewrite"
-              data-period="2000"
-              data-type="[\\"easier...\\", \\"smarter...\\", \\"better...\\"]"
-              style={
-                Object {
-                  "color": "#e8c900",
-                }
+            <Typewriter
+              backSpeed={50}
+              color="#e8c900"
+              strings={
+                Array [
+                  "easier...",
+                  "smarter...",
+                  "better...",
+                ]
               }
+              typeSpeed={130}
             />
           </h1>
           <br />

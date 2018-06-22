@@ -1,9 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { shallow } from 'enzyme';
 import DefaultFooter from '../DefaultFooter';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<DefaultFooter />, div);
-  ReactDOM.unmountComponentAtNode(div);
+test('should render DefaultFooter component without crashing', () => {
+	const wrapper = shallow(<DefaultFooter />);
+	expect(wrapper).toMatchSnapshot();
 });

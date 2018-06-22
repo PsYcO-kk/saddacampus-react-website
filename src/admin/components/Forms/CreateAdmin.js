@@ -12,7 +12,7 @@ import {
 	Input,
 	Button
 } from 'reactstrap';
-import createAdmin from '../../APIcalls/createAdmin';
+import createAdmin from '../../requests/createAdmin';
 
 export default class CreateAdmin extends React.Component{
 	constructor(props){

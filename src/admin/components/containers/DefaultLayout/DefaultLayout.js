@@ -23,7 +23,7 @@ import { superRoutes, maintainerRoutes } from '../../routes';
 import DefaultFooter from './DefaultFooter';
 import DefaultHeader from './DefaultHeader';
 
-class DefaultLayout extends Component {
+export class DefaultLayout extends Component {
 	componentDidMount(){
 		if(!sessionStorage.getItem('admin-token')){
 			this.props.history.push("/login");

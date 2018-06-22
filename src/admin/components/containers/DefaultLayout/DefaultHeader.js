@@ -13,7 +13,7 @@ const propTypes = {
 
 const defaultProps = {};
 
-class DefaultHeader extends Component {
+export class DefaultHeader extends Component {
 	controlledNav = () => {
 		if(this.props.role == 'super' || this.props.role == 'core')
 			return (
