@@ -1,7 +1,9 @@
+import baseURL from '../../baseURL';
+import { VERIFY_NUMBER_URL } from '../config';
 
 const verifyNumber = (data) => {
 
-	const url = 'http://127.0.0.1:3000/v1/membership/auth';
+	const url = baseURL + VERIFY_NUMBER_URL;
 
 	return fetch(url, {
 		body: JSON.stringify(data),

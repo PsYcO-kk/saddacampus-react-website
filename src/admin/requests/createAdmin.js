@@ -1,7 +1,9 @@
+import baseURL from '../../baseURL';
+import { CREATE_ADMIN_URL } from '../config';
 
 const createAdmin = ({ username, password, email, role, admin_token }) => {
 
-	const url = 'http://127.0.0.1:3000/v1/membership/admin/create';
+	const url = baseURL + CREATE_ADMIN_URL;
 
 	return fetch(url, {
 		body: JSON.stringify({ username, password, email, role }),

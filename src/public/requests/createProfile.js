@@ -1,7 +1,9 @@
+import baseURL from '../../baseURL';
+import { CREATE_PROFILE_URL } from '../config';
 
 const createProfile = ({ country_code, number, username, profilepic, token }) => {
 
-	const url = 'http://127.0.0.1:3000/v1/membership/create';
+	const url = baseURL + CREATE_PROFILE_URL;
 
 	return fetch(url, {
 		body: JSON.stringify({ country_code, number, username, profilepic }),

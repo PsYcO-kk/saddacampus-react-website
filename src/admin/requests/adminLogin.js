@@ -1,7 +1,9 @@
+import baseURL from '../../baseURL';
+import { ADMIN_AUTH_URL } from '../config';
 
 const adminLogin = (data) => {
 
-	const url = 'http://127.0.0.1:3000/v1/membership/admin/auth';
+	const url = baseURL + ADMIN_AUTH_URL;
 
 	return fetch(url, {
 		body: JSON.stringify(data),
