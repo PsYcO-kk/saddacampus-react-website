@@ -14,7 +14,7 @@ const Card = (props)=>(
     <h5 className={"card-title "+ ( props.open?"card-open":"card-close")}  title={props.open?"Click to order":"Sorry restraunt is closed"} style={Heading} >{props.name}</h5>
     <span className="subHeading" >BurgerWings</span>
     <div className="rating"><img src="/assets/images/ic_star_24px.png" className="starImage" /> <span className="ratingText"> 4.5</span></div>
-    <span className="InfoPart">Min Order-: 200 &nbsp; &nbsp; &nbsp; <img src="/assets/images/dot.jpeg" className="dot" /> &nbsp; &nbsp; &nbsp; Free delivery</span>
+    <span className="InfoPart">Min Order-: 200  <img src="/assets/images/dot.jpeg" className="dot" />  Free delivery</span>
   </div>
    </div>
 )

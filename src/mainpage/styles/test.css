@@ -114,6 +114,7 @@ cursor: not-allowed
 }
 .dot{
     width: 4px;
+    margin-left: 45px
 }
 
 @media screen and (max-width: 1199px) and (min-width : 657px) {
