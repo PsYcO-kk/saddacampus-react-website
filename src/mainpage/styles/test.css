@@ -1,0 +1,159 @@
+
+li {
+    list-style-type: none
+}
+.card {
+    width : 250px;;
+    float : left;
+    padding : 7.5px;
+    margin  : 7.5px;
+    border : 0
+}
+.card:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 0px
+}
+
+.card-open:hover{
+cursor: pointer;
+}
+.card-close:hover{
+cursor: not-allowed    
+}
+
+.card-title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+.card-body {
+    padding-top : 5px;
+    padding-left : 5px;
+    padding-bottom  : 5px
+}
+.rating{
+    position: relative;
+    bottom: 8px;
+}
+.ratingText{
+    opacity: .8;
+    position: relative;
+    left:2px;
+    bottom: 1px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px
+}
+.InfoPart{
+    font-size: 12px;
+    position: relative;
+    bottom: 12px;
+    opacity: .5;
+    font-family: 'Roboto', sans-serif;
+}
+.starImage{
+    width: 13px;
+    position: relative;
+    bottom: 3px;
+}
+.subHeading{
+    font-size: 12px;
+    position: relative;
+    bottom : 8px;
+    left: 1px;
+    font-family: 'Roboto', sans-serif;
+    opacity: .7;
+}
+.Heading{
+    padding-top : 100px;
+    position : relative;
+    left : 15px
+}
+.collegeName{
+    font-weight: 500;
+    transform:scaleY(1.3);
+    letter-spacing: 1px;
+    width:100%
+}
+#hr{
+    position: relative;
+    bottom: 14px;
+    background-color: #707070;
+    margin-left: 0px;
+    width: 150px
+ 
+}
+.Filters{
+    position: relative;
+    bottom: 15px;
+    font-size: 20px;
+}
+.buttongroup{
+    bottom: 2px;
+    left: 10px;
+}
+.dropdownArrow{
+    padding-left: 0px;
+    position: relative;
+    top: 1px;
+ }
+ .divider{
+    width: 60%;
+    border-color: #707070;
+    margin-left: 35px;
+ }
+.dropdownItems{
+    color: black
+}
+.dropdownItems:hover{
+    color: #707070;
+}
+.settingIcon{
+    width: 18px;
+}
+.logoName{
+    font-family: 'Roboto', sans-serif;
+}
+.dot{
+    width: 4px;
+}
+
+@media screen and (max-width: 1199px) and (min-width : 657px) {
+    .row{
+        padding-left: 80px
+    }
+}
+@media screen and (max-width: 658px) and (min-width : 612px) {
+    .row{
+        padding-left: 35px
+    }
+}
+@media screen and (max-width: 576px) and (min-width : 490px) {
+    .row{
+        padding-left: 130px
+    }
+}
+@media screen and (max-width: 490px) and (min-width : 440px) {
+    .row{
+        padding-left: 80px
+    }
+}
+@media screen and (max-width: 440px) and (min-width : 370px) {
+    .row{
+        padding-left: 65px
+    }
+}
+@media screen and (max-width:370px) {
+    .row{
+        padding-left: 25px
+    }
+}
+@media (max-width: 767px){
+    .container {
+        max-width: 740px;
+    }
+}
+@media screen and (max-width:643px) {
+    .Heading{
+      padding-top: 140px
+    }
+}
+  
