@@ -22,11 +22,15 @@ var styleSetting = {
     "backgroundColor" : "white" ,
     "border" : "none",
     "color": "black",
-    "boxShadow"  :"none"
+	"boxShadow"  :"none",
+	"marginTop" : "8px"
 }
 var positionSettings = {
 	"position":"relative",
 	"bottom":"4px"
+}
+var dropdownBox = {
+	"borderRadius"  : "0px"
 }
 export default class Header extends React.Component {
 	constructor(){
@@ -63,7 +67,7 @@ export default class Header extends React.Component {
 									<DropdownToggle style={styleSetting} >
 									<img src="/assets/images/icon_setting.png" className="settingIcon" />
 									</DropdownToggle>
-									<DropdownMenu>
+									<DropdownMenu style={dropdownBox} >
 										<DropdownItem >Edit Profile</DropdownItem>
 										<DropdownItem >My Orders</DropdownItem>
 										<DropdownItem divider className="divider"  ></DropdownItem>

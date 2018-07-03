@@ -1,15 +1,11 @@
 import React from "react";
 
-var Image = {
-    "borderRadius" : "0",
-    "height" : "150px"
-}
 var Heading = {
     "marginBottom" : "0px"
 }
 const Card = (props)=>(
     <div className="card">
-    <img className="card-img-top" src={props.link} alt="Card image cap" style={Image} />
+    <img className="card-img-top" src={props.link} alt="Card image cap"/>
     <div className="card-body" >
     <h5 className={"card-title "+ ( props.open?"card-open":"card-close")}  title={props.open?"Click to order":"Sorry restraunt is closed"} style={Heading} >{props.name}</h5>
     <span className="subHeading" >BurgerWings</span>

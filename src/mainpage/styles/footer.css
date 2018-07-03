@@ -13,12 +13,14 @@
 }
 .detailsRow{
     padding-top: 35px;
+    margin-top: 20px
 }
 .links {
     color: #707070
 }
 .footer{
-    margin-bottom: 50px
+    margin-bottom: 50px;
+    margin-top: 30px
 }
 .motto{
     font-weight: 450;
@@ -29,8 +31,8 @@
     width: 30%;
     background-color: #707070;
     height: 1.5px;
+    margin-bottom: 30px;
 }
-
 @media screen and (min-width : 1200px) {
     .motto{
         padding-top: 30px

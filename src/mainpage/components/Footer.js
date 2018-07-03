@@ -23,7 +23,7 @@ const contentStyle = {
 
 const Footer = () => (
 	<footer className="footer">
-		<div className="container">
+		<div className="container parent ">
         <hr className="hr" />
 			<div className="row">
                 <div className="col-md-2">
