@@ -2,7 +2,7 @@ import React from "react";
 
 var Image = {
     "borderRadius" : "0",
-    "height" : "140px"
+    "height" : "150px"
 }
 var Heading = {
     "marginBottom" : "0px"

@@ -38,8 +38,8 @@ input {
 #editButton {
     float: right;
     background: white;
-    color: yellow;
-    border: 1px solid yellow;
+    color: #E6CA01;
+    border: 1px solid #E6CA01;
     padding: 10px
 }
 .hr{

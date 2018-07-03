@@ -3,7 +3,7 @@ li {
     list-style-type: none
 }
 .card {
-    width : 250px;;
+    width: 265px;
     float : left;
     padding : 7.5px;
     margin  : 7.5px;
@@ -38,7 +38,7 @@ cursor: not-allowed
     opacity: .8;
     position: relative;
     left:2px;
-    bottom: 1px;
+    bottom: 2px;
     font-family: 'Roboto', sans-serif;
     font-size: 12px
 }

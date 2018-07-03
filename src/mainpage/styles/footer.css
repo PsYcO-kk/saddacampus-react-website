@@ -1,0 +1,59 @@
+.contactUs {
+    display: inline;
+    float: left;
+    color: #707070
+}
+.details{
+    display: block
+}
+.contactDetails{
+    float: left;
+    color: #707070;
+    padding-left: 30px;
+}
+.detailsRow{
+    padding-top: 35px;
+}
+.links {
+    color: #707070
+}
+.footer{
+    margin-bottom: 50px
+}
+.motto{
+    font-weight: 450;
+}
+.hr{
+    border: 0;
+    display: block;
+    width: 30%;
+    background-color: #707070;
+    height: 1.5px;
+}
+
+@media screen and (min-width : 1200px) {
+    .motto{
+        padding-top: 30px
+    }
+    .icons{
+        padding-top: 50px;
+    }
+}
+@media screen and (max-width : 767px) {
+    .additionalInfo {
+        margin-top: 30px
+    }
+}
+ 
+@media screen and (max-width : 1201px) and (min-width : 991px) {
+    .icons{
+        padding-top: 30px
+    }
+}
+
+@media screen and (max-width : 992px) {
+    .icons{
+        padding-top: 70px
+    }
+}
+
