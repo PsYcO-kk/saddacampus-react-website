@@ -4,29 +4,26 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 var CardComponent=[];
 export default class test extends React.Component{
-    constructor(props)
-    {
+    constructor(props){
         super(props);
     }
     CardUpdate = ()=>{
-        if(this.props.ImageLink.ImageLink.length)
-    {
-      CardComponent = this.props.ImageLink.ImageLink.map((links)=>{
-           return <li key={links.link}> <Card link={links.link} name={links.restrauntName} open={links.open}/></li>
-         })
-    }
-     else{
-         CardComponent = [];
-     }
+        if(this.props.restaurants.data.length){
+			CardComponent = this.props.restaurants.data.map((info)=>{
+				return <li key={info.link}> <Card data={info}/></li>
+			});
+		}else{
+			CardComponent = [];
+		}
     }
     render(){
         this.CardUpdate();
         return(
-    <div className="container">
-      <div className="row"> 
-      {CardComponent}
-      </div>
-    </div>
-        )
+			<div className="container">
+				<div className="row">
+					{CardComponent}
+				</div>
+			</div>
+        );
     }
 }

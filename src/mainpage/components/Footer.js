@@ -25,13 +25,13 @@ const Footer = () => (
 	<footer className="footer">
 		<div className="container parent ">
         <hr className="hr" />
-			<div className="row">
+			<div className="row footer-top">
                 <div className="col-md-2">
 					<img className="img-fluid float-left" src="/assets/images/brand/16-9.png" id="logo" />
 				</div>
 				<div className="col-md-6 motto"  >
 					<em>Saddacampus works with the motto of “making college life easier”. Saddacampus aims at becoming a ONE STOP SOLUTION for college students.</em>
-                </div> 
+                </div>
 				<div className="col-md-3 icons ">
 					<table >
 							<tbody>
@@ -42,9 +42,9 @@ const Footer = () => (
 								</tr>
 							</tbody>
 					</table>
-				</div>	
+				</div>
 			</div>
-		
+
 			<div className="row detailsRow">
 				<div className="col-md-6 ">
 					<div>
@@ -55,17 +55,17 @@ const Footer = () => (
 							<span className="details" >CIIE, IIT(ISM) DHANBAD</span>
 							<span className="details" >DHANBAD, JHARKHAND</span>
 							<span className="details" > 826004, INDIA</span>
-						</div>	
-					</div>	
+						</div>
+					</div>
 				</div>
 				<div className="col-md-6 additionalInfo">
 					<div>
-						<h5>Additional Imformation</h5>
-						<span>Join the thousands of other restaurants who benefit from having their menus on TakeOff.
+						<h5>Additional Information</h5>
+						<span>Join the other restaurants who benefit from having their menus on Saddacampus.
 						To partner with us drop us a mail at <a href="mailto:info@saddacampus.com" className="links">info@saddacampus.com</a>
 						</span>
 					</div>
-				</div>	
+				</div>
 
 			</div>
 		</div>

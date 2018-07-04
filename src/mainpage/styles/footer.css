@@ -1,3 +1,6 @@
+.footer-top{
+	margin-top: 75px;
+}
 .contactUs {
     display: inline;
     float: left;
@@ -30,8 +33,7 @@
     display: block;
     width: 30%;
     background-color: #707070;
-    height: 1.5px;
-    margin-bottom: 30px;
+	margin-top: 75px;
 }
 @media screen and (min-width : 1200px) {
     .motto{
@@ -46,7 +48,7 @@
         margin-top: 30px
     }
 }
- 
+
 @media screen and (max-width : 1201px) and (min-width : 991px) {
     .icons{
         padding-top: 30px

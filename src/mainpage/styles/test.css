@@ -18,12 +18,13 @@ li {
 cursor: pointer;
 }
 .card-close:hover{
-cursor: not-allowed    
+cursor: not-allowed
 }
 
 .card-title {
     font-family: 'Roboto', sans-serif;
-    font-weight: 500;
+	font-weight: 500;
+	padding-bottom: 5px
 }
 .card-body {
     padding-top : 5px;
@@ -43,10 +44,10 @@ cursor: not-allowed
     font-size: 12px
 }
 .InfoPart{
-    font-size: 12px;
+    font-size: 14px;
     position: relative;
     bottom: 12px;
-    opacity: .5;
+    opacity: .8;
     font-family: 'Roboto', sans-serif;
 }
 .starImage{
@@ -55,12 +56,12 @@ cursor: not-allowed
     bottom: 3px;
 }
 .subHeading{
-    font-size: 12px;
+    font-size: 14px;
     position: relative;
     bottom : 8px;
     left: 1px;
     font-family: 'Roboto', sans-serif;
-    opacity: .7;
+    opacity: .8;
 }
 .Heading{
     padding-top : 100px;
@@ -69,8 +70,6 @@ cursor: not-allowed
 }
 .collegeName{
     font-family: 'Roboto', sans-serif;
-    font-weight: 600;
-    transform:scaleY(1.1);
     letter-spacing: 1px;
     width:100%;
 }
@@ -80,7 +79,7 @@ cursor: not-allowed
     background-color: #707070;
     margin-left: 0px;
     width: 150px
- 
+
 }
 .Filters{
     position: relative;
@@ -97,7 +96,7 @@ cursor: not-allowed
     top: 1px;
  }
  .dropdownMenu {
-     border-radius: 0px
+	border-radius: 0px;
  }
  .divider{
     width: 60%;
@@ -156,7 +155,7 @@ cursor: not-allowed
     }
     .card {
         width: 280px;
-        padding: 10px
+        padding: 15px
     }
     .card-img-top{
         height: 155px
@@ -203,4 +202,4 @@ cursor: not-allowed
       padding-top: 140px
     }
 }
-  
+

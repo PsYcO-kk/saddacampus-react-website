@@ -32,32 +32,32 @@ export default class SubHeading extends React.Component{
              selectedValue : value
          }))
       }
-    
+
       toggle = ()=>{
         this.setState({
           isOpen : !this.state.isOpen
         });
       }
-    
+
     render(){
         return(
             <div className="container Heading" >
-            <div className="row">
-            <div style={divWidth} ><div className="collegeName" >IIT(ISM) DHANBAD  <hr id="hr" /></div></div>
-             <div className="Filters">
-             <span>Restaurants</span>
-            <ButtonDropdown isOpen={this.state.isOpen} toggle={this.toggle} className="buttongroup" >
-            <Button id="caret" color="primary" className="dropdownButton"style={style} >{this.state.selectedValue}</Button>
-            <DropdownToggle caret color="primary" style={style} className="dropdownArrow" />
-            <DropdownMenu onClick={this.selectDropdown} className="dropdownMenu" >
-                <DropdownItem className="dropdownItems" style={this.state.selectedValue=="All"?Selected : NotSelected } >All</DropdownItem>
-                <DropdownItem className="dropdownItems" style={this.state.selectedValue=="Free Delivery"?Selected : NotSelected } >Free Delivery</DropdownItem>
-                <DropdownItem className="dropdownItems" style={this.state.selectedValue=="Sort By Rating"?Selected : NotSelected } >Sort By Rating</DropdownItem>
-                <DropdownItem className="dropdownItems" style={this.state.selectedValue=="Sort By Min.Order"?Selected : NotSelected } >Sort By Min.Order</DropdownItem>
-            </DropdownMenu>
-            </ButtonDropdown>
-             </div>
-            </div>
+            	<div className="row">
+            		<div style={divWidth} ><div className="collegeName" >IIT(ISM) DHANBAD  <hr id="hr" /></div></div>
+					<div className="Filters">
+						<span>Restaurants</span>
+						<ButtonDropdown isOpen={this.state.isOpen} toggle={this.toggle} className="buttongroup" >
+							<Button id="caret" color="primary" className="dropdownButton"style={style} >{this.state.selectedValue}</Button>
+							<DropdownToggle caret color="primary" style={style} className="dropdownArrow" />
+							<DropdownMenu onClick={this.selectDropdown} className="dropdownMenu" >
+								<DropdownItem className="dropdownItems" style={this.state.selectedValue=="All"?Selected : NotSelected } >All</DropdownItem>
+								<DropdownItem className="dropdownItems" style={this.state.selectedValue=="Free Delivery"?Selected : NotSelected } >Free Delivery</DropdownItem>
+								<DropdownItem className="dropdownItems" style={this.state.selectedValue=="Sort By Rating"?Selected : NotSelected } >Sort By Rating</DropdownItem>
+								<DropdownItem className="dropdownItems" style={this.state.selectedValue=="Sort By Min.Order"?Selected : NotSelected } >Sort By Min.Order</DropdownItem>
+							</DropdownMenu>
+						</ButtonDropdown>
+					</div>
+            	</div>
             </div>
         )
     }
