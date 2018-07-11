@@ -2926,11 +2926,12 @@ $black			: #222;
     -moz-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
-    width: 100%;
+	width: 100%;
+	max-height: 250px;
   }
 
   .single-latest-blog .body {
-    padding: 7%;
+    padding: 5%;
   }
 
   .single-latest-blog .tags {

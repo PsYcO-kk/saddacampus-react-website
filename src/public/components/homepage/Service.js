@@ -5,7 +5,7 @@ const Service = (props) => (
 		<div className="single-service">
 			<div className="imgWithHeading">
 				<div className="thumb">
-					<img className="img-fluid" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180" alt="" style={{ 'borderRadius': '0', 'borderBottom': '3px solid #fff' }} />
+					<img className="img-fluid" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180" alt="" style={{ 'borderRadius': '0', 'borderBottom': '3px solid #fff', 'minHeight': '200px' }} />
 				</div>
 				<a href="#" className="imgHeading"><h4>{props.serviceName}</h4></a>
 			</div>
