@@ -6,9 +6,11 @@ const BlogsSection  = () => (
 		<div className="container">
 			<div className="row section-title">
 				<h1>Latest News from our Blog</h1>
-				<p>Lorem ipsum dolor sit amet</p>
+				<p>There are always some things you need to know and once in college you need all the help available.</p>
 			</div>
-			<div className="row">
+			<div className="row" style={{ 'backgroundColor': 'black', 'padding': '3%' }}>
+				<Blog imgSrc="coffee.PNG" />
+				<Blog imgSrc="burger.PNG" />
 				<Blog imgSrc="coffee.PNG" />
 				<Blog imgSrc="burger.PNG" />
 			</div>

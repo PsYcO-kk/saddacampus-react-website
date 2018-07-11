@@ -35,7 +35,7 @@ html,body{
 	margin-top: 0;
 	margin-bottom: 2rem;
 	color: #2d333a;
-	font-family: Slack-Lato,sans-serif;
+	font-family: 'Roboto',sans-serif;
 }
 
 .slides_move{
@@ -142,4 +142,14 @@ html,body{
 	.container {
 	  max-width: 1200px;
 	}
+}
+
+.imgWithHeading {
+	position: relative;
+}
+
+.imgHeading {
+	position: absolute;
+	bottom: 5%;
+    left: 7%;
 }
