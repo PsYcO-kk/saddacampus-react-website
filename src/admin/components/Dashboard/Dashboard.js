@@ -575,7 +575,7 @@ export class Dashboard extends Component {
 						<i className="icon-settings"></i>
 					  </DropdownToggle>
 					  <DropdownMenu right>
-						<DropdownItem active={this.state.card1_status.totalUser} onClick={() => {this.setState({ card1_status: { totalUser: true, days: true, weeks: false, months: false } })}}>Total Users</DropdownItem>
+						<DropdownItem active={this.state.card1_status.totalUser} onClick={() => {this.setState({ card1_status: { totalUser: true, days: false, weeks: false, months: false } })}}>Total Users</DropdownItem>
 						<h6 className="dropdown-header">Users registered in</h6>
 						<DropdownItem active={this.state.card1_status.days} onClick={() => {this.setState({ card1_status: { totalUser: false, days: true, weeks: false, months: false } })}}>Last 7 days</DropdownItem>
 						<DropdownItem active={this.state.card1_status.weeks} onClick={() => {this.setState({ card1_status: { totalUser: false, days: false, weeks: true, months: false } })}}>Last 7 weeks</DropdownItem>

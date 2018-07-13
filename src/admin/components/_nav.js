@@ -22,6 +22,23 @@ export const superNav = {
 				},
 			],
 		},
+		{
+			name: 'Merchants',
+			url: '/merchants',
+			icon: 'icon-people',
+			children: [
+				// {
+				// 	name: 'Show All',
+				// 	url: '/administrators',
+				// 	icon: 'icon-list',
+				// },
+				{
+					name: 'Create Merchant',
+					url: '/merchants/create',
+					icon: 'icon-user-follow',
+				},
+			],
+		},
 	],
 };
 

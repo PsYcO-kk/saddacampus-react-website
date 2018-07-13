@@ -92,7 +92,7 @@ export default class CreateAdmin extends React.Component{
 						<Row>
 							<Col>
 								<FormGroup>
-									<Label htmlFor="password">Passowrd:</Label>
+									<Label htmlFor="password">Password:</Label>
 									<InputGroup>
 										<InputGroupAddon addonType="prepend">
 											<InputGroupText><i className="icon-key"></i></InputGroupText>

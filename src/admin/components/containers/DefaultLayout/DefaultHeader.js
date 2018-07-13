@@ -24,6 +24,9 @@ export class DefaultHeader extends Component {
 					<NavItem className="px-3">
 						<NavLink to="/administrators" activeClassName="active" className="nav-link">Administrators</NavLink>
 					</NavItem>
+					<NavItem className="px-3">
+						<NavLink to="/merchants" activeClassName="active" className="nav-link">Merchants</NavLink>
+					</NavItem>
 				</Nav>
 			);
 		else
