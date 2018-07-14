@@ -169,7 +169,7 @@ export default class CreateMerchant extends React.Component{
 								<Input type="tel" name="alternate_number" placeholder="Enter Alternate Number" value={this.state.alternate_number} onChange={this.handleNumber} required />
 							</InputGroup>
 						</FormGroup>
-						<Button>Submit</Button>
+						<Button color="primary">Submit</Button>
 					</fieldset>
 				</Form>
 			</Container>

@@ -131,7 +131,7 @@ export default class CreateAdmin extends React.Component{
 								</Input>
 							</InputGroup>
 						</FormGroup>
-						<Button>Submit</Button>
+						<Button color="primary">Submit</Button>
 					</fieldset>
 				</Form>
 			</Container>

@@ -8,34 +8,34 @@ export const superNav = {
 		{
 			name: 'Administrators',
 			url: '/administrators',
-			icon: 'icon-people',
+			icon: 'fas fa-user-secret',
 			children: [
-				// {
-				// 	name: 'Show All',
-				// 	url: '/administrators',
-				// 	icon: 'icon-list',
-				// },
+				{
+					name: 'Show All',
+					url: '/administrators',
+					icon: 'fas fa-list',
+				},
 				{
 					name: 'Create Admin',
 					url: '/administrators/create',
-					icon: 'icon-user-follow',
+					icon: 'fas fa-user-plus',
 				},
 			],
 		},
 		{
 			name: 'Merchants',
 			url: '/merchants',
-			icon: 'icon-people',
+			icon: 'fas fa-users',
 			children: [
-				// {
-				// 	name: 'Show All',
-				// 	url: '/administrators',
-				// 	icon: 'icon-list',
-				// },
+				{
+					name: 'Show All',
+					url: '/merchants',
+					icon: 'fas fa-list',
+				},
 				{
 					name: 'Create Merchant',
 					url: '/merchants/create',
-					icon: 'icon-user-follow',
+					icon: 'fas fa-user-plus',
 				},
 			],
 		},
