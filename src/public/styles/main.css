@@ -2927,7 +2927,7 @@ $black			: #222;
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
 	width: 100%;
-	max-height: 250px;
+	height: 250px;
   }
 
   .single-latest-blog .body {
