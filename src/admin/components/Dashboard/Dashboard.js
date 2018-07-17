@@ -19,94 +19,24 @@ import CardChart1 from './widgets/CardChart1';
 import CardChart2 from './widgets/CardChart2';
 import CardChart3 from './widgets/CardChart3';
 import CardChart4 from './widgets/CardChart4';
+
 import MainChart from './widgets/MainChart';
+
 import SocialBox1 from './widgets/SocialBox1';
 import SocialBox2 from './widgets/SocialBox2';
 import SocialBox3 from './widgets/SocialBox3';
 import SocialBox4 from './widgets/SocialBox4';
+
+import SparkLineChart1 from './widgets/SparkLineChart1';
+import SparkLineChart2 from './widgets/SparkLineChart2';
+import SparkLineChart3 from './widgets/SparkLineChart3';
+import SparkLineChart4 from './widgets/SparkLineChart4';
 
 const brandPrimary = getStyle('--primary')
 const brandSuccess = getStyle('--success')
 const brandInfo = getStyle('--info')
 const brandWarning = getStyle('--warning')
 const brandDanger = getStyle('--danger')
-
-// sparkline charts
-const sparkLineChartData = [
-  {
-    data: [35, 23, 56, 22, 97, 23, 64],
-    label: 'New Clients',
-  },
-  {
-    data: [65, 59, 84, 84, 51, 55, 40],
-    label: 'Recurring Clients',
-  },
-  {
-    data: [35, 23, 56, 22, 97, 23, 64],
-    label: 'Pageviews',
-  },
-  {
-    data: [65, 59, 84, 84, 51, 55, 40],
-    label: 'Organic',
-  },
-  {
-    data: [78, 81, 80, 45, 34, 12, 40],
-    label: 'CTR',
-  },
-  {
-    data: [1, 13, 9, 17, 34, 41, 38],
-    label: 'Bounce Rate',
-  },
-];
-
-const makeSparkLineData = (dataSetNo, variant) => {
-  const dataset = sparkLineChartData[dataSetNo];
-  const data = {
-    labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-    datasets: [
-      {
-        backgroundColor: 'transparent',
-        borderColor: variant ? variant : '#c2cfd6',
-        data: dataset.data,
-        label: dataset.label,
-      },
-    ],
-  };
-  return () => data;
-};
-
-const sparklineChartOpts = {
-  tooltips: {
-    enabled: false,
-    custom: CustomTooltips
-  },
-  responsive: true,
-  maintainAspectRatio: true,
-  scales: {
-    xAxes: [
-      {
-        display: false,
-      }],
-    yAxes: [
-      {
-        display: false,
-      }],
-  },
-  elements: {
-    line: {
-      borderWidth: 2,
-    },
-    point: {
-      radius: 0,
-      hitRadius: 10,
-      hoverRadius: 4,
-      hoverBorderWidth: 3,
-    },
-  },
-  legend: {
-    display: false,
-  },
-};
 
 export class Dashboard extends Component {
 
@@ -157,30 +87,13 @@ export class Dashboard extends Component {
               <CardBody>
                 <Row>
                   <Col xs="12" md="6" xl="6">
-                    <Row>
-                      <Col sm="6">
-                        <div className="callout callout-info">
-                          <small className="text-muted">New Clients</small>
-                          <br />
-                          <strong className="h4">9,123</strong>
-                          <div className="chart-wrapper">
-                            <Line data={makeSparkLineData(0, brandPrimary)} options={sparklineChartOpts} width={100} height={30} />
-                          </div>
-                        </div>
-                      </Col>
-                      <Col sm="6">
-                        <div className="callout callout-danger">
-                          <small className="text-muted">Recurring Clients</small>
-                          <br />
-                          <strong className="h4">22,643</strong>
-                          <div className="chart-wrapper">
-                            <Line data={makeSparkLineData(1, brandDanger)} options={sparklineChartOpts} width={100} height={30} />
-                          </div>
-                        </div>
-                      </Col>
+					<Row>
+					  <SparkLineChart1 />
+					  <SparkLineChart2 />
                     </Row>
                     <hr className="mt-0" />
-                    <div className="progress-group mb-4">
+
+					<div className="progress-group mb-4">
                       <div className="progress-group-prepend">
                         <span className="progress-group-text">
                           Monday
@@ -191,7 +104,8 @@ export class Dashboard extends Component {
                         <Progress className="progress-xs" color="danger" value="78" />
                       </div>
                     </div>
-                    <div className="progress-group mb-4">
+
+					<div className="progress-group mb-4">
                       <div className="progress-group-prepend">
                         <span className="progress-group-text">
                         Tuesday
@@ -202,7 +116,8 @@ export class Dashboard extends Component {
                         <Progress className="progress-xs" color="danger" value="94" />
                       </div>
                     </div>
-                    <div className="progress-group mb-4">
+
+					<div className="progress-group mb-4">
                       <div className="progress-group-prepend">
                         <span className="progress-group-text">
                         Wednesday
@@ -213,7 +128,8 @@ export class Dashboard extends Component {
                         <Progress className="progress-xs" color="danger" value="67" />
                       </div>
                     </div>
-                    <div className="progress-group mb-4">
+
+					<div className="progress-group mb-4">
                       <div className="progress-group-prepend">
                         <span className="progress-group-text">
                         Thursday
@@ -224,7 +140,8 @@ export class Dashboard extends Component {
                         <Progress className="progress-xs" color="danger" value="91" />
                       </div>
                     </div>
-                    <div className="progress-group mb-4">
+
+					<div className="progress-group mb-4">
                       <div className="progress-group-prepend">
                         <span className="progress-group-text">
                         Friday
@@ -235,7 +152,8 @@ export class Dashboard extends Component {
                         <Progress className="progress-xs" color="danger" value="73" />
                       </div>
                     </div>
-                    <div className="progress-group mb-4">
+
+					<div className="progress-group mb-4">
                       <div className="progress-group-prepend">
                         <span className="progress-group-text">
                         Saturday
@@ -246,7 +164,8 @@ export class Dashboard extends Component {
                         <Progress className="progress-xs" color="danger" value="82" />
                       </div>
                     </div>
-                    <div className="progress-group mb-4">
+
+					<div className="progress-group mb-4">
                       <div className="progress-group-prepend">
                         <span className="progress-group-text">
                         Sunday
@@ -257,7 +176,8 @@ export class Dashboard extends Component {
                         <Progress className="progress-xs" color="danger" value="69" />
                       </div>
                     </div>
-                    <div className="legend text-center">
+
+					<div className="legend text-center">
                       <small>
                         <sup className="px-1"><Badge pill color="info">&nbsp;</Badge></sup>
                         New clients
@@ -268,31 +188,14 @@ export class Dashboard extends Component {
                     </div>
                   </Col>
                   <Col xs="12" md="6" xl="6">
-                    <Row>
-                      <Col sm="6">
-                        <div className="callout callout-warning">
-                          <small className="text-muted">Pageviews</small>
-                          <br />
-                          <strong className="h4">78,623</strong>
-                          <div className="chart-wrapper">
-                            <Line data={makeSparkLineData(2, brandWarning)} options={sparklineChartOpts} width={100} height={30} />
-                          </div>
-                        </div>
-                      </Col>
-                      <Col sm="6">
-                        <div className="callout callout-success">
-                          <small className="text-muted">Organic</small>
-                          <br />
-                          <strong className="h4">49,123</strong>
-                          <div className="chart-wrapper">
-                            <Line data={makeSparkLineData(3, brandSuccess)} options={sparklineChartOpts} width={100} height={30} />
-                          </div>
-                        </div>
-                      </Col>
+					<Row>
+					 <SparkLineChart3 />
+					 <SparkLineChart4 />
                     </Row>
                     <hr className="mt-0" />
                     <ul>
-                      <div className="progress-group">
+
+					  <div className="progress-group">
                         <div className="progress-group-header">
                           <i className="icon-user progress-group-icon"></i>
                           <span className="title">Male</span>
@@ -302,7 +205,8 @@ export class Dashboard extends Component {
                           <Progress className="progress-xs" color="warning" value="43" />
                         </div>
                       </div>
-                      <div className="progress-group mb-5">
+
+					  <div className="progress-group mb-5">
                         <div className="progress-group-header">
                           <i className="icon-user-female progress-group-icon"></i>
                           <span className="title">Female</span>
@@ -312,7 +216,8 @@ export class Dashboard extends Component {
                           <Progress className="progress-xs" color="warning" value="37" />
                         </div>
                       </div>
-                      <div className="progress-group">
+
+					  <div className="progress-group">
                         <div className="progress-group-header">
                           <i className="icon-globe progress-group-icon"></i>
                           <span className="title">Organic Search</span>
@@ -322,7 +227,8 @@ export class Dashboard extends Component {
                           <Progress className="progress-xs" color="success" value="56" />
                         </div>
                       </div>
-                      <div className="progress-group">
+
+					  <div className="progress-group">
                         <div className="progress-group-header">
                           <i className="icon-social-facebook progress-group-icon"></i>
                           <span className="title">Facebook</span>
@@ -332,7 +238,8 @@ export class Dashboard extends Component {
                           <Progress className="progress-xs" color="success" value="15" />
                         </div>
                       </div>
-                      <div className="progress-group">
+
+					  <div className="progress-group">
                         <div className="progress-group-header">
                           <i className="icon-social-twitter progress-group-icon"></i>
                           <span className="title">Twitter</span>
@@ -342,7 +249,8 @@ export class Dashboard extends Component {
                           <Progress className="progress-xs" color="success" value="11" />
                         </div>
                       </div>
-                      <div className="progress-group">
+
+					  <div className="progress-group">
                         <div className="progress-group-header">
                           <i className="icon-social-linkedin progress-group-icon"></i>
                           <span className="title">LinkedIn</span>
@@ -352,7 +260,8 @@ export class Dashboard extends Component {
                           <Progress className="progress-xs" color="success" value="8" />
                         </div>
                       </div>
-                      <div className="divider text-center">
+
+					  <div className="divider text-center">
                         <Button color="link" size="sm" className="text-muted" data-toggle="tooltip" data-placement="top"
                                 title="" data-original-title="show more"><i className="icon-options"></i></Button>
                       </div>
@@ -372,7 +281,8 @@ export class Dashboard extends Component {
                   </tr>
                   </thead>
                   <tbody>
-                  <tr>
+
+				  <tr>
                     <td className="text-center">
                       <div className="avatar">
                         <img src={'assets/images/avatars/1.jpg'} className="img-avatar" alt="admin@bootstrapmaster.com" />
@@ -407,7 +317,8 @@ export class Dashboard extends Component {
                       <strong>10 sec ago</strong>
                     </td>
                   </tr>
-                  <tr>
+
+				  <tr>
                     <td className="text-center">
                       <div className="avatar">
                         <img src={'assets/images/avatars/2.jpg'} className="img-avatar" alt="admin@bootstrapmaster.com" />
@@ -443,7 +354,8 @@ export class Dashboard extends Component {
                       <strong>5 minutes ago</strong>
                     </td>
                   </tr>
-                  <tr>
+
+				  <tr>
                     <td className="text-center">
                       <div className="avatar">
                         <img src={'assets/images/avatars/3.jpg'} className="img-avatar" alt="admin@bootstrapmaster.com" />
@@ -478,7 +390,8 @@ export class Dashboard extends Component {
                       <strong>1 hour ago</strong>
                     </td>
                   </tr>
-                  <tr>
+
+				  <tr>
                     <td className="text-center">
                       <div className="avatar">
                         <img src={'assets/images/avatars/4.jpg'} className="img-avatar" alt="admin@bootstrapmaster.com" />
@@ -513,7 +426,8 @@ export class Dashboard extends Component {
                       <strong>Last month</strong>
                     </td>
                   </tr>
-                  <tr>
+
+				  <tr>
                     <td className="text-center">
                       <div className="avatar">
                         <img src={'assets/images/avatars/5.jpg'} className="img-avatar" alt="admin@bootstrapmaster.com" />
@@ -548,7 +462,8 @@ export class Dashboard extends Component {
                       <strong>Last week</strong>
                     </td>
                   </tr>
-                  <tr>
+
+				  <tr>
                     <td className="text-center">
                       <div className="avatar">
                         <img src={'assets/images/avatars/6.jpg'} className="img-avatar" alt="admin@bootstrapmaster.com" />
