@@ -2783,6 +2783,44 @@ $black			: #222;
   }
 
   /*-------- End services Area -------------*/
+
+  .categories-area {
+	margin-top: 3%;
+	background-color: #fff;
+	padding: 2%;
+  }
+
+  .categories-area .thumb {
+	padding: 0;
+	margin: 0.8%;
+	text-align: center;
+	font-size: 11px;
+  }
+
+  .single-category {
+	margin-top: 3%;
+	background-color: #fff;
+	padding: 2%;
+  }
+
+  .single-category .thumb {
+	padding: 0;
+	margin-left: 5%;
+	margin-right: 5%;
+  }
+
+  .single-category .thumb img {
+	/* max-width: 250px; */
+  }
+
+  .single-category .thumb div {
+	font-size: 16px;
+  }
+
+  .single-category .thumb .deal-alert {
+	color: rgb(255, 0, 0);
+  }
+
   /*-------- Start image-gallery Area -------------*/
   .image-gallery-area {
     background: rgba(249, 249, 255, 0.6);

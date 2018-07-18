@@ -14,10 +14,10 @@ const ServicesSection = () => (
 				<p>BTW, we already apologize we cannot do anything about your sem-backs and low attendance, but - </p>
 			</div>
 			<div className="row" style={{ 'backgroundColor': 'white', 'padding': '3%' }}>
-				<Service serviceName="Food Delivery" serviceDescription={deliveryDescription} />
-				<Service serviceName="Video Lectures" serviceDescription={lecturesDescription} />
-				<Service serviceName="Internships" serviceDescription={internshipsDescription} />
-				<Service serviceName="Deals" serviceDescription={dealsDescription} />
+				<Service serviceName="Food Delivery" serviceDescription={deliveryDescription} link="/" />
+				<Service serviceName="Video Lectures" serviceDescription={lecturesDescription} link="/" />
+				<Service serviceName="Internships" serviceDescription={internshipsDescription} link="/" />
+				<Service serviceName="Deals" serviceDescription={dealsDescription} link="/deals" />
 			</div>
 		</div>
     </section>

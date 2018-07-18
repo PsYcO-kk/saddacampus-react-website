@@ -158,3 +158,27 @@ html,body{
 	bottom: 5%;
     left: 7%;
 }
+
+.deals-page {
+	background-color: #000;
+}
+
+.deals-header {
+	padding: 1%;
+	margin-left: 0;
+	background: linear-gradient(to bottom, black 0%,black 30%,black 30%,white 0%,white 70%,white 70%);
+}
+
+.deals-header .section-title {
+	margin-top: 3%;
+}
+
+.deals-header .thumb {
+	padding: 0;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+.deals-header .thumb img {
+	/* height: 175px; */
+}

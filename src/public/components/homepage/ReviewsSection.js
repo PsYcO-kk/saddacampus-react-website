@@ -16,11 +16,18 @@ const ReviewsSection = () => {
 		speed: 500,
 		responsive: [
 			{
-				breakpoint: 600,
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 2,
+				}
+			},
+			{
+				breakpoint: 775,
 				settings: {
 					slidesToShow: 1,
 				}
-			}		]
+			}
+		]
 	};
 	return(
 		<section className="reviews-area section-gap">

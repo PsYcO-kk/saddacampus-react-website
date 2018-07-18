@@ -5,6 +5,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import HomePage from './components/HomePage';
+import DealsPage from './components/DealsPage';
 import AboutUsPage from './components/AboutUsPage';
 import PrivacyPolicyPage from './components/PrivacyPolicyPage';
 import NotFoundPage from './components/NotFoundPage';
@@ -18,6 +19,7 @@ const jsx = (
 		<div>
             <Switch>
                 <Route path="/" component={HomePage} exact={true} />
+                <Route path="/deals" component={DealsPage} />
                 <Route path="/about-us" component={AboutUsPage} />
                 <Route path="/privacy-policy" component={PrivacyPolicyPage} />
                 <Route component={NotFoundPage} />
