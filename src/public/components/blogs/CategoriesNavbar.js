@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'reactstrap';
 
-const CategoryNavbar = () => (
+const CategoriesNavbar = () => (
 	<Row className="blogs-category-nav remove-extra-space">
 		<Col className="navItem">COLLEGE</Col>
 		<Col className="navItem">FASHION</Col>
@@ -18,4 +18,4 @@ const CategoryNavbar = () => (
 	</Row>
 );
 
-export default CategoryNavbar;
+export default CategoriesNavbar;

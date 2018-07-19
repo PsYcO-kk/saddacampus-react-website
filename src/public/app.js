@@ -4,9 +4,9 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
-import HomePage from './components/HomePage';
-import BlogsPage from './components/BlogsPage';
-import DealsPage from './components/DealsPage';
+import HomePage from './components/homepage/DefaultStructure';
+import BlogsPage from './components/blogs/DefaultStructure';
+import DealsPage from './components/deals/DefaultStructure';
 import AboutUsPage from './components/AboutUsPage';
 import PrivacyPolicyPage from './components/PrivacyPolicyPage';
 import NotFoundPage from './components/NotFoundPage';
