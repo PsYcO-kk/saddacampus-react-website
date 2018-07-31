@@ -9,6 +9,7 @@ import BlogsPage from './components/blogs/DefaultStructure';
 import DealsPage from './components/deals/DefaultStructure';
 import AboutUsPage from './components/AboutUsPage';
 import PrivacyPolicyPage from './components/PrivacyPolicyPage';
+import TestComponent from './components/TestComponent';
 import NotFoundPage from './components/NotFoundPage';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -24,6 +25,7 @@ const jsx = (
                 <Route path="/deals" component={DealsPage} />
                 <Route path="/about-us" component={AboutUsPage} />
                 <Route path="/privacy-policy" component={PrivacyPolicyPage} />
+                <Route path="/test" component={TestComponent} />
                 <Route component={NotFoundPage} />
 			</Switch>
         </div>
