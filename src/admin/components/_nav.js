@@ -39,6 +39,23 @@ export const superNav = {
 				},
 			],
 		},
+		{
+			name: 'Businesses',
+			url: '/businesses',
+			icon: 'fas fa-briefcase',
+			children: [
+				{
+					name: 'Show All',
+					url: '/businesses',
+					icon: 'fas fa-list',
+				},
+				{
+					name: 'Restaurants',
+					url: '/businesses/restaurants',
+					icon: 'fas fa-utensils',
+				},
+			],
+		},
 	],
 };
 

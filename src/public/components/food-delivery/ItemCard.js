@@ -10,7 +10,7 @@ const ItemCard = (props) => (
 				<img className="img-fluid" src={props.imgSrc} alt="" />
 			</div>
 			<div className="body">
-				<h4>Chickblast</h4>
+				<h4>Green Leaf</h4>
 				<Row className="remove-extra-space">
 					<Col md={6} className="remove-extra-space">
 						North Indian
