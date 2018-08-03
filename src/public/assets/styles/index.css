@@ -359,3 +359,138 @@ html,body{
 .blogs-greeting button {
 	margin-top: 3%;
 }
+
+.services-navbar {
+	background: linear-gradient(to bottom, #2d333a 0%,#2d333a 75%,#2d333a 75%,white 0%,white 25%,white 25%);
+	padding: 3% 7%;
+}
+
+.services-navbar .service-box {
+	background-color: #fff;
+	margin: 2% 3%;
+}
+
+.services-navbar .service-box img {
+	max-height: 90px;
+}
+
+.search-box {
+    position: relative;
+}
+
+.search-box .search-icon {
+	position: absolute;
+	padding: 12px;
+	font-size: 24px;
+	color: #ccc;
+	pointer-events: none;
+	left:  0px;
+}
+
+.search-box .search-bar {
+	border-radius: 0;
+	font-size: 24px;
+	margin-top: 5%;
+	padding-left: 45px;
+}
+
+.search-box .search-bar::placeholder {
+	color: #ccc;
+}
+
+.search-box .search-bar:hover, .search-bar:focus {
+	/* z-index: 1; */
+	box-shadow: 0 8px 6px -6px #777;
+}
+
+.deals-carousel {
+	padding: 1% 7%;
+}
+
+.deals-carousel .thumb {
+	padding: 0;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+.deals-carousel .thumb img {
+	/* height: 175px; */
+}
+
+.carousel-prev, .carousel-next {
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 20px;
+	z-index: 1;
+	padding: 1% 0%;
+    transform: translate(0, -50%);
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.carousel-prev:hover, .carousel-prev:focus, .carousel-next:hover, .carousel-next:focus {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.carousel-prev {
+    left: 0;
+	padding-right: 1%;
+}
+
+.carousel-next {
+    right: 0;
+	padding-left: 1%;
+}
+
+.food-items-container {
+	padding: 7%;
+	padding-top: 5%;
+}
+
+.food-items-container .items-list {
+
+}
+
+.food-items-container .list-heading {
+	margin-left: 2%;
+	font-size: 40px;
+}
+
+.food-items-container .item-card {
+	margin: 7%;
+    padding: 3%;
+	border: 1px solid #fff;
+	box-shadow: 0px 8px 6px -9px #ccc, -8px 8px 6px -9px #ccc, 8px 8px 6px -9px #ccc;
+}
+
+.food-items-container .item-card:hover {
+	border: 1px solid #999;
+	cursor: pointer;
+}
+
+.food-items-container .item-card .body {
+    padding: 5% 0%;
+}
+
+.food-items-container .item-card .thumb {
+    overflow: hidden;
+	box-shadow: 0 8px 6px -6px #ccc;
+}
+
+.food-items-container .item-card .thumb img {
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+	width: 100%;
+	height: 150px;
+}
+
+.item-card h4 {
+    margin-bottom: 3%;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
