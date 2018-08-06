@@ -3,15 +3,17 @@ import { Row, Col } from 'reactstrap';
 
 import Header from '../Header';
 import ServicesNavbar from './ServicesNavbar';
-import RestaurantList from './RestaurantList';
 import DealsSection from './DealsSection';
+import RestaurantsList from './RestaurantsList';
+import FoodItemsList from './FoodItemsList';
 
 const DefaultStructure = () => (
 	<div>
 		<Header />
 		<ServicesNavbar />
-		<DealsSection />
-		<RestaurantList />
+		{/*<DealsSection />
+		<RestaurantsList />*/}
+		<FoodItemsList />
 	</div>
 );
 

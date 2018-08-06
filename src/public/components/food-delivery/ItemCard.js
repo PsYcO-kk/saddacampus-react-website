@@ -4,7 +4,7 @@ import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faStar from '@fortawesome/fontawesome-free-solid/faStar';
 
 const ItemCard = (props) => (
-	<Col md={4} className="remove-extra-space">
+	<Col md={props.cardWidth} className="remove-extra-space">
 		<div className="item-card">
 			<div className="thumb">
 				<img className="img-fluid" src={props.imgSrc} alt="" />
