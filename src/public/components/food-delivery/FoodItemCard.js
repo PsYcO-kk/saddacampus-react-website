@@ -32,7 +32,7 @@ export default class FoodItemCard extends React.Component {
 			<Row className="remove-extra-space food-item-card">
 				<Row className="remove-extra-space">
 					<Col md={2} className="remove-extra-space">
-						<img src="./assets/images/svg/chicken-leg.svg" className="img-fluid" width="40px" />
+						<img src="./assets/images/svg/chicken-leg.svg" className="img-fluid chicken-leg" width="40px" />
 					</Col>
 					<Col md={6} className="remove-extra-space">
 						<div className="body">
