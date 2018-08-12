@@ -10,14 +10,7 @@ const DefaultStructure = () => (
 	<div>
 		<Header />
 		<CategoriesNavbar />
-		<Row className="remove-extra-space">
-			<Col md={9} className="remove-extra-space">
-				<MainPage />
-			</Col>
-			<Col md={3} className="remove-extra-space">
-				<Sidebar />
-			</Col>
-		</Row>
+		<MainPage />
 	</div>
 );
 

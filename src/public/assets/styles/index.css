@@ -183,10 +183,6 @@ html,body{
 	/* height: 175px; */
 }
 
-.blogs-category-nav {
-	background-color: #2d333a;
-}
-
 .blogs-category-nav .navItem {
 	padding: 1%;
 	font-weight: bold;
@@ -241,107 +237,119 @@ html,body{
 	margin-bottom: 5%;
 }
 
-.blogs-mainpage .blogs-section h4 {
+.blogs-mainpage .blogs-section h3 {
 	color: #555;
 }
 
-.single-blog {
+/* Single BLog Card */
+.single-blog-card {
 	margin: 2%;
-	margin-top: 5%;
+	padding: 10px;
+	border: 1px solid #fff;
+	box-shadow: 8px 8px 6px -6px #ccc;
 }
 
-.single-blog .thumb {
+.single-blog-card.large {
+	height: 350px;
+}
+
+.single-blog-card.medium {
+	height: 250px;
+}
+
+.single-blog-card.small {
+	height: 170px;
+}
+
+.single-blog-card .thumb {
+	position: relative;
     overflow: hidden;
+	transition: all 1000ms cubic-bezier(0.005, 1.650, 1.000, -0.600);
+    transition-timing-function: cubic-bezier(0.005, 1.650, 1.000, -0.600);
 }
 
-.single-blog .thumb img {
-    -webkit-transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
+.show-off {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: -180px;
+    left: -600px;
+    transition: 1s;
+    transform: rotate(30deg);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0)50%, rgba(255, 255, 255, 0.5)100%);
+}
+
+.single-blog-card .thumb img {
 	width: 100%;
-	height: 175px;
+	filter: brightness(65%);
 }
 
-.single-blog .body {
-    padding: 5%;
+.single-blog-card.large .thumb img {
+	height: 330px;
 }
 
-.single-blog .body p {
-    font-size: 12px;
+.single-blog-card.medium .thumb img {
+	height: 230px;
 }
 
-.single-blog .tags {
-    margin-bottom: 3%;
+.single-blog-card.small .thumb img {
+	height: 150px;
 }
 
-.single-blog .tags li {
-    display: inline-block;
-    border: 1px solid #ddd;
-    padding: 2%;
-    font-size: 10px;
-    font-weight: 400;
-    -webkit-transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
+.single-blog-card .body {
+	padding: 10px 20px;
 }
 
-.single-blog .tags li a {
-    color: #222;
-    -webkit-transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
-}
-
-.single-blog .tags li:hover {
-    background-color: #f9d700;
-    color: #222;
-    border-color: transparent;
-}
-
-.single-blog h4 {
-    margin-bottom: 3%;
-    -webkit-transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
-}
-
-.single-blog h4:hover {
-    color: #f9d700;
-}
-
-.single-blog .date {
-    color: #222;
-}
-
-.single-blog .actions {
+.single-blog-card h3, .single-blog-card h4 {
 	color: #555;
-    font-weight: bold;
+	margin-bottom: 3%;
 }
 
-.single-blog .likes {
-    color: rgb(255, 0, 0);
+.single-blog-card .blog-card-footer {
+	position: relative;
 }
 
-.single-blog .comments {
-    color: rgb(0, 255, 0);
+.single-blog-card.large .blog-card-footer {
+	bottom: -145px;
 }
 
-.single-blog .comments {
-    text-align: right;
+.single-blog-card.medium .blog-card-footer {
+	bottom: -75px;
 }
 
-.single-blog:hover .thumb img {
-    -webkit-filter: brightness(50%);
-    filter: brightness(50%);
-    transform: scale(1.1);
+.single-blog-card.small .blog-card-footer {
+	bottom: -30px;
+}
+
+.single-blog-card span {
+	margin: 0% 5%;
+}
+
+.single-blog-card .actions {
+	text-align: right;
+}
+
+.single-blog-card .actions:hover {
+	cursor: default;
+}
+
+.single-blog-card:hover {
+	border: 1px solid #999;
+	cursor: pointer;
+}
+
+.single-blog-card:hover .show-off {
+    top: 0px;
+    left: 0px;
+    transform: rotate(0deg);
+}
+
+.single-blog-card:hover .thumb img {
+	filter: brightness(100%);
 }
 
 @media (max-width: 991px) {
-    .single-blog {
+    .single-blog-card {
 		margin-bottom: 40px;
     }
 }
@@ -349,6 +357,7 @@ html,body{
 .blogs-greeting {
 	margin-bottom: 5%;
 	padding: 3%;
+	padding-bottom: 7%;
 	background-color: #2d333a;
 }
 
@@ -494,7 +503,7 @@ html,body{
 
 .food-item-card {
 	margin: 2%;
-    padding: 3%;
+    padding: 2%;
 	border: 1px solid #fff;
 	box-shadow: 8px 8px 6px -8px #ccc;
 }
@@ -522,7 +531,8 @@ html,body{
 
 .food-categories {
 	margin-top: 5%;
-	border-right: 2px solid #777;
+	position: sticky;
+	top: 20%;
 }
 
 .food-categories .single-food-category {
@@ -534,4 +544,28 @@ html,body{
 .food-categories .single-food-category:hover, .single-food-category:focus {
 	background-color: #ccc;
 	cursor: pointer;
+}
+
+.chicken-leg {
+	transform: rotate(45deg);
+}
+
+.disable-filter {
+	filter: blur(1px);
+}
+
+.food-type-filter {
+	margin-right: 5%;
+	font-size: 18px;
+}
+
+.food-type-filter input:checked {
+	/* background-color: grey !important; */
+}
+
+.cart {
+	text-align: center;
+	padding-top: 7%;
+	position: sticky;
+	top: 20%;
 }
