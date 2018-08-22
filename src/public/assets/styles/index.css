@@ -320,17 +320,19 @@ html,body{
 
 .single-blog-card .thumb .category-tag {
 	background-color: #fff;
+	font-weight: bold;
 	position: absolute;
 	top: 5%;
 	right: 5%;
 	padding: 0% 7%;
-	border-radius: 2px;
 	border-bottom: 2px solid #888;
 	text-transform: uppercase;
 }
 
 .single-blog-card .thumb .category-tag:hover {
 	cursor: default;
+	color: #fff;
+	background-color: #00f;
 }
 
 .show-off {
@@ -428,7 +430,113 @@ html,body{
 }
 
 .single-blog-page {
-	margin-top: 5%;
+	padding: 5%;
+}
+
+.single-blog-page .left-sidebar {
+	padding-right: 10%;
+}
+
+.single-blog-page .left-sidebar .blogs-section {
+	margin: 7% 0%;
+}
+
+.single-blog-page .left-sidebar .blogs-section h4 {
+	margin-bottom: 3%;
+}
+
+.blog-list-card  {
+	padding: 2%;
+	transition: all 0.3s ease 0s;
+}
+
+.blog-list-card h6 {
+	color: #555;
+}
+
+.blog-list-card .info {
+	padding-left: 3%;
+	font-size: 12px;
+}
+
+.blog-list-card:hover {
+	cursor: pointer;
+	background-color: #ccc;
+}
+
+.single-blog-page .short-info {
+	margin-bottom: 5%;
+}
+
+.single-blog-page .short-info .body {
+	padding-right: 5%;
+}
+
+.single-blog-page .short-info .body h2 {
+	margin-bottom: 3%;
+}
+
+.single-blog-page .short-info .body h5 {
+	color: #555;
+	min-height: 115px;
+}
+
+.single-blog-page .short-info .body span {
+	margin: 0% 5%;
+}
+
+.single-blog-page .short-info .body .actions {
+	text-align: right;
+}
+
+.single-blog-page .short-info .thumb img {
+	box-shadow: 8px 8px 6px -6px #ccc;
+}
+
+.single-blog-page .short-info .thumb .category-tag {
+	background-color: #fff;
+	font-weight: bold;
+	position: absolute;
+	top: 5%;
+	right: 5%;
+	padding: 0% 7%;
+	border-bottom: 2px solid #888;
+	text-transform: uppercase;
+}
+
+.single-blog-page .short-info .thumb .category-tag:hover {
+	cursor: default;
+	color: #fff;
+	background-color: #00f;
+}
+
+.single-blog-page .actions-menu {
+	position: sticky;
+	top: 60%;
+	text-align: center;
+	color: #00f;
+	margin-right: 15px;
+	padding-top: 15px;
+	border: 1px solid #eee;
+	box-shadow: 8px 8px 6px -6px #ccc;
+}
+
+.single-blog-page .actions-menu .single-action {
+	margin-bottom: 15px;
+	font-size: 18px;
+	line-height: 15px;
+}
+
+.single-blog-page .actions-menu .single-action:hover {
+	cursor: pointer;
+}
+
+.single-blog-page .actions-menu .single-action .action-count {
+	font-size: 12px;
+}
+
+.single-blog-page .content {
+	font-size: 18px;
 }
 
 .services-navbar {
@@ -631,12 +739,6 @@ html,body{
 	position: sticky;
 	top: 20%;
 }
-
-/* .btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .show > .btn-secondary.dropdown-toggle {
-    color: #fff;
-    background-color: #fff;
-    border-color: #fff;
-} */
 
 .profile-dropdown-btn {
 	background-color: #eee;
