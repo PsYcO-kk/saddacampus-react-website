@@ -9,35 +9,35 @@ const settings = {
 	infinite: false,
 	speed: 500,
 	slidesToScroll: 1,
-	slidesToShow: 4,
+	slidesToShow: 9,
 	swipeToSlide: true,
 	responsive: [
 		{
 			breakpoint: 1024,
 			settings: {
-				slidesToShow: 3,
+				slidesToShow: 7,
 				slidesToScroll: 1,
 			}
 		},
 		{
 			breakpoint: 600,
 			settings: {
-				slidesToShow: 2,
+				slidesToShow: 5,
 				slidesToScroll: 1,
 			}
 		},
 		{
 			breakpoint: 480,
 			settings: {
-				slidesToShow: 1,
+				slidesToShow: 3,
 				slidesToScroll: 1
 			}
 		}
 	]
 };
 
-const DealsNavbar = () => (
-	<div className="deals-header">
+const DealsCarousel = () => (
+	<div className="deals-page-carousel">
 		<Container>
 			<Slider {...settings}>
 				<div>
@@ -80,13 +80,19 @@ const DealsNavbar = () => (
 						<img className="img-fluid" src="assets/images/bright-color-eyes-413998.jpg" />
 					</div>
 				</div>
+				<div>
+					<div className="thumb">
+						<img className="img-fluid" src="assets/images/bright-color-eyes-413998.jpg" />
+					</div>
+				</div>
+				<div>
+					<div className="thumb">
+						<img className="img-fluid" src="assets/images/bright-color-eyes-413998.jpg" />
+					</div>
+				</div>
 			</Slider>
-			<div className="row section-title">
-				<h1>Deals from all around</h1>
-				<p>There are always some things you need to know and once in college you need all the help available.</p>
-			</div>
 		</Container>
 	</div>
 );
 
-export default DealsNavbar;
+export default DealsCarousel;
