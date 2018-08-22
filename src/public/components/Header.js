@@ -1,50 +1,53 @@
 import React from 'react';
-import { Collapse, Container, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem } from 'reactstrap';
+import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem, Container, Navbar, NavbarBrand, Nav, NavItem } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 
 export default class Header extends React.Component {
 	constructor(){
 		super();
-		this.state = { isOpen: false };
+		this.state = { dropdownOpen: false };
 	}
 	toggle = () => {
 		this.setState({
-			isOpen: !this.state.isOpen
+			dropdownOpen: !this.state.dropdownOpen
 		});
 	}
 	render(){
 		return (
-			<Navbar color="light" light expand="lg" sticky="top" className="bg-white border-bottom">
+			<Navbar color="light" light expand="lg" sticky="top" className="bg-white border-bottom" style={{ boxShadow: '0px 8px 6px -7px #ccc' }}>
 				<Container>
-					<NavbarBrand href="/">
-						<img src="/assets/images/brand/16-9.png" width="100" className="d-inline-block align-top" alt="" />
+					<NavbarBrand href="/" style={{ fontWeight: 'bold' }}>
+						<img src="/assets/images/brand/16-9.png" width="75" className="d-inline-block" alt="" />
+						 &nbsp;&nbsp; SADDACAMPUS
 					</NavbarBrand>
-					<NavbarToggler onClick={this.toggle} />
-					<Collapse isOpen={this.state.isOpen} navbar>
-						<Nav className="ml-auto" navbar>
-							<NavItem>
-								<NavLink to="/home" activeClassName="active" className="nav-link" style={{ 'fontWeight': 'bold' }}>Home</NavLink>
-							</NavItem>
-							<NavItem>
-								<NavLink to="/food-delivery" activeClassName="active" className="nav-link" style={{ 'fontWeight': 'bold' }}>Food Delivery</NavLink>
-							</NavItem>
-							<NavItem>
-								<NavLink to="/video-lectures" activeClassName="active" className="nav-link" style={{ 'fontWeight': 'bold' }}>Video Lectures</NavLink>
-							</NavItem>
-							<NavItem>
-								<NavLink to="/internships" activeClassName="active" className="nav-link" style={{ 'fontWeight': 'bold' }}>Internships</NavLink>
-							</NavItem>
-							<NavItem>
-								<NavLink to="/blogs" activeClassName="active" className="nav-link" style={{ 'fontWeight': 'bold' }}>Blogs</NavLink>
-							</NavItem>
-							<NavItem>
-								<NavLink to="/deals" activeClassName="active" className="nav-link" style={{ 'fontWeight': 'bold' }}>Deals</NavLink>
-							</NavItem>
-							<NavItem>
-								<NavLink to="/help" activeClassName="active" className="nav-link" style={{ 'fontWeight': 'bold' }}>Help</NavLink>
-							</NavItem>
-						</Nav>
-					</Collapse>
+					<Nav className="ml-auto" navbar>
+						<NavItem>
+							<NavLink to="/" className="nav-link">
+								<img className="img-fluid" width="30" src="assets/images/svg/home.svg" />
+							</NavLink>
+						</NavItem>
+						&nbsp;&nbsp;
+						<NavItem>
+							<NavLink to="/help" className="nav-link">
+								<img className="img-fluid" width="30" src="assets/images/svg/questions-circular-button.svg" />
+							</NavLink>
+						</NavItem>
+						&nbsp;&nbsp;
+						<NavItem>
+							<ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
+								<DropdownToggle caret className="profile-dropdown-btn">
+									<img className="img-fluid" width="30" src="assets/images/svg/user.svg" />
+								</DropdownToggle>
+								<DropdownMenu>
+									<DropdownItem header>Header</DropdownItem>
+									<DropdownItem disabled>Action</DropdownItem>
+									<DropdownItem>Another Action</DropdownItem>
+									<DropdownItem divider />
+									<DropdownItem>Another Action</DropdownItem>
+								</DropdownMenu>
+							</ButtonDropdown>
+						</NavItem>
+					</Nav>
 				</Container>
 			</Navbar>
 		);

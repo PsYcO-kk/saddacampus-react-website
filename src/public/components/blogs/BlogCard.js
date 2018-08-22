@@ -12,7 +12,10 @@ const BlogCard = (props) => (
 			<Col md={4} className="remove-extra-space">
 				<div className="thumb">
 					<img className="img-fluid" src={"./assets/images/coffee.PNG"} alt="" />
-					<div className="show-off" />
+					{/*<div className="show-off" />*/}
+					<div className="category-tag">
+						Animal
+					</div>
 				</div>
 			</Col>
 			<Col md={8} className="remove-extra-space">

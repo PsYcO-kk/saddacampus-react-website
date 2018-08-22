@@ -13,6 +13,8 @@ import PrivacyPolicyPage from './components/PrivacyPolicyPage';
 import TestComponent from './components/TestComponent';
 import NotFoundPage from './components/NotFoundPage';
 
+import BlogPage from './components/blogs/BlogPage';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/styles/index.css';
 import './assets/styles/main.css';
@@ -24,7 +26,10 @@ const jsx = (
                 <Route path="/" component={HomePage} exact={true} />
                 <Route path="/food-delivery" component={FoodDeliveryPage} />
                 <Route path="/blogs" component={BlogsPage} />
-                <Route path="/deals" component={DealsPage} />
+
+				<Route path="/blog-page" component={BlogPage} />
+
+				<Route path="/deals" component={DealsPage} />
                 <Route path="/about-us" component={AboutUsPage} />
                 <Route path="/privacy-policy" component={PrivacyPolicyPage} />
                 <Route path="/test" component={TestComponent} />
