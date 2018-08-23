@@ -22,7 +22,7 @@ export default class Merchants extends React.Component {
 	render(){
 		return(
 			<div>
-				<Link to="/merchants/create" className="nav-link">
+				<Link to="/admin/merchants/create" className="nav-link">
 					<Button color="primary" size="lg" block>Create New Merchant</Button>
 				</Link>
 				<br />

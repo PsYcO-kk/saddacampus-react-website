@@ -2,6 +2,8 @@ import React from 'react';
 import { Container } from 'reactstrap';
 import Slider from "react-slick";
 
+import { CustomNextArrow, CustomPrevArrow } from '../CustomCarouselArrows';
+
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -11,6 +13,8 @@ const settings = {
 	slidesToScroll: 1,
 	slidesToShow: 9,
 	swipeToSlide: true,
+	nextArrow: <CustomNextArrow />,
+	prevArrow: <CustomPrevArrow prevArrowStyle={{ /*left: '-24px'*/ }} />,
 	responsive: [
 		{
 			breakpoint: 1024,

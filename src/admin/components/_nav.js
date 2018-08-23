@@ -2,56 +2,56 @@ export const superNav = {
 	items: [
 		{
 			name: 'Dashboard',
-			url: '/dashboard',
+			url: '/admin/dashboard',
 			icon: 'icon-speedometer',
 		},
 		{
 			name: 'Administrators',
-			url: '/administrators',
+			url: '/admin/administrators',
 			icon: 'fas fa-user-secret',
 			children: [
 				{
 					name: 'Show All',
-					url: '/administrators',
+					url: '/admin/administrators',
 					icon: 'fas fa-list',
 				},
 				{
 					name: 'Create Admin',
-					url: '/administrators/create',
+					url: '/admin/administrators/create',
 					icon: 'fas fa-user-plus',
 				},
 			],
 		},
 		{
 			name: 'Merchants',
-			url: '/merchants',
+			url: '/admin/merchants',
 			icon: 'fas fa-users',
 			children: [
 				{
 					name: 'Show All',
-					url: '/merchants',
+					url: '/admin/merchants',
 					icon: 'fas fa-list',
 				},
 				{
 					name: 'Create Merchant',
-					url: '/merchants/create',
+					url: '/admin/merchants/create',
 					icon: 'fas fa-user-plus',
 				},
 			],
 		},
 		{
 			name: 'Businesses',
-			url: '/businesses',
+			url: '/admin/businesses',
 			icon: 'fas fa-briefcase',
 			children: [
 				{
 					name: 'Show All',
-					url: '/businesses',
+					url: '/admin/businesses',
 					icon: 'fas fa-list',
 				},
 				{
 					name: 'Restaurants',
-					url: '/businesses/restaurants',
+					url: '/admin/businesses/restaurants',
 					icon: 'fas fa-utensils',
 				},
 			],
@@ -63,7 +63,7 @@ export const maintainerNav = {
 	items: [
 		{
 			name: 'Dashboard',
-			url: '/dashboard',
+			url: '/admin/dashboard',
 			icon: 'icon-speedometer',
 		},
 	],

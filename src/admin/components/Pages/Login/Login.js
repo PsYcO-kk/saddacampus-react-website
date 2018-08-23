@@ -14,7 +14,7 @@ export class Login extends Component {
 
 	componentDidMount(){
 		if(sessionStorage.getItem('admin-token')){
-			this.props.history.push("/dashboard");
+			this.props.history.push("/admin/dashboard");
 		}
 	}
 
@@ -36,7 +36,7 @@ export class Login extends Component {
 					sessionStorage.setItem('admin-token', response.token);
 					sessionStorage.setItem('admin-role', response.Admin.role);
 					this.props.updateRole();
-					this.props.history.push("/dashboard");
+					this.props.history.push("/admin/dashboard");
 				}
 				else{
 					this.setState(()=>({ error: "Server error. Please try again..." }));

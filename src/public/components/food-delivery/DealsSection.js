@@ -1,29 +1,10 @@
 import React from 'react';
 import Slider from "react-slick";
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import faChevronRight from '@fortawesome/fontawesome-free-solid/faChevronRight';
-import faChevronLeft from '@fortawesome/fontawesome-free-solid/faChevronLeft';
+
+import { CustomNextArrow, CustomPrevArrow } from '../CustomCarouselArrows';
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
-const CustomNextArrow = (props) => {
-	const { className, style, onClick } = props;
-	return(
-		<div className="carousel-arrow carousel-next" style={{ ...style }} onClick={onClick}>
-			<FontAwesomeIcon icon={faChevronRight} />
-		</div>
-	)
-};
-
-const CustomPrevArrow = (props) => {
-	const { className, style, onClick } = props;
-	return(
-		<div className="carousel-arrow carousel-prev" style={{ ...style }} onClick={onClick}>
-			<FontAwesomeIcon icon={faChevronLeft} />
-		</div>
-	)
-};
 
 const settings = {
 	infinite: true,

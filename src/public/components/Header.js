@@ -20,7 +20,7 @@ export default class Header extends React.Component {
 						<img src="/assets/images/brand/16-9.png" width="75" className="d-inline-block" alt="" />
 						 &nbsp;&nbsp; SADDACAMPUS
 					</NavbarBrand>
-					<Nav className="ml-auto" navbar>
+					<Nav className="ml-auto" navbar style={{ flexDirection: 'row' }}>
 						<NavItem>
 							<NavLink to="/" className="nav-link">
 								<img className="img-fluid" width="30" src="assets/images/svg/home.svg" />

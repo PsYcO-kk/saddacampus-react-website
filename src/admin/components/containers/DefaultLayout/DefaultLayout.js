@@ -26,7 +26,7 @@ import DefaultHeader from './DefaultHeader';
 export class DefaultLayout extends Component {
 	componentDidMount(){
 		if(!sessionStorage.getItem('admin-token')){
-			this.props.history.push("/login");
+			this.props.history.push("/admin/login");
 		}
 	}
 
@@ -64,7 +64,7 @@ export class DefaultLayout extends Component {
 								: (null);
 							},
 							)}
-							<Redirect from="/" to="/dashboard" />
+							<Redirect from="/admin" to="/admin/dashboard" />
 						</Switch>
 					</Container>
 				</main>

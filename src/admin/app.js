@@ -23,10 +23,10 @@ const jsx = (
 	<Provider store={store}>
 		<BrowserRouter>
 			<Switch>
-				<Route exact path="/login" name="Login Page" component={Login} />
-				<Route exact path="/register" name="Register Page" component={Register} />
-				<Route exact path="/logout" name="Logout" component={Logout} />
-				<Route path="/" name="Home" component={DefaultLayout} />
+				<Route exact path="/admin/login" name="Login Page" component={Login} />
+				<Route exact path="/admin/register" name="Register Page" component={Register} />
+				<Route exact path="/admin/logout" name="Logout" component={Logout} />
+				<Route path="/admin" name="Home" component={DefaultLayout} />
 			</Switch>
 		</BrowserRouter>
 	</Provider>

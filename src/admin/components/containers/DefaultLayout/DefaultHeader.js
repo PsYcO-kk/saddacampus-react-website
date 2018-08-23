@@ -69,7 +69,7 @@ export class DefaultHeader extends Component {
 							<DropdownItem><i className="fa fa-file"></i> Projects<Badge color="primary">42</Badge></DropdownItem>
 							<DropdownItem divider />
 							<DropdownItem><i className="fa fa-shield"></i> Lock Account</DropdownItem>
-							<Link to="/logout" className="nav-link"><DropdownItem><i className="fa fa-lock"></i> Logout</DropdownItem></Link>
+							<Link to="/admin/logout" className="nav-link"><DropdownItem><i className="fa fa-lock"></i> Logout</DropdownItem></Link>
 						</DropdownMenu>
 					</AppHeaderDropdown>
 				</Nav>
