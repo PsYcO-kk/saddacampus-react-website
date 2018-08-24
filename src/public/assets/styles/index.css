@@ -539,9 +539,12 @@ html,body{
 	font-size: 18px;
 }
 
+/* Start of Services Navbar */
 .services-navbar {
-	background: linear-gradient(to bottom, #2d333a 0%,#2d333a 75%,#2d333a 75%,white 0%,white 25%,white 25%);
+	background-color: #2d333a;
 	padding: 3% 7%;
+	margin-bottom: 7%;
+	position: relative;
 }
 
 .services-navbar .service-box {
@@ -553,34 +556,41 @@ html,body{
 	max-height: 90px;
 }
 
-.search-box {
-    position: relative;
+.services-navbar .search-box {
+	position: absolute;
+	bottom: -25px;
+	width: 840px;
 }
 
-.search-box .search-icon {
+.services-navbar .search-box .left-addon {
+	position: relative;
+}
+
+.services-navbar .search-box .search-icon {
 	position: absolute;
-	padding: 12px;
-	font-size: 24px;
+	padding: 10px;
 	color: #ccc;
 	pointer-events: none;
 	left:  0px;
 }
 
-.search-box .search-bar {
+.services-navbar .search-box .search-bar {
 	border-radius: 0;
-	font-size: 24px;
+	font-size: 20px;
 	margin-top: 5%;
 	padding-left: 45px;
+	max-width: 420px;
 }
 
-.search-box .search-bar::placeholder {
+.services-navbar .search-box .search-bar::placeholder {
 	color: #ccc;
 }
 
-.search-box .search-bar:hover, .search-bar:focus {
+.services-navbar .search-box .search-bar:hover, .search-bar:focus {
 	/* z-index: 1; */
 	box-shadow: 0 8px 6px -6px #777;
 }
+/* End of Services Navbar */
 
 .deals-carousel {
 	padding: 1% 7%;

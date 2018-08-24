@@ -2,7 +2,7 @@ import React from 'react';
 import { Parallax, Background } from 'react-parallax';
 
 import Header from '../Header';
-import CategoriesNavbar from './CategoriesNavbar';
+import CategoriesNavbar from '../CategoriesNavbar';
 import DealsCarousel from './DealsCarousel';
 import SingleCategoryDeals from './SingleCategoryDeals';
 

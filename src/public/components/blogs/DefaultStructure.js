@@ -3,7 +3,7 @@ import { Row, Col } from 'reactstrap';
 import { Parallax, Background } from 'react-parallax';
 
 import Header from '../Header';
-import CategoriesNavbar from './CategoriesNavbar';
+import CategoriesNavbar from '../CategoriesNavbar';
 import BlogsSection from './BlogsSection';
 
 const DefaultStructure = () => (
