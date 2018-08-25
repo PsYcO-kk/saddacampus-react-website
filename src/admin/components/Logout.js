@@ -6,7 +6,7 @@ class Logout extends React.Component{
 		sessionStorage.removeItem('admin-role');
 		sessionStorage.removeItem('admin-token');
 		this.props.updateRole();
-		this.props.history.push('/login');
+		this.props.history.push('/admin/login');
 	}
 
 	render(){

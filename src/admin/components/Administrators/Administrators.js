@@ -4,7 +4,7 @@ import { Button, Table } from 'reactstrap';
 
 const Administrators = () => (
 	<div>
-		<Link to="/administrators/create" className="nav-link">
+		<Link to="/admin/administrators/create" className="nav-link">
 			<Button color="primary" size="lg" block>Create New Administrator</Button>
 		</Link>
 		<br />

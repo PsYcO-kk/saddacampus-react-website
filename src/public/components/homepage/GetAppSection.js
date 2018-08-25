@@ -2,7 +2,8 @@ import React from 'react';
 
 const descriptionStyle = {
 	"fontWeight": "normal",
-	"marginTop": "3%"
+	"marginTop": "3%",
+	"color": "white"
 };
 
 const linkDivStyle = {
@@ -18,14 +19,14 @@ const imgStyle = {
 };
 
 const GetAppSection = () => (
-	<section className="section-gap-half">
-		<div className="container jumbotron" style={{ borderRadius: '0' }}>
+	<section className="section-gap-half" style={{ backgroundColor: 'black' }}>
+		<div className="container">
 			<div className="row align-items-center">
 				<div className="col-lg-4 about-left">
 					<img className="img-fluid" src="/assets/images/application.png" alt="" />
 				</div>
 				<div className="col-lg-8 about-right">
-					<h1>The Best Food Delivery App</h1>
+					<h1 style={{ 'color': 'white' }}>The Best Food Delivery App</h1>
 					<h4 style={descriptionStyle}>
 						Now you can make food happen pretty much wherever you are thanks to the free easy-to-use Food Delivery.
 					</h4>

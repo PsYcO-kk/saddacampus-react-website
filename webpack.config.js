@@ -1,21 +1,22 @@
 const path = require('path');
 module.exports = {
 
-	entry: './src/mainpage/app.js',
+	entry: './src/public/app.js',
 	output: {
 		path: path.resolve(__dirname, 'public'),
 		filename: 'bundle.js'
     },
 	module: {
         rules: [{
-            test: /\.js$/,
+            test: /\.jsx?$/,
             loader: 'babel-loader',
             include: path.resolve(__dirname, 'src')
         }, {
-            test: /\.css$/,
+            test: /\.s?css$/,
             use: [
                 'style-loader',
-                'css-loader'
+				'css-loader',
+				'sass-loader'
             ]
         }, {
 			test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
@@ -29,7 +30,7 @@ module.exports = {
 				}
 			]
 		}, {
-			test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+			test: /\.(ttf|eot|svg|jpg|png|gif)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
 			use: [
 				{ loader: 'file-loader' }
 			]

@@ -21,9 +21,6 @@ export class DefaultHeader extends Component {
 					<NavItem className="px-3">
 						<NavLink to="/dashboard" activeClassName="active" className="nav-link">Dashboard</NavLink>
 					</NavItem>
-					<NavItem className="px-3">
-						<NavLink to="/administrators" activeClassName="active" className="nav-link">Administrators</NavLink>
-					</NavItem>
 				</Nav>
 			);
 		else
@@ -50,7 +47,7 @@ export class DefaultHeader extends Component {
 				/>
 				<AppSidebarToggler className="d-md-down-none" display="lg" />
 
-				<this.controlledNav />
+				{/*<this.controlledNav />*/}
 				<Nav className="ml-auto" navbar>
 					{/*<NavItem className="d-md-down-none">
 						<NavLink to="#" activeClassName="active" className="nav-link"><i className="icon-bell"></i><Badge pill color="danger">5</Badge></NavLink>
@@ -72,7 +69,7 @@ export class DefaultHeader extends Component {
 							<DropdownItem><i className="fa fa-file"></i> Projects<Badge color="primary">42</Badge></DropdownItem>
 							<DropdownItem divider />
 							<DropdownItem><i className="fa fa-shield"></i> Lock Account</DropdownItem>
-							<Link to="/logout" className="nav-link"><DropdownItem><i className="fa fa-lock"></i> Logout</DropdownItem></Link>
+							<Link to="/admin/logout" className="nav-link"><DropdownItem><i className="fa fa-lock"></i> Logout</DropdownItem></Link>
 						</DropdownMenu>
 					</AppHeaderDropdown>
 				</Nav>
