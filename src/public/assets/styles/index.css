@@ -825,3 +825,78 @@ html,body{
 }
 
 /* Arrow Box End */
+
+.resume-status-navbar {
+	background-color: #000;
+	color: #fff;
+	padding: 5px;
+}
+
+.resume-status-navbar .inner-body {
+	margin: 10px;
+}
+
+.resume-status-navbar button {
+	border-radius: 0;
+	font-size: 12px;
+	padding: 2px;
+}
+
+.filter-section {
+	margin: 3%;
+	padding: 10%;
+	background-color: #eee;
+}
+
+.filter-section input, .filter-section button {
+	border-radius: 0;
+}
+
+.internships-page {
+	padding: 3%;
+	margin-bottom: 10%;
+}
+
+.internships-section {
+	margin-top: 3%;
+	margin-left: 3%;
+}
+
+.internships-section h3 {
+	color: #555;
+	margin-bottom: 1%;
+}
+
+.internship-opportunity-card {
+	position: relative;
+	margin: 3% 5%;
+	padding: 3%;
+	font-size: 13px;
+	border: 1px solid #eee;
+	box-shadow: 8px 8px 6px -8px #ccc;
+}
+
+.internship-opportunity-card:hover {
+	cursor: pointer;
+	border: 1px solid #999;
+}
+
+.internship-opportunity-card .thumb img {
+	max-height: 75px;
+	margin: 5px;
+}
+
+.internship-opportunity-card .company-details {
+	padding-left: 7%;
+	margin-bottom: 5%;
+}
+
+.internship-opportunity-card .company-details .single-detail {
+	line-height: 18px;
+}
+
+.internship-opportunity-card span {
+	position: absolute;
+	top: 3%;
+	right: 3%;
+}

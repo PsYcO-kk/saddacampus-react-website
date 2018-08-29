@@ -8,6 +8,8 @@ import HomePage from './components/homepage/DefaultStructure';
 import FoodDeliveryPage from './components/food-delivery/DefaultStructure';
 import BlogsPage from './components/blogs/DefaultStructure';
 import DealsPage from './components/deals/DefaultStructure';
+import InternshipsPage from './components/internships/DefaultStructure';
+import VideoLecturesPage from './components/video-lectures/DefaultStructure';
 import AboutUsPage from './components/AboutUsPage';
 import PrivacyPolicyPage from './components/PrivacyPolicyPage';
 import TestComponent from './components/TestComponent';
@@ -30,6 +32,8 @@ const jsx = (
 				<Route path="/blog-page" component={BlogPage} />
 
 				<Route path="/deals" component={DealsPage} />
+				<Route path="/internships" component={InternshipsPage} />
+				<Route path="/video-lectures" component={VideoLecturesPage} />
                 <Route path="/about-us" component={AboutUsPage} />
                 <Route path="/privacy-policy" component={PrivacyPolicyPage} />
                 <Route path="/test" component={TestComponent} />
