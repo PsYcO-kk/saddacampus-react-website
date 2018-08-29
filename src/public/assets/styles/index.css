@@ -119,17 +119,26 @@ html,body{
 }
 
 .footer{
-	padding-top: 3%;
-	padding-bottom: 3%;
-	color: black;
-	font-weight: bold;
+	padding: 3% 5%;
+	color: #fff;
+	background-color: #2d333a;
+	font-size: 18px;
+	text-align: center;
 }
-.single-service, .single-review{
-	/* opacity: 0.6; */
+
+.footer .division .body{
+	margin: 2%;
 }
-.footer{
-	border-top: 1px solid #ccc;
+
+@media (min-width: 750px) {
+	.footer .info, .social {
+	  	text-align: left;
+	}
+	.footer .address {
+		text-align: right;
+  }
 }
+
 #sync{
 	border: 5px solid #f3f3f3;
 	border-radius: 50%;

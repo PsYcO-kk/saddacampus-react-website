@@ -1,69 +1,47 @@
 import React from 'react';
+import { Row, Col } from 'reactstrap';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import brands from '@fortawesome/fontawesome-free-brands';
-
-const tableDivStyle = {
-	"paddingTop": "5%"
-};
-
-const tableStyle = {
-	"minWidth": "100%"
-};
-
-const hrStyle = {
-	"paddingTop": "1%",
-	"paddingBottom": "1%"
-};
-
-const contentStyle = {
-	"fontWeight": "normal"
-};
-
+import faCopyright from '@fortawesome/fontawesome-free-regular/faCopyright';
+import faFacebookF from '@fortawesome/fontawesome-free-brands/faFacebookF';
+import faTwitter from '@fortawesome/fontawesome-free-brands/faTwitter';
+import faInstagram from '@fortawesome/fontawesome-free-brands/faInstagram';
 
 const Footer = () => (
 	<footer className="footer">
-		<div className="container">
-			<div className="row">
-				<div className="col-lg-3">
-					<img className="img-fluid float-left" src="/assets/images/brand/16-9.png" id="logo" />
+		<Row className="remove-extra-space">
+			<Col md={2} className="remove-extra-space division logo">
+				<div className="body">
+					<img className="img-fluid" src="/assets/images/brand/16-9.png" />
+					<div><FontAwesomeIcon icon={faCopyright} /> Saddacampus LLP</div>
 				</div>
-				<div className="col-lg-1"></div>
-				<div className="col">
-					<div align="right">
-						<em>Saddacampus works with the motto of “making college life easier”. Saddacampus aims at becoming a ONE STOP SOLUTION for college students.</em>
-					</div>
-					<div style={tableDivStyle} align="center">
-						<table style={tableStyle}>
-							<tbody>
-								<tr>
-									<td align="center"><h5>Connect to us:</h5></td>
-									<td><a href="https://www.facebook.com/saddacampus/"><FontAwesomeIcon icon={['fab', 'facebook-square']} size="3x" /></a></td>
-									<td><a href="https://www.instagram.com/saddacampus/"><FontAwesomeIcon icon={['fab', 'instagram']} size="3x" /></a></td>
-									<td><a href="https://www.linkedin.com/company/saddacampusllp/"><FontAwesomeIcon icon={['fab', 'linkedin']} size="3x" /></a></td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
+			</Col>
+			<Col md={3} className="remove-extra-space division">
+				<div className="body">
 				</div>
-			</div>
-			<hr style={hrStyle} />
-			<div className="row">
-				<div className="col-lg-2">
-					<h5>Phone</h5>
-					<a href="tel:+919523739679">+91- 95237 39679</a>
+			</Col>
+			<Col md={2} className="remove-extra-space division info">
+				<div className="body">
+					<div>About Us</div>
+					<div>Contact</div>
+					<div>Terms & Conditions</div>
 				</div>
-				<div className="col-lg-5">
-					<h5>Address</h5>
-					<span style={contentStyle}>CIIE, IIT(ISM) DHANBAD, DHANBAD, JHARKHAND, 826004, INDIA.</span>
+			</Col>
+			<Col md={2} className="remove-extra-space division social">
+				<div className="body">
+					<div><FontAwesomeIcon icon={faFacebookF} style={{ marginRight: '7px' }} /> Facebook</div>
+					<div><FontAwesomeIcon icon={faTwitter} style={{ marginRight: '7px' }} /> Twitter</div>
+					<div><FontAwesomeIcon icon={faInstagram} style={{ marginRight: '7px' }} /> Instagram</div>
 				</div>
-				<div className="col-lg-5">
-					<h5>Additional Informations</h5>
-					<span style={contentStyle}>
-						Join the thousands of other restaurants who benefit from having their menus on TakeOff. To partner with us drop us a mail at <a href="mailto:info@saddacampus.com">info@saddacampus.com</a>
-					</span>
+			</Col>
+			<Col md={3} className="remove-extra-space division address">
+				<div className="body">
+					<div>CIIE, IIT (ISM) Dhanbad,</div>
+					<div>Jharkhand- 826004, India</div>
+					<div>+91- 95237 39679</div>
+					<div>info@saddacampus.com</div>
 				</div>
-			</div>
-		</div>
+			</Col>
+		</Row>
 	</footer>
 );
 
