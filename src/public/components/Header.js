@@ -1,5 +1,5 @@
 import React from 'react';
-import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem, Container, Navbar, NavbarBrand, Nav, NavItem } from 'reactstrap';
+import { UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem, Container, Navbar, NavbarBrand, Nav, NavItem } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 
 export default class Header extends React.Component {
@@ -34,18 +34,18 @@ export default class Header extends React.Component {
 						</NavItem>
 						&nbsp;&nbsp;
 						<NavItem>
-							<ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-								<DropdownToggle caret className="profile-dropdown-btn">
+							<UncontrolledDropdown>
+								<DropdownToggle tag="a" className="nav-link" caret>
 									<img className="img-fluid" width="30" src="assets/images/svg/user.svg" />
 								</DropdownToggle>
-								<DropdownMenu>
+								<DropdownMenu style={{ borderRadius: 0 }}>
 									<DropdownItem header>Header</DropdownItem>
 									<DropdownItem disabled>Action</DropdownItem>
 									<DropdownItem>Another Action</DropdownItem>
 									<DropdownItem divider />
 									<DropdownItem>Another Action</DropdownItem>
 								</DropdownMenu>
-							</ButtonDropdown>
+							</UncontrolledDropdown>
 						</NavItem>
 					</Nav>
 				</Container>
