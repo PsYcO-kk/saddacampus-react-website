@@ -900,3 +900,50 @@ html,body{
 	top: 3%;
 	right: 3%;
 }
+
+.video-lectures-page {
+	padding: 2% 10%;
+}
+
+.video-lectures-page .lectures-single-section {
+	margin: 5% 1%;
+}
+
+.video-lectures-page .lectures-single-section h3 {
+	color: #555;
+	margin-bottom: 2%;
+}
+
+.video-lectures-page .lectures-single-section .view-more {
+	margin-top: 1%;
+	text-align: right;
+}
+
+.lectures-single-section .video-lecture-card {
+	margin: 5%;
+	box-shadow: 8px 8px 6px -8px #ccc;
+	border: 1px solid #eee;
+}
+
+.lectures-single-section .video-lecture-card:hover {
+	cursor: pointer;
+	border: 1px solid #555;
+}
+
+.lectures-single-section .video-lecture-card .thumb img {
+	height: 150px;
+	width: 100%;
+}
+
+.lectures-single-section .video-lecture-card .body {
+	padding: 7%;
+}
+
+.lectures-single-section .video-lecture-card .body h5 {
+	color: #555;
+	margin-bottom: 3%;
+}
+
+.lectures-single-section .video-lecture-card .body .lecture-card-footer {
+	font-size: 13px;
+}
