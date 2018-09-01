@@ -130,7 +130,7 @@ html,body{
 	margin: 2%;
 }
 
-@media (min-width: 750px) {
+@media (min-width: 770px) {
 	.footer .info, .social {
 	  	text-align: left;
 	}

@@ -8,7 +8,7 @@ import faInstagram from '@fortawesome/fontawesome-free-brands/faInstagram';
 
 const Footer = () => (
 	<footer className="footer">
-		<Row className="remove-extra-space">
+		<Row className="remove-extra-space" style={{ alignItems: 'flex-end' }}>
 			<Col md={2} className="remove-extra-space division logo">
 				<div className="body">
 					<img className="img-fluid" src="/assets/images/brand/16-9.png" />
