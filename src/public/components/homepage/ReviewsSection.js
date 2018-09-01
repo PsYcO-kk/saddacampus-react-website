@@ -1,62 +1,27 @@
 import React from 'react';
-import Slider from "react-slick";
+import { Row, Col } from 'reactstrap';
+
 import UserReview from './UserReview';
 
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
 const ReviewsSection = () => {
-	const settings = {
-		focusOnSelect: true,
-		className: "center",
-		centerMode: true,
-		infinite: true,
-		centerPadding: "60px",
-		slidesToShow: 3,
-		speed: 500,
-		responsive: [
-			{
-				breakpoint: 1024,
-				settings: {
-					slidesToShow: 2,
-				}
-			},
-			{
-				breakpoint: 775,
-				settings: {
-					slidesToShow: 1,
-				}
-			}
-		]
-	};
 	return(
-		<section className="reviews-area section-gap">
-			<div className="container">
-				<div className="row section-title">
-					<h1>User Reviews</h1>
-					<p>Who are extremely in love with our platform.</p>
-				</div>
-				<Slider {...settings}>
-					<div>
+		<section className="section-gap-half">
+			<Row className="remove-extra-space align-items-center">
+				<Col md={5} className="remove-extra-space">
+					<div className="thumb" style={{ textAlign: 'left', margin: '2% 0' }}>
+						<img className="img-fluid" src="/assets/images/beauty-black-and-white-color-splash-46171.jpg" alt="" />
+					</div>
+				</Col>
+				<Col md={7} className="remove-extra-space">
+					<div style={{ margin: '3% 0 0 20%' }}>
+						<div style={{ maxWidth: '350px' }}>
+							<h1>User Reviews</h1>
+							<p style={{ fontSize: '22px', lineHeight: '25px', margin: '5% 0' }}>Who are extremely in love with our platform.</p>
+						</div>
 						<UserReview username="Shubham" />
 					</div>
-					<div>
-						<UserReview username="Saurabh Kabra" />
-					</div>
-					<div>
-						<UserReview username="Sparsh Choudhary" />
-					</div>
-					<div>
-						<UserReview username="Landon Houston" />
-					</div>
-					<div>
-						<UserReview username="Nelle Wade" />
-					</div>
-					<div>
-						<UserReview username="Jon Banks" />
-					</div>
-				</Slider>
-			</div>
+				</Col>
+			</Row>
 		</section>
 	);
 };

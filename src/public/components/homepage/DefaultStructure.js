@@ -1,12 +1,12 @@
 import React from 'react';
 
-import LoginSection from './LoginSection.js';
-import ServicesSection from "./ServicesSection.js";
-import BlogsSection from './BlogsSection.js';
-import ReviewsSection from './ReviewsSection.js';
-import NewsSection from './NewsSection.js';
-import GetAppSection from './GetAppSection.js';
-
+import LoginSection from './LoginSection';
+import ServicesSection from "./ServicesSection";
+import BlogsSection from './BlogsSection';
+import ReviewsSection from './ReviewsSection';
+import NewsSection from './NewsSection';
+import GetAppSection from './GetAppSection';
+import Footer from '../Footer';
 
 const DefaultStructure = () => (
 	<div>
@@ -16,6 +16,7 @@ const DefaultStructure = () => (
 		<ReviewsSection />
 		<NewsSection />
 		<GetAppSection />
+		<Footer />
 	</div>
 );
 

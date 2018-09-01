@@ -1,43 +1,27 @@
 import React from 'react';
-
-const descriptionStyle = {
-	"fontWeight": "normal",
-	"marginTop": "3%",
-	"color": "white"
-};
-
-const linkDivStyle = {
-	"marginTop": "2%"
-};
-
-const linkStyle = {
-	"cursor": "pointer"
-};
-
-const imgStyle = {
-	"maxWidth": "40%"
-};
+import { Col, Row } from 'reactstrap';
 
 const GetAppSection = () => (
-	<section className="section-gap-half" style={{ backgroundColor: 'black' }}>
-		<div className="container">
-			<div className="row align-items-center">
-				<div className="col-lg-4 about-left">
-					<img className="img-fluid" src="/assets/images/application.png" alt="" />
-				</div>
-				<div className="col-lg-8 about-right">
-					<h1 style={{ 'color': 'white' }}>The Best Food Delivery App</h1>
-					<h4 style={descriptionStyle}>
-						Now you can make food happen pretty much wherever you are thanks to the free easy-to-use Food Delivery.
-					</h4>
-					<div style={linkDivStyle}>
-						<a style={linkStyle} href="https://play.google.com/store/apps/details?id=com.saddacampus.app">
-							<img className="img-fluid" src="/assets/images/google-play-badge.png" style={imgStyle} alt="" />
+	<section className="section-gap-half">
+		<Row className="remove-extra-space align-items-center">
+			<Col md={5} className="remove-extra-space">
+				<div style={{ margin: '0 20%'}}>
+					<h1>Get the app</h1>
+					<h1>Order by Tap.</h1>
+					<p style={{ fontSize: '22px', lineHeight: '25px', margin: '5% 0' }}>Download the app now and let your fingers do the rest.</p>
+					<div>
+						<a href="https://play.google.com/store/apps/details?id=com.saddacampus.app">
+							<img className="img-fluid" src="/assets/images/google-play-badge.png" width="200" alt="" />
 						</a>
 					</div>
 				</div>
-			</div>
-		</div>
+			</Col>
+			<Col md={7} className="remove-extra-space">
+				<div className="thumb" style={{ textAlign: 'right', margin: '2% 0' }}>
+					<img className="img-fluid" src="/assets/images/beauty-black-and-white-color-splash-46171.jpg" alt="" />
+				</div>
+			</Col>
+		</Row>
 	</section>
 );
 

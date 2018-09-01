@@ -1,20 +1,32 @@
 import React from 'react';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faStar from '@fortawesome/fontawesome-free-solid/faStar';
-import { Card, CardText, CardBody, CardTitle, CardSubtitle, Row, Col, Container } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 
 const UserReview = (props) => (
-	<Card className="single-review">
-		<Container>
-			<Row>
-				<Col md={3}><img src="assets/images/avatars/1.jpg" style={{ 'borderRadius': '50%' }} /></Col>
-				<Col md={9}>
-					<CardTitle style={{ 'paddingTop': '5%' }}><a href="#"><h4>{props.username}</h4></a></CardTitle>
-					<CardSubtitle style={{ 'fontSize': '12px', 'fontWeight': 'normal' }}>1d ago</CardSubtitle>
-					<CardBody style={{ 'padding': '0', 'paddingTop': '5%' }}>
-						<CardText>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore.
-						</CardText>
+	<div className="single-review">
+		<Row className="remove-extra-space">
+			<Col md={2} className="remove-extra-space">
+				<div className="thumb">
+					<img src="assets/images/avatars/1.jpg" width="40" style={{ 'borderRadius': '50%' }} />
+				</div>
+			</Col>
+			<Col md={10} className="remove-extra-space">
+				<Row className="remove-extra-space" style={{ height: 'auto', marginTop: '10px' }}>
+					<Col md={9} className="remove-extra-space">
+						<div>
+							<h4>{props.username}</h4>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore.
+							</p>
+						</div>
+					</Col>
+					<Col md={3} className="remove-extra-space">
+						<div>1d ago</div>
+					</Col>
+				</Row>
+				<Row className="remove-extra-space" style={{ height: 'auto' }}>
+					<Col md={9} className="remove-extra-space">
 						<div className="star">
 							<FontAwesomeIcon icon={faStar} className="checked" />
 							<FontAwesomeIcon icon={faStar} className="checked" />
@@ -22,11 +34,14 @@ const UserReview = (props) => (
 							<FontAwesomeIcon icon={faStar} />
 							<FontAwesomeIcon icon={faStar} />
 						</div>
-					</CardBody>
-				</Col>
-			</Row>
-		</Container>
-	</Card>
+					</Col>
+					<Col md={3} className="remove-extra-space">
+						<div>View More</div>
+					</Col>
+				</Row>
+			</Col>
+		</Row>
+	</div>
 );
 
 export default UserReview;

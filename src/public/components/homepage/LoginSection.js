@@ -4,7 +4,7 @@ import OtpForm from './forms/OtpForm.js';
 import ProfileSettings from './forms/ProfileSettings.js';
 import ErrorBoundary from '../ErrorBoundary';
 import Typewriter from './Typewriter';
-import { Container, Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem } from 'reactstrap';
+import { Row, Col, Container, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem, Navbar, NavbarBrand, Nav, NavItem } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
 export default class LoginSection extends React.Component{
@@ -19,7 +19,8 @@ export default class LoginSection extends React.Component{
 			number: '',
 			otp: '',
 			message: '',
-			isOpen: false,
+			// isOpen: false,
+			dropdownOpen: false,
 			windowHeight: 650,
 			windowWidth: 650
 		}
@@ -30,7 +31,8 @@ export default class LoginSection extends React.Component{
 	}
 	toggle = () => {
 		this.setState({
-			isOpen: !this.state.isOpen
+			// isOpen: !this.state.isOpen,
+			dropdownOpen: !this.state.dropdownOpen
 		});
 	}
 	changeState = (newState) => {
@@ -46,27 +48,41 @@ export default class LoginSection extends React.Component{
     render(){
         return(
 			<section style={{ 'minHeight': this.state.windowHeight+'px' }}>
-				<div className="row align-items-center">
-					<div className="col-lg-6 about-left">
+				<Row className="remove-extra-space">
+					<Col md={7} className="remove-extra-space">
 						<Container>
 							<Navbar color="light" light expand="lg" className="bg-white">
-								<NavbarBrand href="/">
-									<img src="/assets/images/brand/16-9.png" width="150" className="d-inline-block align-top" alt="" />
+								<NavbarBrand href="/" style={{ fontWeight: 'bold' }}>
+									<h2>SADDACAMPUS</h2>
 								</NavbarBrand>
-								<NavbarToggler onClick={this.toggle} />
-								<Collapse isOpen={this.state.isOpen} navbar>
-									<Nav className="ml-auto" navbar>
-										<NavItem>
-											<a href="https://play.google.com/store/apps/details?id=com.saddacampus.app" className="nav-link" style={{ 'fontWeight': 'bold' }}>Get the App</a>
-										</NavItem>
-										<NavItem>
-											<Link to="/about-us" className="nav-link" style={{ 'fontWeight': 'bold' }}>About Us</Link>
-										</NavItem>
-										<NavItem>
-											<Link to="/help" className="nav-link" style={{ 'fontWeight': 'bold' }}>Help</Link>
-										</NavItem>
-									</Nav>
-								</Collapse>
+								<Nav className="ml-auto" navbar style={{ flexDirection: 'row' }}>
+									<NavItem>
+										<Link to="/" className="nav-link">
+											<img className="img-fluid" width="30" src="assets/images/svg/home.svg" />
+										</Link>
+									</NavItem>
+									&nbsp;&nbsp;
+									<NavItem>
+										<Link to="/help" className="nav-link">
+											<img className="img-fluid" width="30" src="assets/images/svg/questions-circular-button.svg" />
+										</Link>
+									</NavItem>
+									&nbsp;&nbsp;
+									<NavItem>
+										<UncontrolledDropdown>
+											<DropdownToggle tag="a" className="nav-link" caret>
+												<img className="img-fluid" width="30" src="assets/images/svg/user.svg" />
+											</DropdownToggle>
+											<DropdownMenu style={{ borderRadius: 0 }}>
+												<DropdownItem header>Header</DropdownItem>
+												<DropdownItem disabled>Action</DropdownItem>
+												<DropdownItem>Another Action</DropdownItem>
+												<DropdownItem divider />
+												<DropdownItem>Another Action</DropdownItem>
+											</DropdownMenu>
+										</UncontrolledDropdown>
+									</NavItem>
+								</Nav>
 							</Navbar>
 							<div className="jumbotron bg-white">
 								<h2 className="display-4" style={{ 'marginBottom': '3%' }}>
@@ -93,11 +109,11 @@ export default class LoginSection extends React.Component{
 								</ErrorBoundary>
 							</div>
 						</Container>
-					</div>
-					<div className="col-lg-6 about-right">
-						<img className="img-fluid" src="./assets/images/image.jpg" alt="" style={{ 'minWidth': (this.state.windowWidth/2 - 9)+'px', 'minHeight': this.state.windowHeight+'px' }} />
-					</div>
-				</div>
+					</Col>
+					<Col md={5} className="remove-extra-space">
+						<img className="img-fluid" src="./assets/images/image.jpg" alt="" style={{ 'height': this.state.windowHeight+'px' }} />
+					</Col>
+				</Row>
 			</section>
         );
     }

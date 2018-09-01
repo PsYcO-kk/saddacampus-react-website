@@ -2851,64 +2851,44 @@ $black			: #222;
 
   /*-------- End image-gallery Area -------------*/
   /*-------- Start review Area -------------*/
-  .reviews-area {
-	padding-top: 5%;
-	background-color: #000;
+ .single-review {
+	margin: 10% 5% 5% 5%;
+	max-width: 450px;
   }
 
-  .reviews-area h1 {
-	color: #fff;
+  .single-review p {
+	margin: 7% 0;
   }
 
-  .reviews-area .single-review {
-	background: #fff;
-	padding: 0;
-	padding-top: 5%;
-	padding-bottom: 7%;
-	margin-left: 5%;
-	margin-right: 5%;
-	border-radius: 0;
-    /* -webkit-transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s; */
-  }
-
-  .reviews-area .single-review .star .checked {
+ .single-review .star .checked {
     color: orange;
   }
 
-  .news-area .single-news {
+  .single-news {
     text-align: center;
-    background-color: #000;
+    background-color: #fff;
     padding: 30px;
-    margin-bottom: 30px;
-    -webkit-transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
+	margin: 5% 0;
+	max-width: 400px;
+	transition: all 0.3s ease 0s;
+	position: relative;
+	float: right;
   }
 
-  .news-area .single-news p {
+  .single-news span {
+	position: absolute;
+	top: -25px;
+	left: -25px;
+  }
+
+  .single-news p {
 	margin-top: 20px;
-	color: #fff;
+	color: #2874f0;
   }
 
-  .news-area .single-news h4 {
-    color: #f9d700;
-  }
-
-  .news-area .single-news:hover {
+  .single-news:hover {
     background-color: #ccc;
     cursor: pointer;
-  }
-
-  .news-area .single-news:hover p {
-	color: #000;
-  }
-
-  .news-area .single-news:hover h4 {
-    color: #000;
   }
 
   /*-------- End review Area -------------*/
