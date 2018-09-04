@@ -25,8 +25,8 @@ export default class FoodItemsList extends React.Component{
 
 	render(){
 		return(
-			<Row className="remove-extra-space" style={{ padding: '1%', paddingLeft: '5%' }}>
-				<Col md={9} className="remove-extra-space">
+			<Row className="remove-extra-space" style={{ paddingLeft: '5%' }}>
+				<Col md={9} className="remove-extra-space" style={{ marginTop: '7%' }}>
 					<div className="list-heading" style={{ marginBottom: '3%' }}>Chickblast Restaurant</div>
 					<Row className="remove-extra-space">
 						<Col md={2} className="remove-extra-space" style={{ borderRight: '2px solid #777' }}>
