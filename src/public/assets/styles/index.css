@@ -1047,3 +1047,56 @@ html,body{
 .single-video-lecture-page .switch-lesson span {
 	margin-left: 3%;
 }
+
+.active-service-tab {
+	color: #2874f0;
+	border-bottom: 3px solid #2874f0;
+}
+
+.service-tab:hover {
+	cursor: pointer;
+}
+
+.slide-enter {
+	left: 100%;
+	opacity: 0;
+}
+
+.slide-enter-active {
+	opacity: 1;
+	left: 0;
+	animation: slide-in 1s 0.3s ease forwards;
+}
+
+.slide-exit {
+	opacity: 1;
+	right: 0;
+}
+
+.slide-exit-active {
+	opacity: 0;
+	right: 100%;
+	animation: slide-out 1s 0.3s ease forwards;
+}
+
+@keyframes slide-in {
+	from {
+		left: 100%;
+		opacity: 0;
+	}
+	to {
+		left: 0;
+		opacity: 1;
+	}
+}
+
+@keyframes slide-out {
+	from {
+		right: 0;
+		opacity: 1;
+	}
+	to {
+		right: 100%;
+		opacity: 0;
+	}
+}
