@@ -134,10 +134,10 @@ html,body{
 }
 
 .footer{
-	padding: 3% 5%;
+	padding: 5% 5% 2% 1%;
 	color: #fff;
 	background-color: #111;
-	font-size: 18px;
+	font-size: 16px;
 	text-align: center;
 }
 
@@ -1099,4 +1099,9 @@ html,body{
 		right: 100%;
 		opacity: 0;
 	}
+}
+
+@font-face {
+	font-family: Bebas;
+	src: url(../BebasNeue.woff);
 }

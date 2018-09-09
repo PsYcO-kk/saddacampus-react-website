@@ -1,5 +1,5 @@
 import React from 'react';
-import { UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem, Container, Navbar, NavbarBrand, Nav, NavItem } from 'reactstrap';
+import { Container, Navbar, NavbarBrand, Nav, NavItem } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 
 export default class Header extends React.Component {
@@ -7,10 +7,22 @@ export default class Header extends React.Component {
 		super();
 		this.state = { dropdownOpen: false };
 	}
+	componentDidMount(){
+		window.addEventListener("click", (event) => {
+			if(!event.target.matches('#profile-options')){
+				this.setState({
+					dropdownOpen: false
+				});
+			}
+		});
+	}
 	toggle = () => {
 		this.setState({
 			dropdownOpen: !this.state.dropdownOpen
 		});
+	}
+	componentWillUnmount() {
+		window.removeEventListener("click", this.updateDimensions);
 	}
 	render(){
 		return (
@@ -34,18 +46,14 @@ export default class Header extends React.Component {
 						</NavItem>
 						&nbsp;&nbsp;
 						<NavItem>
-							<UncontrolledDropdown>
-								<DropdownToggle tag="a" className="nav-link" caret>
-									<img className="img-fluid" width="30" src="assets/images/svg/user.svg" />
-								</DropdownToggle>
-								<DropdownMenu style={{ borderRadius: 0 }}>
-									<DropdownItem header>Header</DropdownItem>
-									<DropdownItem disabled>Action</DropdownItem>
-									<DropdownItem>Another Action</DropdownItem>
-									<DropdownItem divider />
-									<DropdownItem>Another Action</DropdownItem>
-								</DropdownMenu>
-							</UncontrolledDropdown>
+							<div className="nav-link" style={{ position: 'relative' }}>
+								<img id="profile-options" className="img-fluid" width="30" src="assets/images/svg/user.svg" onClick={this.toggle} />
+								<div style={{ position: 'absolute', top: '100%', display: (this.state.dropdownOpen ? 'block' : 'none'), minWidth: '150px', overflow: 'auto', zIndex: 1, backgroundColor: 'rgba(255,255,255,0.9)', boxShadow: '0 2px 6px 0 #ccc' }}>
+									<div style={{ padding: '5px 10px' }}>Header</div>
+									<div style={{ padding: '5px 10px' }}>Header</div>
+									<div style={{ padding: '5px 10px' }}>Header</div>
+								</div>
+							</div>
 						</NavItem>
 					</Nav>
 				</Container>

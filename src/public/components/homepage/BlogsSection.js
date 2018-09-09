@@ -7,8 +7,8 @@ const BlogsSection  = () => (
 			<Col md={5} className="remove-extra-space">
 				<div style={{ margin: '0 20%' }}>
 					<div style={{ textAlign: 'right' }}>
-						<h1>Latest News from our Blog</h1>
-						<p style={{ fontSize: '22px', lineHeight: '25px', margin: '7% 0' }}>There are always some things you need to know and once in college you need all the help available.</p>
+						<h1 style={{ fontFamily: 'Lato, Black' }}>Latest News from our Blog</h1>
+						<p style={{ fontFamily: 'Lato, Regular', fontSize: '20px', lineHeight: '23px', margin: '7% 0' }}>There are always some things you need to know and once in college you need all the help available.</p>
 						<Button outline color="primary" style={{ borderRadius: 0 }}>VIEW BLOG</Button>
 					</div>
 				</div>

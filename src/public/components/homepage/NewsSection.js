@@ -16,8 +16,8 @@ const NewsSection = () => (
 			<Row className="remove-extra-space align-items-center">
 				<Col md={6} className="remove-extra-space">
 					<div style={{ padding: '0 20%'}}>
-						<h1 style={{ color: '#fff' }}>In the News</h1>
-						<div style={{ fontSize: '22px', lineHeight: '25px', margin: '5% 0', color: '#fff' }}>
+						<h1 style={{ color: '#fff', fontFamily: 'Lato, Black' }}>In the News</h1>
+						<div style={{ fontSize: '20px', lineHeight: '23px', margin: '5% 0', color: '#fff', fontFamily: 'Lato, Regular' }}>
 							<div>Who doesn't like attention?</div>
 							<div>Gladly we get it a lot.</div>
 						</div>

@@ -6,9 +6,9 @@ const GetAppSection = () => (
 		<Row className="remove-extra-space align-items-center">
 			<Col md={5} className="remove-extra-space">
 				<div style={{ margin: '0 20%'}}>
-					<h1>Get the app</h1>
-					<h1>Order by Tap.</h1>
-					<p style={{ fontSize: '22px', lineHeight: '25px', margin: '5% 0' }}>Download the app now and let your fingers do the rest.</p>
+					<h1 style={{ fontFamily: 'Lato, Black' }}>Get the app</h1>
+					<h1 style={{ fontFamily: 'Lato, Black' }}>Order by tap.</h1>
+					<p style={{ fontSize: '20px', lineHeight: '23px', margin: '7% 0', fontFamily: 'Lato, Regular' }}>Download the app now and let your fingers do the rest.</p>
 					<div>
 						<a href="https://play.google.com/store/apps/details?id=com.saddacampus.app">
 							<img className="img-fluid" src="/assets/images/google-play-badge.png" width="200" alt="" />

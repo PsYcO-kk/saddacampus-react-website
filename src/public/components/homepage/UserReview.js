@@ -4,10 +4,10 @@ import faStar from '@fortawesome/fontawesome-free-solid/faStar';
 import { Row, Col } from 'reactstrap';
 
 const UserReview = (props) => (
-	<div className="single-review">
+	<div className="single-review" style={{ fontFamily: 'Lato, Regular' }}>
 		<Row className="remove-extra-space">
 			<Col md={2} className="remove-extra-space">
-				<div className="thumb">
+				<div className="thumb" style={{ textAlign: 'center' }}>
 					<img src="assets/images/avatars/1.jpg" width="40" style={{ 'borderRadius': '50%' }} />
 				</div>
 			</Col>
@@ -15,7 +15,7 @@ const UserReview = (props) => (
 				<Row className="remove-extra-space" style={{ height: 'auto', marginTop: '10px' }}>
 					<Col md={9} className="remove-extra-space">
 						<div>
-							<h4>{props.username}</h4>
+							<h4 style={{ color: '#555', fontFamily: 'Lato, Black' }}>{props.username}</h4>
 							<p>
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore.
 							</p>

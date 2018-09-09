@@ -15,8 +15,8 @@ const ReviewsSection = () => {
 				<Col md={7} className="remove-extra-space">
 					<div style={{ margin: '3% 0 0 20%' }}>
 						<div style={{ maxWidth: '350px' }}>
-							<h1>User Reviews</h1>
-							<p style={{ fontSize: '22px', lineHeight: '25px', margin: '5% 0' }}>Who are extremely in love with our platform.</p>
+							<h1 style={{ fontFamily: 'Lato, Black' }}>User Reviews</h1>
+							<p style={{ fontFamily: 'Lato, Regular', fontSize: '20px', lineHeight: '23px', margin: '5% 0' }}>Who are extremely in love with our platform.</p>
 						</div>
 						<UserReview username="Shubham" />
 					</div>

@@ -7,17 +7,15 @@ import faTwitter from '@fortawesome/fontawesome-free-brands/faTwitter';
 import faInstagram from '@fortawesome/fontawesome-free-brands/faInstagram';
 
 const Footer = () => (
-	<footer className="footer">
+	<footer className="footer" style={{ fontFamily: 'Lato, Regular' }}>
 		<Row className="remove-extra-space" style={{ alignItems: 'flex-end' }}>
 			<Col md={2} className="remove-extra-space division logo">
-				<div className="body">
-					<img className="img-fluid" src="/assets/images/brand/16-9.png" />
+				<div>
+					<img className="img-fluid" src="/assets/images/brand/16-9.png" width="150" />
 					<div><FontAwesomeIcon icon={faCopyright} /> Saddacampus LLP</div>
 				</div>
 			</Col>
 			<Col md={3} className="remove-extra-space division">
-				<div className="body">
-				</div>
 			</Col>
 			<Col md={2} className="remove-extra-space division info">
 				<div className="body">

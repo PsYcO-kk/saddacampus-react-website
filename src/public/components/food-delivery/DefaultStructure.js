@@ -11,9 +11,9 @@ const DefaultStructure = () => (
 	<div>
 		<Header />
 		<ServicesNavbar />
-		<DealsSection />
-		<RestaurantsList />
-		{/*<FoodItemsList />*/}
+		{/*<DealsSection />
+		<RestaurantsList />*/}
+		<FoodItemsList />
 	</div>
 );
 

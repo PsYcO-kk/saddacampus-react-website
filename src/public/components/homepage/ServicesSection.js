@@ -15,35 +15,35 @@ export default class ServicesSection extends React.Component{
 	}
 	render(){
 		return(
-			<section className="section-gap-half">
+			<section className="section-gap-half" style={{ fontFamily: 'Lato, Regular' }}>
 				<div style={{ padding: '0 10%', textAlign: 'center' }}>
 					<div>
-						<h1>What Student-friendly services we offer?</h1>
-						<p style={{ fontSize: '22px', lineHeight: '25px' }}>BTW, we already apologize we cannot do anything about your sem-backs and low attendance, but - </p>
+						<h1 style={{ fontFamily: 'Lato, Black' }}>What Student-friendly services we offer?</h1>
+						<p style={{ fontSize: '20px', lineHeight: '23px' }}>BTW, we already apologize we cannot do anything about your sem-backs and low attendance, but - </p>
 					</div>
 					<Row className="remove-extra-space">
 						<Col md={3} className="remove-extra-space">
 							<div style={{ margin: '7%', padding: '3%', fontWeight: 'bold' }} className={"service-tab "+(this.state.id === 1 ? 'active-service-tab' : '')} onMouseOver={()=>{ this.handleHover(1) }}>
 								<img src="./assets/images/application.png" className="img-fluid" />
-								<div style={{ marginTop: '7%', fontSize: '20px' }}>Food Delivery</div>
+								<div style={{ marginTop: '7%', fontSize: '18px' }}>Food Delivery</div>
 							</div>
 						</Col>
 						<Col md={3} className="remove-extra-space">
 							<div style={{ margin: '7%', padding: '3%', fontWeight: 'bold' }} className={"service-tab "+(this.state.id === 2 ? 'active-service-tab' : '')} onMouseOver={()=>{ this.handleHover(2) }}>
 								<img src="./assets/images/application.png" className="img-fluid" />
-								<div style={{ marginTop: '7%', fontSize: '20px' }}>Video Lectures</div>
+								<div style={{ marginTop: '7%', fontSize: '18px' }}>Video Lectures</div>
 							</div>
 						</Col>
 						<Col md={3} className="remove-extra-space">
 							<div style={{ margin: '7%', padding: '3%', fontWeight: 'bold' }} className={"service-tab "+(this.state.id === 3 ? 'active-service-tab' : '')} onMouseOver={()=>{ this.handleHover(3) }}>
 								<img src="./assets/images/application.png" className="img-fluid" />
-								<div style={{ marginTop: '7%', fontSize: '20px' }}>Internships</div>
+								<div style={{ marginTop: '7%', fontSize: '18px' }}>Internships</div>
 							</div>
 						</Col>
 						<Col md={3} className="remove-extra-space">
 							<div style={{ margin: '7%', padding: '3%', fontWeight: 'bold' }} className={"service-tab "+(this.state.id === 4 ? 'active-service-tab' : '')} onMouseOver={()=>{ this.handleHover(4) }}>
 								<img src="./assets/images/application.png" className="img-fluid" />
-								<div style={{ marginTop: '7%', fontSize: '20px' }}>Deals & Offers</div>
+								<div style={{ marginTop: '7%', fontSize: '18px' }}>Deals & Offers</div>
 							</div>
 						</Col>
 					</Row>
@@ -64,8 +64,8 @@ export default class ServicesSection extends React.Component{
 							<Col md={7} className="remove-extra-space">
 								<div style={{ margin: '3% 0 0 20%' }}>
 									<div style={{ maxWidth: '350px' }}>
-										<h1>Latest News from our Blog</h1>
-										<p style={{ fontSize: '22px', lineHeight: '25px', margin: '7% 0' }}>There are always some things you need to know and once in college you need all the help available.</p>
+										<h1 style={{ fontFamily: 'Lato, Black' }}>Latest News from our Blog</h1>
+										<p style={{ fontSize: '20px', lineHeight: '23px', margin: '7% 0' }}>There are always some things you need to know and once in college you need all the help available.</p>
 										<Button outline color="primary" style={{ borderRadius: 0 }}>EXPLORE</Button>
 									</div>
 								</div>
@@ -86,8 +86,8 @@ export default class ServicesSection extends React.Component{
 							<Col md={7} className="remove-extra-space">
 								<div style={{ margin: '3% 0 0 20%' }}>
 									<div style={{ maxWidth: '350px' }}>
-										<h1>Latest News from our Blog</h1>
-										<p style={{ fontSize: '22px', lineHeight: '25px', margin: '7% 0' }}>There are always some things you need to know and once in college you need all the help available.</p>
+										<h1 style={{ fontFamily: 'Lato, Black' }}>Latest News from our Blog</h1>
+										<p style={{ fontSize: '20px', lineHeight: '23px', margin: '7% 0' }}>There are always some things you need to know and once in college you need all the help available.</p>
 										<Button outline color="primary" style={{ borderRadius: 0 }}>EXPLORE</Button>
 									</div>
 								</div>
@@ -108,8 +108,8 @@ export default class ServicesSection extends React.Component{
 							<Col md={7} className="remove-extra-space">
 								<div style={{ margin: '3% 0 0 20%' }}>
 									<div style={{ maxWidth: '350px' }}>
-										<h1>Latest News from our Blog</h1>
-										<p style={{ fontSize: '22px', lineHeight: '25px', margin: '7% 0' }}>There are always some things you need to know and once in college you need all the help available.</p>
+										<h1 style={{ fontFamily: 'Lato, Black' }}>Latest News from our Blog</h1>
+										<p style={{ fontSize: '20px', lineHeight: '23px', margin: '7% 0' }}>There are always some things you need to know and once in college you need all the help available.</p>
 										<Button outline color="primary" style={{ borderRadius: 0 }}>EXPLORE</Button>
 									</div>
 								</div>
@@ -130,8 +130,8 @@ export default class ServicesSection extends React.Component{
 							<Col md={7} className="remove-extra-space">
 								<div style={{ margin: '3% 0 0 20%' }}>
 									<div style={{ maxWidth: '350px' }}>
-										<h1>Latest News from our Blog</h1>
-										<p style={{ fontSize: '22px', lineHeight: '25px', margin: '7% 0' }}>There are always some things you need to know and once in college you need all the help available.</p>
+										<h1 style={{ fontFamily: 'Lato, Black' }}>Latest News from our Blog</h1>
+										<p style={{ fontSize: '20px', lineHeight: '23px', margin: '7% 0' }}>There are always some things you need to know and once in college you need all the help available.</p>
 										<Button outline color="primary" style={{ borderRadius: 0 }}>EXPLORE</Button>
 									</div>
 								</div>

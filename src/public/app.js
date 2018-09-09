@@ -15,6 +15,7 @@ import PrivacyPolicyPage from './components/PrivacyPolicyPage';
 import TestComponent from './components/TestComponent';
 import NotFoundPage from './components/NotFoundPage';
 
+import CheckoutPage from './components/food-delivery/CheckoutPage';
 import SingleBlogPage from './components/blogs/SingleBlogPage';
 import SingleInternshipOpportunityPage from './components/internships/SingleInternshipOpportunityPage';
 import SingleVideoLecturePage from './components/video-lectures/SingleVideoLecturePage';
@@ -31,6 +32,7 @@ const jsx = (
                 <Route path="/food-delivery" component={FoodDeliveryPage} />
                 <Route path="/blogs" component={BlogsPage} />
 
+				<Route path="/checkout-page" component={CheckoutPage} />
 				<Route path="/single-blog-page" component={SingleBlogPage} />
 				<Route path="/single-internship-opportunity-page" component={SingleInternshipOpportunityPage} />
 				<Route path="/single-video-lecture-page" component={SingleVideoLecturePage} />

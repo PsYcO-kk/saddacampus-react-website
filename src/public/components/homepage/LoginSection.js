@@ -4,7 +4,7 @@ import OtpForm from './forms/OtpForm.js';
 import ProfileSettings from './forms/ProfileSettings.js';
 import ErrorBoundary from '../ErrorBoundary';
 import Typewriter from './Typewriter';
-import { Row, Col, Container, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem, Navbar, NavbarBrand, Nav, NavItem } from 'reactstrap';
+import { Row, Col, Container, Navbar, NavbarBrand, Nav, NavItem } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
 export default class LoginSection extends React.Component{
@@ -28,6 +28,13 @@ export default class LoginSection extends React.Component{
 	componentDidMount(){
 		this.updateDimensions();
 		window.addEventListener("resize", this.updateDimensions);
+		window.addEventListener("click", (event) => {
+			if(!event.target.matches('#profile-options')){
+				this.setState({
+					dropdownOpen: false
+				});
+			}
+		});
 	}
 	toggle = () => {
 		this.setState({
@@ -43,6 +50,7 @@ export default class LoginSection extends React.Component{
 	}
 	componentWillUnmount() {
 		window.removeEventListener("resize", this.updateDimensions);
+		window.removeEventListener("click", this.updateDimensions);
 	}
 
     render(){
@@ -53,7 +61,7 @@ export default class LoginSection extends React.Component{
 						<Container>
 							<Navbar color="light" light expand="lg" className="bg-white">
 								<NavbarBrand href="/" style={{ fontWeight: 'bold' }}>
-									<h2>SADDACAMPUS</h2>
+									<h1 style={{ fontFamily: 'Bebas' }}>SADDACAMPUS</h1>
 								</NavbarBrand>
 								<Nav className="ml-auto" navbar style={{ flexDirection: 'row' }}>
 									<NavItem>
@@ -69,27 +77,24 @@ export default class LoginSection extends React.Component{
 									</NavItem>
 									&nbsp;&nbsp;
 									<NavItem>
-										<UncontrolledDropdown>
-											<DropdownToggle tag="a" className="nav-link" caret>
-												<img className="img-fluid" width="30" src="assets/images/svg/user.svg" />
-											</DropdownToggle>
-											<DropdownMenu style={{ borderRadius: 0 }}>
-												<DropdownItem header>Header</DropdownItem>
-												<DropdownItem disabled>Action</DropdownItem>
-												<DropdownItem>Another Action</DropdownItem>
-												<DropdownItem divider />
-												<DropdownItem>Another Action</DropdownItem>
-											</DropdownMenu>
-										</UncontrolledDropdown>
+										<div className="nav-link" style={{ position: 'relative' }}>
+											<img id="profile-options" className="img-fluid" width="30" src="assets/images/svg/user.svg" onClick={this.toggle} />
+											<div style={{ position: 'absolute', top: '100%', display: (this.state.dropdownOpen ? 'block' : 'none'), minWidth: '150px', overflow: 'auto', zIndex: 1, backgroundColor: 'rgba(255,255,255,0.9)', boxShadow: '0 2px 6px 0 #ccc' }}>
+												<div style={{ padding: '5px 10px' }}>Header</div>
+												<div style={{ padding: '5px 10px' }}>Header</div>
+												<div style={{ padding: '5px 10px' }}>Header</div>
+											</div>
+										</div>
 									</NavItem>
 								</Nav>
 							</Navbar>
 							<div className="jumbotron bg-white">
-								<h2 className="display-4" style={{ 'marginBottom': '3%' }}>
+								<h1 style={{ fontSize: '44px', fontFamily: 'Lato, Black', marginBottom: '3%' }}>
 									Making college life
 									<br />
-									<Typewriter strings={["easier...", "smarter...", "better..."]} typeSpeed={130} backSpeed={50} color={'#e8c900'} />
-								</h2>
+									<Typewriter strings={["easier...", "smarter...", "better..."]} typeSpeed={130} backSpeed={50} color={'#0578EB'} />
+								</h1>
+								<p style={{ fontSize: '18px', lineHeight: '20px', margin: '5% 0', paddingRight: '35%', fontFamily: 'Lato, Regular' }}>Saddacampus is one step solution for all your college needs from services like food delivery and exciting college specific deals at the tap of your fingers sitting in your hostel rooms.</p>
 								{this.state.loading &&
 									<table style={{ 'marginBottom': '1%' }}>
 										<tbody>
