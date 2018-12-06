@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col, Button } from 'reactstrap';
+import { Row, Col, Button, Input } from 'reactstrap';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faPlus from '@fortawesome/fontawesome-free-solid/faPlus';
 import faMinus from '@fortawesome/fontawesome-free-solid/faMinus';
@@ -72,6 +72,7 @@ export default class Cart extends React.Component{
 							</div>
 						</Col>
 					</Row>
+					<Input type="textarea" rows={2} placeholder="Any Special Instructions" style={{ borderRadius: 0, margin: '10% 0' }} />
 					<div style={{ marginTop: '20%', textAlign: 'center' }}>
 						<Button outline color="primary" style={{ borderRadius: 0 }}>Proceed to Checkout <FontAwesomeIcon icon={faAngleDoubleRight} /></Button>
 					</div>

@@ -23,25 +23,25 @@ export default class ServicesSection extends React.Component{
 					</div>
 					<Row className="remove-extra-space">
 						<Col md={3} className="remove-extra-space">
-							<div style={{ margin: '7%', padding: '3%', fontWeight: 'bold' }} className={"service-tab "+(this.state.id === 1 ? 'active-service-tab' : '')} onMouseOver={()=>{ this.handleHover(1) }}>
+							<div style={{ margin: '7%', padding: '3%', fontWeight: 'bold' }} className={"service-tab "+(this.state.id === 1 ? 'active-service-tab' : '')} onMouseOver={()=>{ this.timer = window.setTimeout(()=>{ this.handleHover(1) }, 500); }} onMouseOut={()=>{ if(this.timer){ window.clearTimeout(this.timer); } }}>
 								<img src="./assets/images/application.png" className="img-fluid" />
 								<div style={{ marginTop: '7%', fontSize: '18px' }}>Food Delivery</div>
 							</div>
 						</Col>
 						<Col md={3} className="remove-extra-space">
-							<div style={{ margin: '7%', padding: '3%', fontWeight: 'bold' }} className={"service-tab "+(this.state.id === 2 ? 'active-service-tab' : '')} onMouseOver={()=>{ this.handleHover(2) }}>
+							<div style={{ margin: '7%', padding: '3%', fontWeight: 'bold' }} className={"service-tab "+(this.state.id === 2 ? 'active-service-tab' : '')} onMouseOver={()=>{ this.timer = window.setTimeout(()=>{ this.handleHover(2) }, 500); }} onMouseOut={()=>{ if(this.timer){ window.clearTimeout(this.timer); } }}>
 								<img src="./assets/images/application.png" className="img-fluid" />
 								<div style={{ marginTop: '7%', fontSize: '18px' }}>Video Lectures</div>
 							</div>
 						</Col>
 						<Col md={3} className="remove-extra-space">
-							<div style={{ margin: '7%', padding: '3%', fontWeight: 'bold' }} className={"service-tab "+(this.state.id === 3 ? 'active-service-tab' : '')} onMouseOver={()=>{ this.handleHover(3) }}>
+							<div style={{ margin: '7%', padding: '3%', fontWeight: 'bold' }} className={"service-tab "+(this.state.id === 3 ? 'active-service-tab' : '')} onMouseOver={()=>{ this.timer = window.setTimeout(()=>{ this.handleHover(3) }, 500); }} onMouseOut={()=>{ if(this.timer){ window.clearTimeout(this.timer); } }}>
 								<img src="./assets/images/application.png" className="img-fluid" />
 								<div style={{ marginTop: '7%', fontSize: '18px' }}>Internships</div>
 							</div>
 						</Col>
 						<Col md={3} className="remove-extra-space">
-							<div style={{ margin: '7%', padding: '3%', fontWeight: 'bold' }} className={"service-tab "+(this.state.id === 4 ? 'active-service-tab' : '')} onMouseOver={()=>{ this.handleHover(4) }}>
+							<div style={{ margin: '7%', padding: '3%', fontWeight: 'bold' }} className={"service-tab "+(this.state.id === 4 ? 'active-service-tab' : '')} onMouseOver={()=>{ this.timer = window.setTimeout(()=>{ this.handleHover(4) }, 500); }} onMouseOut={()=>{ if(this.timer){ window.clearTimeout(this.timer); } }}>
 								<img src="./assets/images/application.png" className="img-fluid" />
 								<div style={{ marginTop: '7%', fontSize: '18px' }}>Deals & Offers</div>
 							</div>

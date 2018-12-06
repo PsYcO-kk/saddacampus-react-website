@@ -32,7 +32,6 @@ const jsx = (
                 <Route path="/food-delivery" component={FoodDeliveryPage} />
                 <Route path="/blogs" component={BlogsPage} />
 
-				<Route path="/checkout-page" component={CheckoutPage} />
 				<Route path="/single-blog-page" component={SingleBlogPage} />
 				<Route path="/single-internship-opportunity-page" component={SingleInternshipOpportunityPage} />
 				<Route path="/single-video-lecture-page" component={SingleVideoLecturePage} />

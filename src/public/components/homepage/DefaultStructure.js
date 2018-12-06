@@ -8,6 +8,8 @@ import NewsSection from './NewsSection';
 import GetAppSection from './GetAppSection';
 import Footer from '../Footer';
 
+import '../../assets/styles/login-page.css';
+
 const DefaultStructure = () => (
 	<div>
 		<LoginSection />

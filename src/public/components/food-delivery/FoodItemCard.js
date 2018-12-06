@@ -29,7 +29,7 @@ export default class FoodItemCard extends React.Component {
 
 	render(){
 		return(
-			<Row className="remove-extra-space food-item-card">
+			<div className="food-item-card">
 				<Row className="remove-extra-space">
 					<Col md={2} className="remove-extra-space">
 						<img src="./assets/images/svg/chicken-leg.svg" className="img-fluid chicken-leg" width="40px" />
@@ -70,7 +70,7 @@ export default class FoodItemCard extends React.Component {
 						</div>
 					</Col>
 				</Row>
-			</Row>
+			</div>
 		);
 	}
 }

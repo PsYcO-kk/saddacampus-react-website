@@ -6,6 +6,7 @@ import ErrorBoundary from '../ErrorBoundary';
 import Typewriter from './Typewriter';
 import { Row, Col, Container, Navbar, NavbarBrand, Nav, NavItem } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import Header from '../Header';
 
 export default class LoginSection extends React.Component{
 	constructor(){
@@ -50,7 +51,13 @@ export default class LoginSection extends React.Component{
 	}
 	componentWillUnmount() {
 		window.removeEventListener("resize", this.updateDimensions);
-		window.removeEventListener("click", this.updateDimensions);
+		window.removeEventListener("click", (event) => {
+			if(!event.target.matches('#profile-options')){
+				this.setState({
+					dropdownOpen: false
+				});
+			}
+		});
 	}
 
     render(){
@@ -59,35 +66,7 @@ export default class LoginSection extends React.Component{
 				<Row className="remove-extra-space">
 					<Col md={7} className="remove-extra-space">
 						<Container>
-							<Navbar color="light" light expand="lg" className="bg-white">
-								<NavbarBrand href="/" style={{ fontWeight: 'bold' }}>
-									<h1 style={{ fontFamily: 'Bebas' }}>SADDACAMPUS</h1>
-								</NavbarBrand>
-								<Nav className="ml-auto" navbar style={{ flexDirection: 'row' }}>
-									<NavItem>
-										<Link to="/" className="nav-link">
-											<img className="img-fluid" width="30" src="assets/images/svg/home.svg" />
-										</Link>
-									</NavItem>
-									&nbsp;&nbsp;
-									<NavItem>
-										<Link to="/help" className="nav-link">
-											<img className="img-fluid" width="30" src="assets/images/svg/questions-circular-button.svg" />
-										</Link>
-									</NavItem>
-									&nbsp;&nbsp;
-									<NavItem>
-										<div className="nav-link" style={{ position: 'relative' }}>
-											<img id="profile-options" className="img-fluid" width="30" src="assets/images/svg/user.svg" onClick={this.toggle} />
-											<div style={{ position: 'absolute', top: '100%', display: (this.state.dropdownOpen ? 'block' : 'none'), minWidth: '150px', overflow: 'auto', zIndex: 1, backgroundColor: 'rgba(255,255,255,0.9)', boxShadow: '0 2px 6px 0 #ccc' }}>
-												<div style={{ padding: '5px 10px' }}>Header</div>
-												<div style={{ padding: '5px 10px' }}>Header</div>
-												<div style={{ padding: '5px 10px' }}>Header</div>
-											</div>
-										</div>
-									</NavItem>
-								</Nav>
-							</Navbar>
+							<Header />
 							<div className="jumbotron bg-white">
 								<h1 style={{ fontSize: '44px', fontFamily: 'Lato, Black', marginBottom: '3%' }}>
 									Making college life
